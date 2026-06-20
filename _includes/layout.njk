@@ -1,0 +1,53 @@
+---
+url: http://pick-a-pic.app
+title: "Pick-a-Pic: AAC for iPad"
+author: James Childress
+description: Pick-a-Pic is an app for iPad that makes AAC easy.
+company: Pick-a-Pic
+---
+
+{% if path %}
+  {% set segments = [url, path] %}
+{% else %}
+  {% set segments = [url] %}
+{% endif %}
+
+{% if styles %}
+  {% set styles = [styles] %}
+{% else %}
+  {% set styles = ["/styles/main.css"] %}
+{% endif %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    {% metagen
+    title = title,
+    author = author,
+    desc = description,
+    url = segments | join("/"),
+    comments = true,
+    css = styles,
+    custom = custom
+ %}
+  </head>
+  <body>
+    <header>
+      <a href="/">
+        <span>
+          {{ company }}
+        </span>
+      </a>
+    </header>
+    <main>
+      {{ content | safe }}
+    </main>
+    <footer>
+      <a href="/">
+        <span>
+          {{ company }}
+        </span>
+      </a>
+    </footer>
+  </body>
+</html>

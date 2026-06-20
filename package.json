@@ -1,0 +1,19 @@
+{
+  "name": "pickapic-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "npx @11ty/eleventy --serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy-plugin-haml": "^1.0.0",
+    "eleventy-plugin-metagen": "^1.8.4",
+    "sass": "^1.101.0"
+  }
+}
