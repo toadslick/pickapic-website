@@ -157,25 +157,40 @@ body {
     strong {
       font-style: italic;
       font-weight: 900;
-      text-shadow: 0 0 15px skyblue;
+      text-shadow: 0 0 15px #fff6;
       letter-spacing: -0.3pt;
     }
   }
 
-  #bubble {
-    &.blocks {
+  video.speech-bubble::before {
+    $width: 250px;
+    $aspect-ratio: 471 / 318;
+
+    display: block;
+    position: absolute;
+    width: $width;
+    aspect-ratio: $aspect-ratio;
+    background-image: url("/assets/style/bubble.avif");
+    background-size: 100%;
+
+    @mixin speech-bubble($left, $top, $text) {
+      left: calc((left * 100%) - ($width / 2));
+      top: calc(top * 100%) - ($width / $aspect-ratio / 2);
+    }
+
+    &.speech-bubble-blocks {
       left: 843 / 1280;
       top: 244 / 890;
     }
-    &.cereal {
+    &.speech-bubble-cereal {
       left: 896 / 1280;
       top: 445 / 890;
     }
-    &.crayon {
+    &.speech-bubble-crayon {
       left: 439 / 1280;
       top: 635 / 890;
     }
-    &.apple {
+    &.speech-bubble-apple {
       left: 439 / 1280;
       top: 244 / 890;
     }
