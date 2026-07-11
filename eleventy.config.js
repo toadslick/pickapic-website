@@ -4,7 +4,8 @@ import metagen from "eleventy-plugin-metagen";
 import hamlPlugin from "@11ty/eleventy-plugin-haml";
 
 export default function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("images");
+  eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("scripts");
 
   eleventyConfig.addPlugin(metagen);
   eleventyConfig.addPlugin(hamlPlugin);
