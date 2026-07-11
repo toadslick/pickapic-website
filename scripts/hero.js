@@ -1,5 +1,8 @@
 (function () {
+  const frame = document.querySelector("#hero .video-frame");
   const video = document.querySelector("#hero video");
+
+  const frameInitialClassName = frame.className;
 
   const speechTimes = [
     { light: 1.5, dark: 1.25, className: "blocks" },
@@ -31,10 +34,9 @@
 
   const speak = function (index) {
     const className = speechTimes[index].className;
-    video.className = "";
+    frame.className = frameInitialClassName;
     requestAnimationFrame(function () {
-      video.className = `speech-bubble speech-bubble-${className}`;
+      frame.className = `${frameInitialClassName} speech-bubble speech-bubble-${className}`;
     });
-    console.log("Speak:", index, className);
   };
 })();
