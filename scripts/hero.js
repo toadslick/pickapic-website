@@ -10,26 +10,31 @@
 
   var isDarkMode = false;
   var speechIndex = 0;
+  var previousTime = 0;
 
   video.addEventListener("timeupdate", () => {
-    let nextSpeechTime =
-      speechTimes[speechIndex][isDarkMode ? "dark" : "light"];
+    if (previousTime > video.currentTime) {
+      speechIndex = 0;
+    }
+    previousTime = video.currentTime;
 
-    if (video.currentTime >= nextSpeechTime) {
-      speak(speechIndex);
+    if (speechIndex < speechTimes.length) {
+      let nextSpeechTime =
+        speechTimes[speechIndex][isDarkMode ? "dark" : "light"];
 
-      speechIndex += 1;
-      if (speechIndex >= speechTimes.length) {
-        speechIndex = 0;
+      if (video.currentTime >= nextSpeechTime) {
+        speak(speechIndex);
+        speechIndex += 1;
       }
     }
   });
 
   const speak = function (index) {
-    const className = speechTimes[index].speech;
+    const className = speechTimes[index].className;
     video.className = "";
     requestAnimationFrame(function () {
       video.className = `speech-bubble speech-bubble-${className}`;
     });
+    console.log("Speak:", index, className);
   };
 })();
