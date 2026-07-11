@@ -5,17 +5,23 @@ layout: layout.njk
 %main
 
   #hero
+    .two-column
+      %div
+      
+        %h1
+          .span Pick-a-Pic
+        %p
+          %span Motivate
+          %strong functional communication skills
+          %span with an iPad app that is
+          %strong easy to customize
+          %span for your learners.
 
-    %h1
-      .span Pick-a-Pic
-    %p
-      %span Springboard
-      %strong functional communication skills
-      %span with an iPad app that is intuitive, easy to use, and able to support a variety of learning styles.
-
-    .video-frame
-      %video{ autoplay: true, muted: true, loop: true }
-        %source{ src: "/assets/video/speak-light.mp4", type: "video/mp4" }
+      .div
+      
+        .video-frame
+          %video{ autoplay: true, muted: true, loop: true }
+            %source{ src: "/assets/video/speak-light.mp4", type: "video/mp4" }
 
   %h2 How it works
     %ul
