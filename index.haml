@@ -2,70 +2,61 @@
 layout: layout.njk
 ---
 
-%main
 
-  #hero
-    .two-column
-      %div
-      
-        %h1
-          .span Pick-a-Pic
-        %p
-          Build
-          %strong functional communication skills
-          \ with an iPad app that is
-          %strong easy to personalize
-          \ for your learners.
-
-      .div
-
-        .video-frame
-          %video{ autoplay: true, muted: true, loop: true }
-            %source{ src: "/assets/video/speak-light.mp4", type: "video/mp4" }
-
-  .one-column
-    %h2
-      Made for
-      %strong your
-      \ pictures
-
-    %p
-      Motivate your learner by using pictures of the exact things they want.
-      %br.wide-only
-      With only a few taps, pictures can be imported from:
+#hero
+  .two-column
+    %div
     
-    %ul#import-list
-      %li the Photos app
-      %li the camera
-      %li the Files app
-      %li copied from the web
-      %li text or emoji
-      %li our gallery of examples
+      %h1
+        .span Pick-a-Pic
+      %p
+        Build
+        %strong functional communication skills
+        \ with an iPad app that is
+        %strong easy to personalize
+        \ for your learners.
+
+    %div
+
+      .video-frame
+        %video{ autoplay: true, muted: true, loop: true }
+          %source{ src: "/assets/video/speak-light.mp4", type: "video/mp4" }
+
+.one-column
+  %h2
+    Made for
+    %strong your
+    \ pictures
 
   %p
-    %br
-    %br
-    %br
-    %br
-    %br
-    %br
-    %br
+    Motivate your learner by using pictures of the exact things they want.
+    %br.wide-only
+    With only a few taps, pictures can be imported from:
+  
+  %ul#import-list
+    %li the Photos app
+    %li the camera
+    %li the Files app
+    %li copied from the web
+    %li text or emoji
+    %li our gallery of examples
 
-  %h2 Pick-a-Pic is for
-  %h3 Early Communicators
-  %p For learners that struggle with abstraction, Pick-a-Pic makes it easy to add pictures of the exact things they request.
-  %h3 Caregivers
-  %p Pick-a-Pic is designed to feel like the iPad apps that are used everyday, with a clear and intuitive interface.
-  %h3 Professionals
-  %p Behavior analysts and technicians can use Pick-a-Pic to implement functional communication training that is individualized and motivating to learners.
-  %h3 Organizations
-  %p Pick-a-Pic files can be synced and shared via iCloud and AirDrop so that learners have a consistent experience in any environment.
+.two-column
+  %div
+    .video-frame
+      %video{ autoplay: true, muted: true, loop: true }
+        %source{ src: "/assets/video/arrange-light.mp4", type: "video/mp4" }
+  %div
+    %p
+      Tap pictures in your library to add them to a page. Pictues arrange themselves automatically and can be rearranged by dragging.
 
-  %h2
-    Pick-a-Pic is
-    %em not
-    for
-  %p Pick-a-Pic is not meant for learners that are already able to effectively communicate in full sentences, and it is not meant to replace existing AAC apps. Pick-a-Pic is meant to springboard basic communication as one tool in a comprehensive and individualized AAC system, with learners graduating to more advanced apps when they are ready.
-
+.two-column.two-column-reverse
+  %div
+    .video-frame
+      %video{ autoplay: true, muted: true, loop: true }
+        %source{ src: "/assets/video/import-light.mp4", type: "video/mp4" }
+  %div  
+    %p
+      TKTK import picture
 
 %script{ type: "text/javascript", src: "/scripts/hero.js" }
