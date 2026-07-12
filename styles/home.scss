@@ -155,6 +155,11 @@
       box-shadow: 0 0 10px main.$red;
     }
   }
+
+  a {
+    border: none;
+    color: #000;
+  }
 }
 
 .inline-list {

@@ -3,12 +3,14 @@
 
 $orange: #ff9535;
 $red: #fd6153;
+$blue: #069;
 
 html,
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   color: #000;
   font-size: 16pt;
+  font-weight: 500;
   line-height: 1.5;
   background: #26a;
 
@@ -18,6 +20,7 @@ body {
 
   main {
     background: #fff;
+    padding-bottom: 50px;
 
     p {
       display: block;
@@ -26,6 +29,13 @@ body {
       strong {
         font-weight: 700;
       }
+    }
+
+    a {
+      text-decoration: none;
+      color: $blue;
+      border-bottom: 3px dotted $orange;
+      font-weight: 600;
     }
 
     h2 {
@@ -52,6 +62,22 @@ body {
         color: $red;
       }
     }
+  }
+}
+
+a.app-store {
+  display: block;
+  margin: auto;
+  position: relative;
+  background-image: url("/assets/style/app-store.svg");
+  background-size: 100% 100%;
+  width: 240px;
+  height: 80px;
+  border: none;
+
+  span {
+    position: absolute;
+    left: -9999px;
   }
 }
 
