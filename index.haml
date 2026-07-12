@@ -1,12 +1,12 @@
 ---
 layout: layout.njk
+styles: /styles/home.css
 ---
 
 
 #hero
   .two-column
     %div
-    
       %h1
         .span Pick-a-Pic
       %p
@@ -15,9 +15,7 @@ layout: layout.njk
         \ with an iPad app that is
         %strong easy to personalize
         \ for your learners.
-
     %div
-
       .video-frame
         %video{ autoplay: true, muted: true, loop: true }
           %source{ src: "/assets/video/speak-light.mp4", type: "video/mp4" }
@@ -27,36 +25,93 @@ layout: layout.njk
     Made for
     %strong your
     \ pictures
-
   %p
     Motivate your learner by using pictures of the exact things they want.
     %br.wide-only
-    With only a few taps, pictures can be imported from:
-  
-  %ul#import-list
-    %li the Photos app
-    %li the camera
-    %li the Files app
-    %li copied from the web
-    %li text or emoji
-    %li our gallery of examples
+    Import pictures from these sources with only a few taps:
+  %ul.feature-list
+    %li The camera
+    %li The Photos app
+    %li The Files app
+    %li Copied from the web
+    %li Text or emoji
+    %li Our gallery of examples
 
-.two-column
+.two-column.arrow
+  %div
+    .video-frame
+      %video{ autoplay: true, muted: true, loop: true }
+        %source{ src: "/assets/video/import-light.mp4", type: "video/mp4" }
+  %div
+    %p
+      From photo to tappable button in 20 seconds.
+      %br.wide-only
+      Create the pictures you need as soon as you need them. 
+
+.two-column.arrow.two-column-reverse
   %div
     .video-frame
       %video{ autoplay: true, muted: true, loop: true }
         %source{ src: "/assets/video/arrange-light.mp4", type: "video/mp4" }
   %div
     %p
-      Tap pictures in your library to add them to a page. Pictues arrange themselves automatically and can be rearranged by dragging.
+      After pictures are imported, it only takes one tap to add them to a page.
+      Pictures arrange themselves automatically. Long-press and drag to rearrange them.
 
-.two-column.two-column-reverse
-  %div
-    .video-frame
-      %video{ autoplay: true, muted: true, loop: true }
-        %source{ src: "/assets/video/import-light.mp4", type: "video/mp4" }
-  %div  
-    %p
-      TKTK import picture
+.one-column
+  %h2
+    Made for
+    %strong collaborating
+  %p
+    Caregivers, behavior analysts, and therapists can share their Pick-a-Pic files 
+    %br.wide-only
+    with each other by using
+    %strong Dropbox
+    , 
+    %strong Google Drive
+    , or 
+    %strong iCloud file sharing
+    .
+
+.one-column
+  %h2
+    %strong No
+    \ account needed
+  %p
+    %strong No
+    \ signing up.
+    %strong No
+    \ account creation.
+    %strong No
+    \ user tracking.
+    %br.wide-only
+    Pick-a-Pic respects your time and your privacy.
+
+.one-column
+  %h2 A growing list of features
+  %ul.inline-list
+    %li
+      %span Organize your picture library using
+      %strong search
+      ,
+      %strong sort
+      , and
+      %strong tags
+      .
+    %li
+      %strong Lock books
+      \ with Face ID or a 4-digit passcode to prevent editing.
+    %li
+      %span Quickly fix mistakes with
+      %strong undo and redo
+      .
+    %li
+      %strong Choose the voice
+      \ that speaks when pictures are tapped.
+  %p
+    Pick-a-Pic is in
+    %strong active development
+    . Visit our product roadmap to see the features that are coming next.
+
 
 %script{ type: "text/javascript", src: "/scripts/hero.js" }

@@ -1,4 +1,4 @@
-@use "_wrapper";
+@use "_reset";
 @use "sass:math";
 
 $orange: #ff9535;
@@ -9,9 +9,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   color: #000;
   font-size: 16pt;
+  line-height: 1.5;
   background: #26a;
-  padding: 0;
-  margin: 0;
 
   @media (max-width: 768px) {
     font-size: 14pt;
@@ -31,7 +30,7 @@ body {
 
     h2 {
       display: block;
-      margin: 0 auto 0.2em;
+      margin: 0.5em auto 0.2em;
       font-family:
         ui-rounded,
         -apple-system,
@@ -87,7 +86,7 @@ body {
 }
 
 .one-column {
-  margin: auto;
+  margin: 2em auto;
   padding: 0 20px;
   max-width: 1400px;
   text-align: center;
@@ -97,11 +96,12 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: auto;
+  margin: 1em auto;
   padding: 0 10px;
   max-width: 1400px;
   justify-content: center;
   align-items: center;
+  flex: 1;
 
   > div {
     position: relative;
@@ -110,6 +110,7 @@ body {
 
   @media (min-width: 1000px) {
     flex-direction: row;
+    margin: auto;
 
     > div {
       width: 50%;
@@ -127,160 +128,48 @@ body {
       flex-direction: row-reverse;
     }
   }
-}
 
-#hero {
-  background:
-    repeat-x left bottom/200% 10% url("/assets/style/clouds.avif"),
-    linear-gradient(#147 0%, #69c 70%);
-  padding: 30px 0 20px;
-  margin-bottom: 10px;
-
-  h1 {
-    $padding-left: calc((151 / 852) * 110%);
-
-    display: block;
-    position: relative;
-    z-index: 3;
-    margin-top: 10px;
-
-    &::before {
-      content: "";
-      display: block;
-      margin: auto;
-      margin-bottom: 20px;
-      width: 30%;
-      max-width: 150px;
-      min-width: 100px;
-      aspect-ratio: 1;
-      background-image: url("/assets/style/icon.avif");
-      background-size: 100%;
-      border-radius: 20%;
-      box-shadow: 0 3px 6px #000000aa;
-      transform: rotate(-8deg);
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      margin: auto;
-      max-width: 600px;
-      aspect-ratio: 852 / 151;
-      background-image: url("/assets/style/title.avif");
-      background-size: 100% 100%;
-    }
-
-    .span {
-      position: absolute;
-      left: -9999px;
-    }
+  &.arrow {
+    background: linear-gradient(#9cf0 0%, #9cfd 20%, #9cf0 90%);
   }
 
-  p {
-    color: #fff;
-    font-size: 20pt;
-    margin: 0.5em 0 1em;
-    text-align: center;
-    font-weight: 500;
+  @media (min-width: 1000px) {
+    &.arrow {
+      background:
+        linear-gradient(90deg, #fff 0%, #fff0 30%, #fff0 60%, #fff 100%),
+        linear-gradient(#fff 60%, #9cfa 85%, #fff 90%);
 
-    @media (max-width: 700px) {
-      font-size: 18pt;
-    }
-    @media (max-width: 500px) {
-      font-size: 16pt;
-    }
-
-    strong {
-      font-style: italic;
-      font-weight: 900;
-      letter-spacing: -0.3pt;
-    }
-  }
-
-  .video-frame.speech-bubble {
-    $width: 6em;
-
-    &::before {
-      @keyframes speak {
-        0% {
-          opacity: 0;
-          transform: translateY(0);
-        }
-
-        30% {
-          opacity: 1;
-        }
-
-        60% {
-          opacity: 1;
-        }
-
-        100% {
-          opacity: 0;
-          transform: translateY(-100px);
+      > :last-child {
+        p {
+          display: flex;
+          align-items: center;
+          text-align: left;
+          padding-left: 3em;
+          background: no-repeat left center/2.5em
+            url("/assets/style/bracket-left.avif");
+          min-height: 10em;
         }
       }
-
-      color: #fff;
-      font-weight: 600;
-      opacity: 0;
-      display: flex;
-      position: absolute;
-      width: $width;
-      aspect-ratio: 1;
-      background-image: url("/assets/style/bubble.avif");
-      background-size: 100%;
-      animation: speak 2s ease-out forwards;
-      z-index: 100;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
     }
 
-    @mixin speech-bubble($left, $top, $text) {
-      left: calc(percentage($left) - ($width / 2));
-      top: calc(percentage($top) - $width);
-      content: $text;
-    }
-
-    &.speech-bubble-blocks::before {
-      @include speech-bubble(math.div(843, 1280), math.div(244, 890), "Blocks");
-    }
-    &.speech-bubble-cereal::before {
-      @include speech-bubble(math.div(896, 1280), math.div(445, 890), "Cereal");
-    }
-    &.speech-bubble-crayon::before {
-      @include speech-bubble(math.div(439, 1280), math.div(635, 890), "Crayon");
-    }
-    &.speech-bubble-apple::before {
-      @include speech-bubble(math.div(439, 1280), math.div(244, 890), "Apple");
-    }
-  }
-}
-
-#import-list {
-  line-height: 1.2;
-  margin-bottom: 2em;
-
-  li {
-    display: inline-block;
-    font-weight: 500;
-    padding: 0.3em 0.7em;
-    margin: 0.4em 0.2em;
-    border-radius: 1em;
-    border: 3px solid $orange;
-    background: #fff;
-    box-shadow: 0 0 10px $orange;
-
-    &:nth-child(2n) {
-      border-color: $red;
-      box-shadow: 0 0 10px $red;
+    &.two-column-reverse {
+      > :last-child {
+        p {
+          display: flex;
+          align-items: center;
+          text-align: right;
+          padding-right: 3em;
+          background: no-repeat right center/2.5em
+            url("/assets/style/bracket-right.avif");
+          min-height: 10em;
+        }
+      }
     }
   }
 }
 
 .wide-only {
-  @media (max-width: 900px) {
+  @media (max-width: 800px) {
     visibility: hidden;
     position: absolute;
   }

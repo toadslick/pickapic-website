@@ -1,0 +1,188 @@
+@use "main";
+@use "sass:math";
+
+#hero {
+  background:
+    repeat-x left bottom/200% 10% url("/assets/style/clouds.avif"),
+    linear-gradient(#147 0%, #69c 70%);
+  padding: 30px 0 30px;
+
+  h1 {
+    $padding-left: calc((151 / 852) * 110%);
+
+    display: block;
+    position: relative;
+    z-index: 3;
+    margin-top: 10px;
+
+    &::before {
+      content: "";
+      display: block;
+      margin: auto;
+      margin-bottom: 20px;
+      width: 30%;
+      max-width: 150px;
+      min-width: 100px;
+      aspect-ratio: 1;
+      background-image: url("/assets/style/icon.avif");
+      background-size: 100%;
+      border-radius: 20%;
+      box-shadow: 0 3px 6px #000000aa;
+      transform: rotate(-8deg);
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      margin: auto;
+      max-width: 600px;
+      aspect-ratio: 852 / 151;
+      background-image: url("/assets/style/title.avif");
+      background-size: 100% 100%;
+    }
+
+    .span {
+      position: absolute;
+      left: -9999px;
+    }
+  }
+
+  p {
+    color: #fff;
+    font-size: 20pt;
+    margin: 0.5em 0 1em;
+    text-align: center;
+    font-weight: 500;
+
+    @media (max-width: 700px) {
+      font-size: 18pt;
+    }
+    @media (max-width: 500px) {
+      font-size: 16pt;
+    }
+
+    strong {
+      font-style: italic;
+      font-weight: 900;
+      letter-spacing: -0.3pt;
+    }
+  }
+
+  .video-frame.speech-bubble {
+    $width: 6em;
+
+    &::before {
+      @keyframes speak {
+        0% {
+          opacity: 0;
+          transform: translateY(0);
+        }
+
+        30% {
+          opacity: 1;
+        }
+
+        60% {
+          opacity: 1;
+        }
+
+        80% {
+          transform: translateY(-100px);
+        }
+
+        100% {
+          opacity: 0;
+          transform: translateY(-100px);
+        }
+      }
+
+      color: #fff;
+      font-weight: 600;
+      opacity: 0;
+      display: flex;
+      position: absolute;
+      width: $width;
+      aspect-ratio: 1;
+      background-image: url("/assets/style/bubble.avif");
+      background-size: 100%;
+      animation: speak 2s ease-out forwards;
+      z-index: 100;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @mixin speech-bubble($left, $top, $text) {
+      left: calc(math.percentage($left) - ($width / 2));
+      top: calc(math.percentage($top) - $width);
+      content: $text;
+    }
+
+    &.speech-bubble-blocks::before {
+      @include speech-bubble(math.div(843, 1280), math.div(244, 890), "Blocks");
+    }
+    &.speech-bubble-cereal::before {
+      @include speech-bubble(math.div(896, 1280), math.div(445, 890), "Cereal");
+    }
+    &.speech-bubble-crayon::before {
+      @include speech-bubble(math.div(439, 1280), math.div(635, 890), "Crayon");
+    }
+    &.speech-bubble-apple::before {
+      @include speech-bubble(math.div(439, 1280), math.div(244, 890), "Apple");
+    }
+  }
+
+  + .two-column {
+  }
+}
+
+.feature-list {
+  line-height: 1.2;
+  margin-bottom: 1.5em;
+
+  li {
+    display: inline-block;
+    font-weight: 500;
+    padding: 0.3em 0.7em;
+    margin: 0.4em 0.2em;
+    border-radius: 1em;
+    border: 3px solid main.$orange;
+    background: #fff;
+    box-shadow: 0 0 10px main.$orange;
+
+    &:nth-child(2n) {
+      border-color: main.$red;
+      box-shadow: 0 0 10px main.$red;
+    }
+  }
+}
+
+.inline-list {
+  margin-bottom: 1em;
+
+  li {
+    $size: 0.6em;
+
+    display: inline;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      height: $size;
+      width: $size;
+      border-radius: calc($size / 2);
+      margin: 0 0.3em;
+      background-color: main.$orange;
+      box-shadow: 0 0 calc($size / 2) main.$orange;
+    }
+
+    &:nth-child(2n)::before {
+      background-color: main.$red;
+      box-shadow: 0 0 calc($size / 2) main.$red;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+  }
+}
