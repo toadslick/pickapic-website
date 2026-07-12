@@ -1,10 +1,13 @@
 @use "_wrapper";
 @use "sass:math";
 
+$orange: #ff9535;
+$red: #fd6153;
+
 html,
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #fff;
+  color: #000;
   font-size: 16pt;
   background: #26a;
   padding: 0;
@@ -15,7 +18,7 @@ body {
 
     p {
       display: block;
-      margin: auto;
+      margin: 0 auto 0.5em;
 
       strong {
         font-weight: 700;
@@ -24,7 +27,7 @@ body {
 
     h2 {
       display: block;
-      margin: auto;
+      margin: 0 auto 0.2em;
       font-family:
         ui-rounded,
         -apple-system,
@@ -32,13 +35,18 @@ body {
         sans-serif;
       font-size: 38pt;
       font-weight: 800;
-      color: #ff9535;
+      color: $orange;
       text-transform: uppercase;
       text-align: center;
       line-height: 0.97;
+      letter-spacing: -0.03em;
 
       @media (max-width: 768px) {
         font-size: 24pt;
+      }
+
+      strong {
+        color: $red;
       }
     }
   }
@@ -74,6 +82,13 @@ body {
   }
 }
 
+.one-column {
+  margin: auto;
+  padding: 0 20px;
+  max-width: 1400px;
+  text-align: center;
+}
+
 .two-column {
   display: flex;
   flex-direction: column;
@@ -99,8 +114,11 @@ body {
 }
 
 #hero {
-  background: linear-gradient(#26a, #69c);
-  padding: 50px 0;
+  background:
+    repeat-x left bottom/200% 10% url("/assets/style/clouds.avif"),
+    linear-gradient(#147 0%, #69c 70%);
+  padding: 30px 0 20px;
+  margin-bottom: 10px;
 
   h1 {
     $padding-left: calc((151 / 852) * 110%);
@@ -143,8 +161,9 @@ body {
   }
 
   p {
+    color: #fff;
     font-size: 20pt;
-    margin: 0.5em auto;
+    margin: 0.5em 0 1em;
     text-align: center;
     font-weight: 500;
 
@@ -158,7 +177,6 @@ body {
     strong {
       font-style: italic;
       font-weight: 900;
-      text-shadow: 0 0 15px #fff6;
       letter-spacing: -0.3pt;
     }
   }
@@ -183,18 +201,20 @@ body {
 
         100% {
           opacity: 0;
-          transform: translateY(-150px);
+          transform: translateY(-100px);
         }
       }
 
-      opacity: 1;
+      color: #fff;
+      font-weight: 600;
+      opacity: 0;
       display: flex;
       position: absolute;
       width: $width;
       aspect-ratio: 1;
       background-image: url("/assets/style/bubble.avif");
       background-size: 100%;
-      animation: speak 3s ease-out forwards;
+      animation: speak 2s ease-out forwards;
       z-index: 100;
       text-align: center;
       font-size: 20pt;
@@ -204,7 +224,7 @@ body {
 
     @mixin speech-bubble($left, $top, $text) {
       left: calc(percentage($left) - ($width / 2));
-      top: calc(percentage($top) - ($width / 2));
+      top: calc(percentage($top) - $width);
       content: $text;
     }
 
@@ -219,6 +239,27 @@ body {
     }
     &.speech-bubble-apple::before {
       @include speech-bubble(math.div(439, 1280), math.div(244, 890), "Apple");
+    }
+  }
+}
+
+#import-list {
+  line-height: 1.2;
+  margin-bottom: 2em;
+
+  li {
+    display: inline-block;
+    font-weight: 500;
+    padding: 0.3em 0.7em;
+    margin: 0.4em 0.2em;
+    border-radius: 1em;
+    border: 3px solid $orange;
+    background: #fff;
+    box-shadow: 0 0 10px $orange;
+
+    &:nth-child(2n) {
+      border-color: $red;
+      box-shadow: 0 0 10px $red;
     }
   }
 }
