@@ -13,6 +13,10 @@ body {
   padding: 0;
   margin: 0;
 
+  @media (max-width: 768px) {
+    font-size: 14pt;
+  }
+
   main {
     background: #fff;
 
@@ -42,7 +46,7 @@ body {
       letter-spacing: -0.03em;
 
       @media (max-width: 768px) {
-        font-size: 24pt;
+        font-size: 28pt;
       }
 
       strong {
@@ -182,7 +186,7 @@ body {
   }
 
   .video-frame.speech-bubble {
-    $width: 150px;
+    $width: 6em;
 
     &::before {
       @keyframes speak {
@@ -217,7 +221,6 @@ body {
       animation: speak 2s ease-out forwards;
       z-index: 100;
       text-align: center;
-      font-size: 20pt;
       align-items: center;
       justify-content: center;
     }
@@ -261,6 +264,13 @@ body {
       border-color: $red;
       box-shadow: 0 0 10px $red;
     }
+  }
+}
+
+.wide-only {
+  @media (max-width: 900px) {
+    visibility: hidden;
+    position: absolute;
   }
 }
 
