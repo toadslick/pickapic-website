@@ -33,19 +33,19 @@ styles: /styles/home.css
     Import pictures from these sources with only a few taps:
   %ul.feature-list
     %li
-      %a{ href: "#" } The camera
+      %a{ href: "#" } Camera
     %li
-      %a{ href: "#" } The Photos app
+      %a{ href: "#" } Photos
     %li
-      %a{ href: "#" } The Files app
+      %a{ href: "#" } Files
     %li
-      %a{ href: "#" } Copied from the web
+      %a{ href: "#" } Copy & Paste
     %li
       %a{ href: "#" } Emoji
     %li
       %a{ href: "#" } Text
     %li
-      %a{ href: "#" } Our gallery of examples
+      %a{ href: "#" } Our Gallery
 
 .two-column.arrow
   %div
@@ -54,8 +54,7 @@ styles: /styles/home.css
         %source{ src: "/assets/video/import-light.mp4", type: "video/mp4" }
   %div
     %p
-      From photo to tappable button in 20 seconds.
-      %br.wide-only
+      From photo to tappable button in seconds.
       Create the buttons you need as soon as you need them. 
 
 .two-column.arrow.two-column-reverse
@@ -65,16 +64,34 @@ styles: /styles/home.css
         %source{ src: "/assets/video/arrange-light.mp4", type: "video/mp4" }
   %div
     %p
-      After pictures are imported, it only takes one tap to turn them into a button on a page.
-      Buttons arrange themselves automatically. Long-press and drag to rearrange them.
+      It only takes one tap to turn an imported picture into a button on a page.
+      Buttons arrange themselves automatically. Drag to rearrange them.
+
+.two-column.arrow
+  %div
+    .video-frame
+      %video{ autoplay: true, muted: true, loop: true }
+        %source{ src: "/assets/video/pages-light.mp4", type: "video/mp4" }
+  %div
+    %p
+      Quickly navigate and rearrange pages while editing. 
+
+.two-column.arrow.two-column-reverse
+  %div
+    .video-frame
+      %video{ autoplay: true, muted: true, loop: true }
+        %source{ src: "/assets/video/lock-light.mp4", type: "video/mp4" }
+  %div
+    %p
+      Drag and hold to exit a book.
+      Keep books open by locking them with either Face ID or a four-digit passcode.
 
 .one-column
   %h2
     Made for
     %strong collaborating
   %p
-    Caregivers, behavior analysts, and therapists can
-    %a{ href: "#" } share their Pick-a-Pic files 
+    Caregivers, behavior analysts, and therapists can share their Pick-a-Pic files 
     %br.wide-only
     with each other by using
     %strong Dropbox
@@ -103,26 +120,27 @@ styles: /styles/home.css
   %ul.inline-list
     %li
       %span Organize your picture library using
-      %a{ href: "#" } search
+      %strong search
       ,
-      %a{ href: "#" } sort
+      %strong sort
       , and
-      %a{ href: "#" } tags
+      %strong tags
       .
-    %li
-      %a{ href: "#" } Lock books
-      \ with Face ID or a 4-digit passcode to prevent editing.
     %li
       %span Quickly fix mistakes with
-      %a{ href: "#" } undo and redo
+      %strong undo and redo
       .
     %li
-      %a{ href: "#" } Choose the voice
+      %strong Choose the voice
       \ that speaks when pictures are tapped.
   %p
     Pick-a-Pic is in active development.
-    %a{ href: "#" } Visit our product roadmap
+    %strong Visit our product roadmap
     \ to see the features that are coming next.
+
+.one-column
+  %a.app-store{ href: "#" }
+    %span Download on the App Store
 
 
 %script{ type: "text/javascript", src: "/scripts/hero.js" }
