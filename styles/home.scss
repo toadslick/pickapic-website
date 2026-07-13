@@ -15,27 +15,20 @@ body header nav ul {
   padding-bottom: 2em;
 
   h1 {
+    @include main.app-logo;
+
     $padding-left: calc((151 / 852) * 110%);
 
-    display: block;
-    position: relative;
     z-index: 3;
     margin-top: 10px;
 
     &::before {
       content: "";
-      display: block;
       margin: auto;
       margin-bottom: 20px;
       width: 30%;
       max-width: 150px;
       min-width: 100px;
-      aspect-ratio: 1;
-      background-image: url("/assets/style/icon.avif");
-      background-size: 100%;
-      border-radius: 20%;
-      box-shadow: 0 3px 6px #000000aa;
-      transform: rotate(-8deg);
     }
 
     &::after {
@@ -46,11 +39,6 @@ body header nav ul {
       aspect-ratio: 852 / 151;
       background-image: url("/assets/style/title.avif");
       background-size: 100% 100%;
-    }
-
-    .span {
-      position: absolute;
-      left: -9999px;
     }
   }
 

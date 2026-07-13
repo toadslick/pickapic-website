@@ -12,6 +12,27 @@ $two-column-min-width: 1000px;
 $video-width-in-frame: 93.7%;
 $video-height-in-frame: 91.73%;
 
+@mixin app-logo {
+  position: relative;
+  display: block;
+
+  span {
+    position: absolute;
+    left: -9999px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    aspect-ratio: 1;
+    background-image: url("/assets/style/icon.avif");
+    background-size: 100%;
+    border-radius: 20%;
+    box-shadow: 0 3px 6px #000000aa;
+    transform: rotate(-8deg);
+  }
+}
+
 html,
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
