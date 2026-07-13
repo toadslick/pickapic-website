@@ -5,6 +5,11 @@ $orange: #ff9535;
 $red: #fd6153;
 $blue: #069;
 
+$two-column-min-width: 1000px;
+
+$video-width-in-frame: 93.7%;
+$video-height-in-frame: 91.73%;
+
 html,
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -88,12 +93,14 @@ a.app-store {
   justify-content: center;
   align-items: center;
   max-width: 700px;
+  pointer-events: none;
+  user-select: none;
 
   video {
     position: relative;
     display: block;
-    width: 93.7%;
-    height: 91.73%;
+    width: $video-width-in-frame;
+    height: $video-height-in-frame;
     box-shadow: 0 20px 20px #000;
     z-index: 1;
   }
@@ -107,7 +114,7 @@ a.app-store {
     height: 100%;
     background-image: url("/assets/style/frame.avif");
     background-size: 100% 100%;
-    z-index: 2;
+    z-index: 3;
   }
 }
 
@@ -134,7 +141,7 @@ a.app-store {
     padding: 10px;
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: $two-column-min-width) {
     flex-direction: row;
     margin: auto;
 
@@ -150,7 +157,7 @@ a.app-store {
   &.two-column-reverse {
     flex-direction: column;
 
-    @media (min-width: 1000px) {
+    @media (min-width: $two-column-min-width) {
       flex-direction: row-reverse;
     }
   }
@@ -159,7 +166,7 @@ a.app-store {
     background: linear-gradient(#9cf0 0%, #9cfd 20%, #9cf0 90%);
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: $two-column-min-width) {
     &.arrow {
       background:
         linear-gradient(90deg, #fff 0%, #fff0 30%, #fff0 60%, #fff 100%),

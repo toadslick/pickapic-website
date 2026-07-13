@@ -71,6 +71,9 @@
   .video-frame.speech-bubble {
     $width: 6em;
 
+    pointer-events: none;
+    user-select: none;
+
     &::before {
       @keyframes speak {
         0% {
@@ -128,9 +131,6 @@
       @include speech-bubble(math.div(439, 1280), math.div(244, 890), "Apple");
     }
   }
-
-  + .two-column {
-  }
 }
 
 .feature-list {
@@ -165,8 +165,6 @@
   li {
     $size: 0.6em;
 
-    display: inline;
-
     &::before {
       content: "";
       display: inline-block;
@@ -185,6 +183,30 @@
 
     strong {
       font-weight: 700;
+    }
+  }
+}
+
+.two-column.arrow {
+  .video-frame::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: main.$video-width-in-frame;
+    height: main.$video-height-in-frame;
+    left: calc((100% - main.$video-width-in-frame) / 2);
+    top: calc((100% - main.$video-height-in-frame) / 2);
+    background: #000;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 1s;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .video-pause {
+    .video-frame::before {
+      opacity: 0.5;
     }
   }
 }

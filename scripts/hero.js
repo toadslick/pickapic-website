@@ -35,8 +35,34 @@
   const speak = function (index) {
     const className = speechTimes[index].className;
     frame.className = frameInitialClassName;
-    requestAnimationFrame(function () {
+    requestAnimationFrame(() => {
       frame.className = `${frameInitialClassName} speech-bubble speech-bubble-${className}`;
     });
   };
+})();
+
+(function () {
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        const video = entry.target.querySelector("video");
+        if (entry.intersectionRatio < 0.9) {
+          video.pause();
+          entry.target.className = "video-pause";
+        } else {
+          entry.target.className = "video-play";
+          video.play();
+        }
+      });
+    },
+    {
+      threshold: [0, 0.9],
+      delay: 200,
+    },
+  );
+
+  const sections = document.querySelectorAll(".arrow > div:first-child");
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
 })();
