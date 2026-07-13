@@ -5,6 +5,7 @@ $orange: #ff9535;
 $red: #fd6153;
 $blue: #07a;
 
+$two-column-max-width: 1400px;
 $two-column-min-width: 1000px;
 
 $video-width-in-frame: 93.7%;
@@ -121,7 +122,7 @@ a.app-store {
 .one-column {
   margin: 2em auto;
   padding: 0 20px;
-  max-width: 1400px;
+  max-width: $two-column-max-width;
   text-align: center;
 }
 
