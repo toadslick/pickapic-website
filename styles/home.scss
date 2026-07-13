@@ -1,26 +1,18 @@
 @use "main";
 @use "sass:math";
 
+body header nav ul {
+  li:first-child,
+  li:last-child {
+    display: none;
+  }
+}
+
 #hero {
   background:
     repeat-x left bottom/200% 10% url("/assets/style/clouds.avif"),
-    linear-gradient(#147 0%, #69c 70%);
-  padding: 30px 0 30px;
-
-  nav ul {
-    display: flex;
-    justify-content: flex-end;
-    max-width: main.$two-column-max-width;
-
-    li {
-      margin-right: 30px;
-    }
-
-    a {
-      color: #fff9;
-      border-bottom-color: #fff2;
-    }
-  }
+    linear-gradient(main.$dark-blue 0%, #69c 70%);
+  padding-bottom: 2em;
 
   h1 {
     $padding-left: calc((151 / 852) * 110%);

@@ -4,6 +4,7 @@
 $orange: #ff9535;
 $red: #fd6153;
 $blue: #07a;
+$dark-blue: #147;
 
 $two-column-max-width: 1400px;
 $two-column-min-width: 1000px;
@@ -22,6 +23,31 @@ body {
 
   @media (max-width: 768px) {
     font-size: 14pt;
+  }
+
+  header nav {
+    display: block;
+    background: $dark-blue;
+    padding: 1em 30px;
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      margin: auto;
+      max-width: $two-column-max-width;
+    }
+
+    li {
+      display: block;
+      margin-right: 30px;
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: 700;
+      color: #fff9;
+      border-bottom: 3px solid #fff3;
+    }
   }
 
   main {
