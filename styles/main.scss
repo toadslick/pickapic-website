@@ -40,34 +40,80 @@ body {
   font-size: 16pt;
   font-weight: 500;
   line-height: 1.5;
-  background: #26a;
+  background: #fff;
 
   @media (max-width: 768px) {
     font-size: 14pt;
   }
 
-  header nav {
+  header nav,
+  footer nav {
+    position: relative;
     display: block;
-    background: $dark-blue;
-    padding: 1em 30px;
+    height: 100px;
 
     ul {
       display: flex;
-      justify-content: flex-end;
       margin: auto;
+      padding: 0 30px;
       max-width: $two-column-max-width;
+      height: 70%;
+      align-items: center;
+      justify-content: flex-end;
     }
 
     li {
-      display: block;
-      margin-right: 30px;
+      margin-right: 50px;
+
+      &:first-child {
+        @include app-logo;
+        width: 4em;
+        margin-right: auto;
+        position: relative;
+        top: 20px;
+      }
+
+      &:last-child {
+        height: 70%;
+        margin-right: 0;
+      }
     }
 
     a {
       text-decoration: none;
       font-weight: 700;
-      color: #fff9;
-      border-bottom: 3px solid #fff3;
+      color: #fffc;
+
+      &.app-store {
+        height: 100%;
+        position: relative;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: #fff;
+      }
+    }
+  }
+
+  header nav {
+    background: linear-gradient($dark-blue 0%, $blue 70%, #07a0 70.0001%);
+  }
+
+  footer nav {
+    background: linear-gradient(#07a0 30%, $blue 30.0001%, $dark-blue 100%);
+
+    ul {
+      align-items: flex-end;
+
+      li:first-child {
+        @include app-logo;
+        width: 4em;
+        margin-right: auto;
+        position: relative;
+        top: -20px;
+      }
     }
   }
 
@@ -123,9 +169,8 @@ a.app-store {
   margin: auto;
   position: relative;
   background-image: url("/assets/style/app-store.svg");
+  aspect-ratio: 240 / 80;
   background-size: 100% 100%;
-  width: 240px;
-  height: 80px;
   border: none;
 
   span {

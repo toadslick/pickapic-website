@@ -126,6 +126,10 @@ body header nav ul {
       @include speech-bubble(math.div(439, 1280), math.div(244, 890), "Apple");
     }
   }
+
+  a.app-store {
+    width: 240px;
+  }
 }
 
 .feature-list {
