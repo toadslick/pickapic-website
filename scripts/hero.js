@@ -1,3 +1,5 @@
+// Spawn the speech bubbles that appear in over the hero header.
+
 (function () {
   const frame = document.querySelector("#hero .video-frame");
   const video = document.querySelector("#hero video");
@@ -39,30 +41,4 @@
       frame.className = `${frameInitialClassName} speech-bubble speech-bubble-${className}`;
     });
   };
-})();
-
-(function () {
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        const video = entry.target.querySelector("video");
-        if (entry.intersectionRatio < 0.9) {
-          video.pause();
-          entry.target.className = "video-pause";
-        } else {
-          entry.target.className = "video-play";
-          video.play();
-        }
-      });
-    },
-    {
-      threshold: [0, 0.9],
-      delay: 200,
-    },
-  );
-
-  const sections = document.querySelectorAll(".arrow > div:first-child");
-  sections.forEach((section) => {
-    observer.observe(section);
-  });
 })();

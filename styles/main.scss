@@ -3,7 +3,7 @@
 
 $orange: #ff9535;
 $red: #fd6153;
-$blue: #069;
+$blue: #07a;
 
 $two-column-min-width: 1000px;
 
@@ -39,8 +39,8 @@ body {
     a {
       text-decoration: none;
       color: $blue;
-      border-bottom: 3px dotted $orange;
-      font-weight: 600;
+      border-bottom: 3px solid #07a3;
+      font-weight: 700;
     }
 
     h2 {
