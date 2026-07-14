@@ -5,6 +5,7 @@ $orange: #ff9535;
 $red: #fd6153;
 $blue: #07a;
 $dark-blue: #147;
+$light-blue: #adf;
 
 $two-column-max-width: 1400px;
 $two-column-min-width: 1000px;
@@ -28,7 +29,7 @@ $video-height-in-frame: 91.73%;
     background-image: url("/assets/style/icon.avif");
     background-size: 100%;
     border-radius: 20%;
-    box-shadow: 0 3px 6px #000000aa;
+    box-shadow: 0 3px 6px #000a;
     transform: rotate(-8deg);
   }
 }
@@ -46,73 +47,73 @@ body {
     font-size: 14pt;
   }
 
-  header nav,
-  footer nav {
-    position: relative;
-    display: block;
-    height: 100px;
+  header,
+  footer {
+    background: $dark-blue;
 
-    ul {
-      display: flex;
-      margin: auto;
-      padding: 0 30px;
+    nav ul {
+      padding: 0 20px;
       max-width: $two-column-max-width;
-      height: 70%;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
       align-items: center;
-      justify-content: flex-end;
+
+      li {
+        + li {
+          margin-left: 30px;
+        }
+
+        a {
+          font-weight: 700;
+          color: #adf;
+          text-decoration: none;
+
+          &:hover,
+          &:focus {
+            color: #fff;
+            border-bottom: 3px solid $blue;
+          }
+        }
+
+        &:first-child {
+          position: relative;
+          margin-right: auto;
+
+          a {
+            @include app-logo;
+
+            width: 80px;
+            border: none;
+          }
+        }
+
+        &:last-child a {
+          height: 60px;
+          border: none;
+        }
+      }
     }
 
-    li {
-      margin-right: 50px;
-
-      &:first-child {
-        @include app-logo;
-        width: 4em;
-        margin-right: auto;
-        position: relative;
-        top: 20px;
-      }
-
-      &:last-child {
-        height: 70%;
-        margin-right: 0;
-      }
-    }
-
-    a {
-      text-decoration: none;
-      font-weight: 700;
-      color: #fffc;
-
-      &.app-store {
-        height: 100%;
-        position: relative;
-      }
-
-      &:hover,
-      &:focus,
-      &:active {
-        color: #fff;
-      }
+    p {
+      color: #fffd;
+      font-size: 12pt;
+      text-align: center;
     }
   }
 
-  header nav {
-    background: linear-gradient($dark-blue 0%, $blue 70%, #07a0 70.0001%);
+  header nav ul li:first-child {
+    top: 12px;
   }
 
-  footer nav {
-    background: linear-gradient(#07a0 30%, $blue 30.0001%, $dark-blue 100%);
+  footer {
+    padding-bottom: 20px;
 
-    ul {
-      align-items: flex-end;
+    nav {
+      padding-bottom: 20px;
 
-      li:first-child {
-        @include app-logo;
-        width: 4em;
-        margin-right: auto;
-        position: relative;
-        top: -20px;
+      ul li:first-child {
+        top: -12px;
       }
     }
   }

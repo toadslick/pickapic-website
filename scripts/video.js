@@ -6,27 +6,36 @@
     (entries, observer) => {
       entries.forEach((entry) => {
         const video = entry.target.querySelector("video");
+        const divs = Array.from(entry.target.children);
 
         // Don't pause video if it is larger than the viewport.
         const videoFillsViewport =
           entry.target.clientHeight > window.innerHeight * 0.8;
 
-        if (entry.intersectionRatio > 0.9 || videoFillsViewport) {
-          entry.target.className = "video-play";
+        if (entry.intersectionRatio >= 0.6 || videoFillsViewport) {
+          divs.forEach((div) => {
+            div.className = "video-play";
+          });
           video.play();
         } else {
+          divs.forEach((div) => {
+            if (div.className == "video-play") {
+              div.className = "video-pause video-play-ended";
+            } else {
+              div.className = "video-pause";
+            }
+          });
           video.pause();
-          entry.target.className = "video-pause";
         }
       });
     },
     {
-      threshold: [0, 0.9],
+      threshold: [0, 0.6],
       delay: 200,
     },
   );
 
-  const sections = document.querySelectorAll(".arrow > div:first-child");
+  const sections = document.querySelectorAll(".arrow");
   sections.forEach((section) => {
     observer.observe(section);
 
