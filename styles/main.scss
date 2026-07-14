@@ -13,6 +13,8 @@ $two-column-min-width: 1000px;
 $video-width-in-frame: 93.7%;
 $video-height-in-frame: 91.73%;
 
+$compact-nav-max-width: 600px;
+
 @mixin app-logo {
   position: relative;
   display: block;
@@ -100,10 +102,27 @@ body {
       font-size: 12pt;
       text-align: center;
     }
+
+    @media (max-width: $compact-nav-max-width) {
+      nav ul {
+        padding-bottom: 60px;
+        position: relative;
+
+        li:last-child {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+        }
+      }
+    }
   }
 
   header nav ul li:first-child {
     top: 12px;
+
+    @media (max-width: $compact-nav-max-width) {
+      top: 20px;
+    }
   }
 
   footer {
@@ -114,6 +133,10 @@ body {
 
       ul li:first-child {
         top: -12px;
+
+        @media (max-width: $compact-nav-max-width) {
+          top: 20px;
+        }
       }
     }
   }

@@ -5,11 +5,15 @@ body header nav {
   background: main.$dark-blue;
   padding-top: 15px;
 
-  ul li {
-    &:first-child,
-    &:last-child {
-      a {
-        display: none;
+  ul {
+    padding-bottom: 0 !important;
+
+    li {
+      &:first-child,
+      &:last-child {
+        a {
+          display: none;
+        }
       }
     }
   }
@@ -111,12 +115,12 @@ body header nav {
 
         70% {
           opacity: 1;
-          transform: translateY(-100px);
+          transform: translateY(-50px);
         }
 
         100% {
           opacity: 0;
-          transform: translateY(-100px);
+          transform: translateY(-50px);
         }
       }
 
