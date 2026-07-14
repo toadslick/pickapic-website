@@ -19,8 +19,6 @@ body header nav {
   }
 
   @media (max-width: main.$two-column-min-width) {
-    margin-bottom: -20px;
-
     ul li {
       + li {
         margin: 0 10px;
@@ -62,12 +60,8 @@ body header nav {
 
     &::after {
       content: "";
-      display: block;
       margin: auto;
       max-width: 600px;
-      aspect-ratio: 852 / 151;
-      background-image: url("/assets/style/title.avif");
-      background-size: 100% 100%;
     }
   }
 
@@ -220,6 +214,8 @@ body header nav {
 }
 
 .two-column.arrow {
+  overflow-x: hidden;
+
   .video-frame::before {
     content: "";
     position: absolute;
@@ -237,7 +233,7 @@ body header nav {
   }
 
   @media (min-width: main.$two-column-min-width) {
-    p {
+    figcaption {
       transition:
         opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
         transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -249,7 +245,7 @@ body header nav {
       .video-frame::before {
         opacity: 0.5;
       }
-      p {
+      figcaption {
         opacity: 0;
         transform: translateX($distance);
       }
@@ -261,7 +257,7 @@ body header nav {
     }
 
     &.two-column-reverse .video-pause {
-      p {
+      figcaption {
         transform: translateX(-1 * $distance);
       }
 

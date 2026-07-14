@@ -3,7 +3,6 @@ layout: layout.njk
 styles: /styles/home.css
 ---
 
-
 #hero
   .two-column
     %div
@@ -40,42 +39,42 @@ styles: /styles/home.css
     %li Text
     %li Our Gallery
 
-.two-column.arrow
+%figure.two-column.arrow
   %div
     .video-frame
       %video{ autoplay: true, muted: true, loop: true }
         %source{ src: "/assets/video/import-light.mp4", type: "video/mp4" }
   %div
-    %p
+    %figcaption
       From photo to tappable button in seconds.
       Create the buttons you need as soon as you need them. 
 
-.two-column.arrow.two-column-reverse
+%figure.two-column.arrow.two-column-reverse
   %div
     .video-frame
       %video{ autoplay: true, muted: true, loop: true }
         %source{ src: "/assets/video/arrange-light.mp4", type: "video/mp4" }
   %div
-    %p
+    %figcaption
       It only takes one tap to turn an imported picture into a button on a page.
       Buttons arrange themselves automatically. Drag to rearrange them.
 
-.two-column.arrow
+%figure.two-column.arrow
   %div
     .video-frame
       %video{ autoplay: true, muted: true, loop: true }
         %source{ src: "/assets/video/pages-light.mp4", type: "video/mp4" }
   %div
-    %p
+    %figcaption
       Quickly navigate and rearrange pages while editing. 
 
-.two-column.arrow.two-column-reverse
+%figure.two-column.arrow.two-column-reverse
   %div
     .video-frame
       %video{ autoplay: true, muted: true, loop: true }
         %source{ src: "/assets/video/lock-light.mp4", type: "video/mp4" }
   %div
-    %p
+    %figcaption
       Drag and hold to exit a book.
       Keep books open by locking them with either Face ID or a four-digit passcode.
 

@@ -34,6 +34,14 @@ $compact-nav-max-width: 600px;
     box-shadow: 0 3px 6px #000a;
     transform: rotate(-8deg);
   }
+
+  &::after {
+    content: "";
+    display: block;
+    aspect-ratio: 852 / 151;
+    background-image: url("/assets/style/title.avif");
+    background-size: 100% 100%;
+  }
 }
 
 html,
@@ -51,56 +59,72 @@ body {
 
   header,
   footer {
-    background: $dark-blue;
+    background:
+      linear-gradient($dark-blue 50%, $blue 98%, $light-blue 100%), $dark-blue;
 
-    nav ul {
-      padding: 0 20px;
-      max-width: $two-column-max-width;
-      margin: auto;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
+    nav {
+      ul {
+        padding: 0 20px;
+        max-width: $two-column-max-width;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
 
-      li {
-        + li {
-          margin-left: 30px;
-        }
-
-        a {
-          font-weight: 700;
-          color: #adf;
-          text-decoration: none;
-
-          &:hover,
-          &:focus {
-            color: #fff;
-            border-bottom: 3px solid $blue;
+        li {
+          + li {
+            margin-left: 30px;
           }
-        }
-
-        &:first-child {
-          position: relative;
-          margin-right: auto;
 
           a {
-            @include app-logo;
+            font-weight: 700;
+            color: #adf;
+            text-decoration: none;
 
-            width: 80px;
+            &:hover,
+            &:focus {
+              color: #fff;
+              border-bottom: 3px solid $blue;
+            }
+          }
+
+          &:first-child {
+            margin-right: auto;
+
+            a {
+              @include app-logo;
+
+              border: none;
+              display: flex;
+              align-items: center;
+
+              &::before {
+                position: relative;
+                width: 80px;
+              }
+
+              &::after {
+                position: relative;
+                height: 50px;
+                margin-left: 20px;
+
+                @media (max-width: 1000px) {
+                  height: 40px;
+                }
+
+                @media (max-width: 800px) {
+                  display: none;
+                }
+              }
+            }
+          }
+
+          &:last-child a {
+            height: 60px;
             border: none;
           }
         }
-
-        &:last-child a {
-          height: 60px;
-          border: none;
-        }
       }
-    }
-
-    p {
-      color: #fffd;
-      font-size: 12pt;
-      text-align: center;
     }
 
     @media (max-width: $compact-nav-max-width) {
@@ -117,7 +141,7 @@ body {
     }
   }
 
-  header nav ul li:first-child {
+  header nav ul li:first-child a::before {
     top: 12px;
 
     @media (max-width: $compact-nav-max-width) {
@@ -127,16 +151,29 @@ body {
 
   footer {
     padding-bottom: 20px;
+    background:
+      linear-gradient($light-blue 0%, $blue 1%, $dark-blue 100%), $dark-blue;
 
     nav {
       padding-bottom: 20px;
 
-      ul li:first-child {
+      ul li:first-child a::before {
         top: -12px;
 
         @media (max-width: $compact-nav-max-width) {
           top: 20px;
         }
+      }
+    }
+
+    p {
+      color: #fffd;
+      font-size: 12pt;
+      text-align: center;
+
+      strong {
+        color: $orange;
+        font-weight: 800;
       }
     }
   }
@@ -289,30 +326,26 @@ a.app-store {
         linear-gradient(90deg, #fff 0%, #fff0 30%, #fff0 60%, #fff 100%),
         linear-gradient(#fff 60%, #9cfa 85%, #fff 90%);
 
-      > :last-child {
-        p {
-          display: flex;
-          align-items: center;
-          text-align: left;
-          padding-left: 3em;
-          background: no-repeat left center/2.5em
-            url("/assets/style/bracket-left.avif");
-          min-height: 10em;
-        }
+      figcaption {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        padding-left: 3em;
+        background: no-repeat left center/2.5em
+          url("/assets/style/bracket-left.avif");
+        min-height: 10em;
       }
     }
 
     &.two-column-reverse {
-      > :last-child {
-        p {
-          display: flex;
-          align-items: center;
-          text-align: right;
-          padding-right: 3em;
-          background: no-repeat right center/2.5em
-            url("/assets/style/bracket-right.avif");
-          min-height: 10em;
-        }
+      figcaption {
+        display: flex;
+        align-items: center;
+        text-align: right;
+        padding-right: 3em;
+        background: no-repeat right center/2.5em
+          url("/assets/style/bracket-right.avif");
+        min-height: 10em;
       }
     }
   }
