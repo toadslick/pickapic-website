@@ -15,6 +15,8 @@ $video-height-in-frame: 91.73%;
 
 $compact-nav-max-width: 600px;
 
+$curve: cubic-bezier(0.075, 0.82, 0.165, 1);
+
 @mixin app-logo {
   position: relative;
   display: block;
@@ -184,6 +186,7 @@ footer {
   $handle-size: $size * 0.75;
   $offset: math.div($size - $handle-size, 2);
 
+  display: none;
   position: relative;
 
   input,
@@ -193,19 +196,24 @@ footer {
   }
 
   label {
+    cursor: pointer;
+
     &::before {
       content: "";
       display: block;
       height: $size;
       width: $size * 2;
       border-radius: math.div($size, 2);
-      // border: 1px solid $light-blue;
       background: #0007;
+      box-shadow:
+        0 1px 0 #fff3,
+        0 1px 5px #000 inset;
     }
 
     &::after {
-      content: "☀";
-      display: flex;
+      content: "";
+      display: block;
+      text-align: center;
       align-items: center;
       justify-content: center;
       height: $handle-size;
@@ -214,16 +222,29 @@ footer {
       position: absolute;
       left: $offset;
       top: $offset;
-      background: $blue;
-      transition: left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-      color: #fff;
+      background: no-repeat left top/200% 100%
+        url("/assets/style/dark-mode.png");
+      background-color: $dark-blue;
+      transition:
+        left 1s $curve,
+        background-position 1s $curve;
+      color: $light-blue;
+      box-shadow:
+        0 1px 0 #fff5 inset,
+        0 1px 2px #000;
+      font-weight: bolder;
+      line-height: 1.2;
     }
   }
 
   input:checked + label::after {
+    background-position: 100% top;
     left: ($size * 2) - $offset - $handle-size;
-    content: "☾";
   }
+}
+
+.mode-set #dark-mode-toggle {
+  display: block;
 }
 
 main {

@@ -6,7 +6,7 @@ company: Pocket Pidgeon
 custom: [
   { tag: 'meta', attrs: { name: 'theme-color', content: '#114477' }},
   { tag: 'icon', attrs: { type: 'image/x-icon', sizes: '16x16 32x32', href: '/favicon.ico' }},
-  { tag: 'apple-touch-icon', attrs: { sizes: '192x192', href: 'favicon.png' }}
+  { tag: 'apple-touch-icon', attrs: { sizes: '192x192', href: '/favicon.png' }}
 ]
 ---
 
@@ -20,6 +20,12 @@ custom: [
   {% set styles = [styles] %}
 {% else %}
   {% set styles = ["/styles/main.css"] %}
+{% endif %}
+
+{% if scripts %}
+  {% set scripts = (scripts.push("/scripts/dark-mode.js:defer"), scripts) %}
+{% else %}
+  {% set scripts = ["/scripts/dark-mode.js:defer"] %}
 {% endif %}
 
 <!doctype html>
@@ -48,17 +54,17 @@ custom: [
               </span>
             </a>
           </li>
-          <li id="dark-mode-toggle">
-            <input type="checkbox" id="dark-mode"/>
-            <label for="dark-mode">
-              <span>Dark mode</span>
-            </label>
-          </li>
           <li>
             <a href="/help">Help</a>
           </li>
           <li>
             <a href="/about">About</a>
+          </li>
+          <li id="dark-mode-toggle">
+            <input type="checkbox" id="dark-mode"/>
+            <label for="dark-mode">
+              <span>Dark mode</span>
+            </label>
           </li>
           <li>
             <a class="app-store" href="#">

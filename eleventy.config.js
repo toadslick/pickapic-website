@@ -6,6 +6,8 @@ import hamlPlugin from "@11ty/eleventy-plugin-haml";
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("scripts");
+  eleventyConfig.addPassthroughCopy("favicon.ico");
+  eleventyConfig.addPassthroughCopy("favicon.png");
 
   eleventyConfig.addPlugin(metagen);
   eleventyConfig.addPlugin(hamlPlugin);
