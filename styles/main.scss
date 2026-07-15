@@ -4,6 +4,7 @@
 $orange: #ff9535;
 $red: #fd6153;
 $blue: #07a;
+$blue-dark-mode: #39c;
 $dark-blue: #147;
 $light-blue: #adf;
 
@@ -427,8 +428,31 @@ a.app-store {
   }
 }
 
-.dark-mode {
-  #hero h1::before {
-    background-position: 0 100%;
+@mixin dark-mode {
+  header,
+  footer {
+    nav menu li:first-child a::before {
+      background-image: url("/assets/style/icon-dark.avif");
+    }
   }
+
+  main {
+    background: #000;
+    color: #fff;
+
+    a {
+      color: $blue-dark-mode;
+      border-bottom-color: $dark-blue;
+    }
+  }
+}
+
+body:not(.mode-set-light) {
+  @media (prefers-color-scheme: dark) {
+    @include dark-mode;
+  }
+}
+
+body.mode-set-dark {
+  @include dark-mode;
 }
