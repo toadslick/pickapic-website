@@ -1,6 +1,10 @@
 ---
 layout: layout.njk
 styles: /styles/home.css
+scripts: [
+  "/scripts/hero.js:defer",
+  "/scripts/video.js:defer",
+]
 ---
 
 #hero
@@ -130,7 +134,3 @@ styles: /styles/home.css
     Pick-a-Pic is in active development.
     %a{ href: "/about#roadmap" } Visit our product roadmap
     \ to see the features that are coming next.
-
-
-%script{ type: "text/javascript", src: "/scripts/hero.js" }
-%script{ type: "text/javascript", src: "/scripts/video.js" }
