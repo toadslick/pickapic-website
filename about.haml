@@ -73,3 +73,79 @@ styles: /styles/main.css
   %p This analysis validated the ways that we envision Pick-a-Pic being useful in educational settings.
 
   %h2#roadmap Product Roadmap
+
+  %h3 Known bugs and fixes
+  %p
+    Bugs will be listed here as they are reported and confirmed.
+    Fixing bugs is our highest priority and fixes will be released as soon as possible.
+    Please
+    %a{ href: "TODO", target: "_blank" } contact us
+    \ if you've found a bug that isn't listed here.
+
+  %h3 Internationalization
+  %p
+    We've worked with many families that are not native English speakers and
+    we want to make Pick-a-Pic accessible to them as soon as we can. 
+    Additional language support will be added as time and budget allow.
+
+  %h3 Upcoming releases
+  %p These are our planned updates to Pick-a-Pic.
+
+  %h4: v1.1 Performance and stability improvements
+  %dl
+    %dd Concurrent picture creation
+    %dt Improve the speed of bulk picture creation by splitting it into concurrent background tasks.
+    %dd Handle downloading document
+    %dt When a document is opened via iCloud before it is fully downloaded, display a progress meter that indicates download progress.
+    %dd Handle empty document state
+    %dt Investigate whether the app can be put into a state where no document is opened. If so, handle it gracefully.
+    %dd Handle conflict document state
+    %dt If two users have saved conflicting versions of a Pick-a-Pic document, display an interface for conflict resolution.
+    %dd Improve state restoration
+    %dt
+      Define more
+      %a{ href: "https://developer.apple.com/documentation/foundation/nsuseractivity", target: "_blank" } NSUserActivity
+      \ objects so that app state can be restored in greater detail.
+    %dd Reduce cache memory footprint
+    %dt
+      Move cached data from RAM to disk by using
+      %a{ href: "https://developer.apple.com/documentation/foundation/urlcache", target: "_blank" } URLCache
+      \ instead of
+      %a{ href: "https://developer.apple.com/documentation/foundation/nscache", target: "_blank" } NSCache
+      \ when possible.
+
+  %h4: v1.2: Options for power users
+  %dl
+    %dd Bulk actions
+    %dt Enable multiple pictures to be tagged or deleted at one time.
+    %dd Bulk import
+    %dt Allow multiple photos or files to be imported.
+    %dd Tag on import
+    %dt Allow tags to be selected that will be applied to all pictures as they are imported.
+    %dd Duplicate book
+    %dt Allow books to be copied, including to other Pick-a-Pic files.
+    %dd Duplicate page or book
+    %dt Allow pages to be copied, including to other books.
+    %dd Import export book
+    %dt Allow books to be exported and then imported into other Pick-a-Pic documents.
+    %dd Import / export photo library
+    %dt Allow the photo library to be exported and then imported into other Pick-a-Pic documents.
+
+  %h4 v1.3: iPadOS integrations and conventions
+  %p This release will implement the small details that make an app feel truly polished and iPad-like.
+  %dl
+    %dd Live document thumbnail
+    %dt
+      Implement
+      %a{ href: "https://developer.apple.com/documentation/quicklookthumbnailing/qlthumbnailprovider", target: "_blank" } QLThumbnailProvider 
+      to make Pick-a-Pic document file thumbnails display the cover of one of their books.
+    %dd Keyboard shortcuts
+    %dt Create keyboard shortcuts for common app actions, such as importing, renaming, deleting, or even scrolling through pages.
+    %dd Add app to share sheets
+    %dt
+      Implement
+      %a{ href: "https://developer.apple.com/documentation/social/slcomposeserviceviewcontroller", target: "_blank" } SLComposeServiceViewController
+      to allow images to be imported as pictures through the system share sheet.
+    %dd Rename document while in app
+    %dt Allow the currently opened document to be renamed without exiting to the file picker.
+  
