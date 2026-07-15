@@ -56,172 +56,219 @@ body {
   @media (max-width: 768px) {
     font-size: 14pt;
   }
+}
 
-  header,
-  footer {
-    background:
-      linear-gradient($dark-blue 50%, $blue 98%, $light-blue 100%), $dark-blue;
+header,
+footer {
+  background:
+    linear-gradient($dark-blue 50%, $blue 98%, $light-blue 100%), $dark-blue;
 
-    nav {
-      menu {
-        padding: 0 20px;
-        max-width: $two-column-max-width;
-        margin: auto;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+  nav {
+    menu {
+      padding: 0 20px;
+      max-width: $two-column-max-width;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
 
-        li {
-          + li {
-            margin-left: 30px;
+      li {
+        + li {
+          margin-left: 30px;
+        }
+
+        a {
+          font-weight: 700;
+          color: #adf;
+          text-decoration: none;
+
+          &:hover,
+          &:focus {
+            color: #fff;
+            border-bottom: 3px solid $blue;
           }
+        }
+
+        &:first-child {
+          margin-right: auto;
 
           a {
-            font-weight: 700;
-            color: #adf;
-            text-decoration: none;
+            @include app-logo;
 
-            &:hover,
-            &:focus {
-              color: #fff;
-              border-bottom: 3px solid $blue;
-            }
-          }
-
-          &:first-child {
-            margin-right: auto;
-
-            a {
-              @include app-logo;
-
-              border: none;
-              display: flex;
-              align-items: center;
-
-              &::before {
-                position: relative;
-                width: 80px;
-              }
-
-              &::after {
-                position: relative;
-                height: 50px;
-                margin-left: 20px;
-
-                @media (max-width: 1000px) {
-                  height: 40px;
-                }
-
-                @media (max-width: 800px) {
-                  display: none;
-                }
-              }
-            }
-          }
-
-          &:last-child a {
-            height: 60px;
             border: none;
+            display: flex;
+            align-items: center;
+
+            &::before {
+              position: relative;
+              width: 80px;
+            }
+
+            &::after {
+              position: relative;
+              height: 50px;
+              margin-left: 20px;
+
+              @media (max-width: 1000px) {
+                height: 40px;
+              }
+
+              @media (max-width: 800px) {
+                display: none;
+              }
+            }
           }
         }
-      }
-    }
 
-    @media (max-width: $compact-nav-max-width) {
-      nav menu {
-        padding-bottom: 60px;
-        position: relative;
-
-        li:last-child {
-          position: absolute;
-          bottom: 10px;
-          right: 10px;
+        &:last-child a {
+          height: 60px;
+          border: none;
         }
       }
     }
   }
 
-  header nav menu li:first-child a::before {
-    top: 12px;
+  @media (max-width: $compact-nav-max-width) {
+    nav menu {
+      padding-bottom: 60px;
+      position: relative;
 
-    @media (max-width: $compact-nav-max-width) {
-      top: 20px;
+      li:last-child {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+      }
     }
   }
+}
 
-  footer {
+header nav menu li:first-child a::before {
+  top: 12px;
+
+  @media (max-width: $compact-nav-max-width) {
+    top: 20px;
+  }
+}
+
+footer {
+  padding-bottom: 20px;
+  background:
+    linear-gradient($light-blue 0%, $blue 1%, $dark-blue 100%), $dark-blue;
+
+  nav {
     padding-bottom: 20px;
-    background:
-      linear-gradient($light-blue 0%, $blue 1%, $dark-blue 100%), $dark-blue;
 
-    nav {
-      padding-bottom: 20px;
+    ul li:first-child a::before {
+      top: -12px;
 
-      ul li:first-child a::before {
-        top: -12px;
-
-        @media (max-width: $compact-nav-max-width) {
-          top: 20px;
-        }
-      }
-    }
-
-    p {
-      color: #fffd;
-      font-size: 12pt;
-      text-align: center;
-
-      strong {
-        color: $orange;
-        font-weight: 800;
+      @media (max-width: $compact-nav-max-width) {
+        top: 20px;
       }
     }
   }
 
-  main {
-    background: #fff;
-    padding-bottom: 50px;
-    overflow-x: hidden;
+  p {
+    color: #fffd;
+    font-size: 12pt;
+    text-align: center;
 
-    p {
+    strong {
+      color: $orange;
+      font-weight: 800;
+    }
+  }
+}
+
+#dark-mode-toggle {
+  $size: 1.7em;
+  $handle-size: $size * 0.75;
+  $offset: math.div($size - $handle-size, 2);
+
+  position: relative;
+
+  input,
+  span {
+    position: absolute;
+    left: -9999px;
+  }
+
+  label {
+    &::before {
+      content: "";
       display: block;
-      margin: 0 auto 0.5em;
-
-      strong {
-        font-weight: 700;
-      }
+      height: $size;
+      width: $size * 2;
+      border-radius: math.div($size, 2);
+      // border: 1px solid $light-blue;
+      background: #0007;
     }
 
-    a {
-      text-decoration: none;
-      color: $blue;
-      border-bottom: 3px solid #07a3;
+    &::after {
+      content: "☀";
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: $handle-size;
+      aspect-ratio: 1;
+      border-radius: math.div($handle-size, 2);
+      position: absolute;
+      left: $offset;
+      top: $offset;
+      background: $blue;
+      transition: left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      color: #fff;
+    }
+  }
+
+  input:checked + label::after {
+    left: ($size * 2) - $offset - $handle-size;
+    content: "☾";
+  }
+}
+
+main {
+  background: #fff;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+
+  p {
+    display: block;
+    margin: 0 auto 0.5em;
+
+    strong {
       font-weight: 700;
     }
+  }
 
-    h2 {
-      display: block;
-      margin: 0.5em auto 0.2em;
-      font-family:
-        ui-rounded,
-        -apple-system,
-        BlinkMacSystemFont,
-        sans-serif;
-      font-size: 38pt;
-      font-weight: 800;
-      color: $orange;
-      // text-transform: uppercase;
-      text-align: center;
-      line-height: 0.97;
-      letter-spacing: -0.03em;
+  a {
+    text-decoration: none;
+    color: $blue;
+    border-bottom: 3px solid #07a3;
+    font-weight: 700;
+  }
 
-      @media (max-width: 768px) {
-        font-size: 28pt;
-      }
+  h2 {
+    display: block;
+    margin: 0.5em auto 0.2em;
+    font-family:
+      ui-rounded,
+      -apple-system,
+      BlinkMacSystemFont,
+      sans-serif;
+    font-size: 38pt;
+    font-weight: 800;
+    color: $orange;
+    // text-transform: uppercase;
+    text-align: center;
+    line-height: 0.97;
+    letter-spacing: -0.03em;
 
-      strong {
-        color: $red;
-      }
+    @media (max-width: 768px) {
+      font-size: 28pt;
+    }
+
+    strong {
+      color: $red;
     }
   }
 }
