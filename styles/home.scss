@@ -5,7 +5,7 @@ body header nav {
   background: main.$dark-blue;
   padding-top: 15px;
 
-  ul {
+  menu {
     padding-bottom: 0 !important;
 
     li {
@@ -19,7 +19,7 @@ body header nav {
   }
 
   @media (max-width: main.$two-column-min-width) {
-    ul li {
+    menu li {
       + li {
         margin: 0 10px;
       }
@@ -214,8 +214,6 @@ body header nav {
 }
 
 .two-column.arrow {
-  overflow-x: hidden;
-
   .video-frame::before {
     content: "";
     position: absolute;
@@ -250,7 +248,7 @@ body header nav {
         transform: translateX($distance);
       }
 
-      &.video-play-ended p {
+      &.video-play-ended figcaption {
         transform: none;
         transition: opacity 2s;
       }
@@ -261,7 +259,7 @@ body header nav {
         transform: translateX(-1 * $distance);
       }
 
-      &.video-play-ended p {
+      &.video-play-ended figcaption {
         transform: none;
       }
     }

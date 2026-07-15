@@ -51,7 +51,7 @@ body {
   font-size: 16pt;
   font-weight: 500;
   line-height: 1.5;
-  background: #fff;
+  background: $dark-blue;
 
   @media (max-width: 768px) {
     font-size: 14pt;
@@ -63,7 +63,7 @@ body {
       linear-gradient($dark-blue 50%, $blue 98%, $light-blue 100%), $dark-blue;
 
     nav {
-      ul {
+      menu {
         padding: 0 20px;
         max-width: $two-column-max-width;
         margin: auto;
@@ -128,7 +128,7 @@ body {
     }
 
     @media (max-width: $compact-nav-max-width) {
-      nav ul {
+      nav menu {
         padding-bottom: 60px;
         position: relative;
 
@@ -141,7 +141,7 @@ body {
     }
   }
 
-  header nav ul li:first-child a::before {
+  header nav menu li:first-child a::before {
     top: 12px;
 
     @media (max-width: $compact-nav-max-width) {
@@ -181,6 +181,7 @@ body {
   main {
     background: #fff;
     padding-bottom: 50px;
+    overflow-x: hidden;
 
     p {
       display: block;
@@ -209,7 +210,7 @@ body {
       font-size: 38pt;
       font-weight: 800;
       color: $orange;
-      text-transform: uppercase;
+      // text-transform: uppercase;
       text-align: center;
       line-height: 0.97;
       letter-spacing: -0.03em;

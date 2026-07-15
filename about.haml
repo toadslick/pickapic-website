@@ -3,16 +3,73 @@ layout: layout.njk
 styles: /styles/main.css
 ---
 
-%section#why
-  %h2 Why we created Pick-a-Pic
+%h1 About
 
-%section#research
-  %h2 Supporting Research
-  
+%nav
+  %menu
+    %li
+      %a{ href: "#why" } Why we made Pick-a-Pic
+      %a{ href: "#research" } Supporting Research
+      %a{ href: "#roadmap" } Product Roadmap
+
+%section
+  %h2#why Why we made Pick-a-Pic
+
+  %h2#research Supporting Research
+
   %h3
-    Design Specifications of Augmentative and Alternative Communication Apps for Individuals with Autism Spectrum Disorder
+    %a{ href: "https://files.eric.ed.gov/fulltext/EJ1378311.pdf", target: "_blank" }
+      Design Specifications of Augmentative and Alternative Communication Apps for Individuals with Autism Spectrum Disorder
+  %cite
+    Polat, H., & Delialioglu, O. (2023).
+    %em International Journal of Technology in Education (IJTE)
+    , 6(1), 19-36.
+    %a{ href: "https://doi.org/10.46328/ijte.396", target: "_blank" } https://doi.org/10.46328/ijte.396
   %p
+    This analysis informed the design choices behind Pick-a-Pic by emphasizing the importance of these qualities in AAC apps:
+  %ul
+    %li Just-in-time customization
+    %li Ease of use and design
+    %li Ease of customization of voice and %arrangement 
+    %li TODO: INSERT OTHER RECOMMENDED FEATURES
 
+  %h3
+    %a{ href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9266194/", target: "_blank" }
+      Parents' Perceptions and Experiences with Their Children's Use of Augmentative/Alternative Communication: A Systematic Review and Qualitative Meta-Synthesis
+  %cite
+    Berenguer, C.; Martínez, E.R.; De Stasio, S.; Baixauli, I.
+    %em Int. J. Environ. Res. Public Health
+    \ 2022, 19, 8091.
+    %a{ href: "https://doi.org/10.3390/ijerph19138091", target: "_blank" } https://doi.org/10.3390/ijerph19138091
+  %p
+    This analysis validated our own experience with the barriers that prevented learners and caregivers from using their AAC apps:
+    %ul
+      %li High cost
+      %li Time investment
+      %li Training needed
+      %li Lack of individualization
+      %li Inconsistent use across settings
 
-%section#roadmap
-  %h2 Product Roadmap
+  %h3
+    %a{ href: "https://link.springer.com/article/10.1007/s10882-021-09803-y", target: "_blank" }
+      A Systematic Review of Research Comparing Mobile Technology Speech-Generating Devices to Other AAC Modes with Individuals with Autism Spectrum Disorder
+  %cite
+    Lorah, E.R., Holyfield, C., Miller, J. et al.
+    %em J Dev Phys Disabil
+    \ 34, 187-210 (2022).
+    %a{ href: "https://doi.org/10.1007/s10882-021-09803-y", target: "_blank" } https://doi.org/10.1007/s10882-021-09803-y
+  %p
+    This analysis validated the core assumption of our app &mdash; that individuals learning the basics of functional communication
+    were not being served by complex AAC apps and instead needed something rooted in the simplicity of PECS.
+
+  %h3
+    %a{ href: "https://link.springer.com/article/10.1007/s40489-022-00334-6", target: "_blank" }
+      A Systematic Review of Evidence-based Instruction for Individuals with Autism Using Mobile Augmentative and Alternative Communication Technology
+  %cite
+    Lorah, E.R., Holyfield, C., Griffen, B. et al.
+    %em Rev J Autism Dev Disord
+    \ 11, 210-224 (2024).
+    %a{ href: "https://doi.org/10.1007/s40489-022-00334-6", target: "_blank" } https://doi.org/10.1007/s40489-022-00334-6
+  %p This analysis validated the ways that we envision Pick-a-Pic being useful in educational settings.
+
+  %h2#roadmap Product Roadmap
