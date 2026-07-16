@@ -198,11 +198,6 @@ body header nav {
       width: $size;
       border-radius: calc($size / 2);
       margin: 0 0.3em;
-      background-color: main.$orange;
-      box-shadow: 0 0 calc($size / 2) main.$orange;
-    }
-
-    &:nth-child(2n)::before {
       background-color: main.$red;
       box-shadow: 0 0 calc($size / 2) main.$red;
     }
