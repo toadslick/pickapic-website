@@ -267,7 +267,16 @@ main {
   a {
     text-decoration: none;
     color: $blue;
-    border-bottom: 3px solid #07a3;
+    border-bottom: 0 solid #07a3;
+    font-weight: 700;
+
+    &:hover,
+    &:focus {
+      border-width: 3px;
+    }
+  }
+
+  h1 {
     font-weight: 700;
   }
 
@@ -292,6 +301,43 @@ main {
 
     strong {
       color: $red;
+    }
+  }
+
+  h3 {
+    font-size: 20pt;
+    color: $orange;
+    font-weight: 700;
+  }
+
+  article {
+    max-width: $two-column-max-width;
+    margin: auto;
+    padding: 0 30px;
+
+    nav {
+      float: right;
+      border-left: 3px solid $red;
+      padding: 0.5em 0 0 1em;
+      margin: 0 0 0 20px;
+    }
+
+    ul,
+    menu {
+      list-style-type: disc;
+      padding-left: 1em;
+      margin-bottom: 1em;
+
+      ::marker {
+        color: $orange;
+        text-shadow: 0 0 5px $orange;
+      }
+    }
+
+    cite {
+      font-size: 12pt;
+      margin-bottom: 1em;
+      display: inline-block;
     }
   }
 }
@@ -451,7 +497,7 @@ a.app-store {
   footer nav menu li:first-child a {
     &::before {
       background-position: left bottom;
-      border: 1px solid $blue;
+      border: 2px solid $blue;
     }
     &::after {
       background-position: left bottom;
