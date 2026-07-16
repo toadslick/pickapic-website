@@ -3,7 +3,7 @@
 
 $orange: #ff9535;
 $red: #fd6153;
-$blue: #07a;
+$blue: #07b;
 $blue-dark-mode: #39c;
 $dark-blue: #147;
 $light-blue: #adf;
@@ -15,6 +15,8 @@ $video-width-in-frame: 93.7%;
 $video-height-in-frame: 91.73%;
 
 $compact-nav-max-width: 600px;
+
+$large-font-max-width: 768px;
 
 $curve: cubic-bezier(0.075, 0.82, 0.165, 1);
 
@@ -56,7 +58,7 @@ body {
   line-height: 1.5;
   background: $dark-blue;
 
-  @media (max-width: 768px) {
+  @media (max-width: $large-font-max-width) {
     font-size: 14pt;
   }
 }
@@ -280,12 +282,11 @@ main {
     font-size: 38pt;
     font-weight: 800;
     color: $orange;
-    // text-transform: uppercase;
-    text-align: center;
+    text-align: left;
     line-height: 0.97;
     letter-spacing: -0.03em;
 
-    @media (max-width: 768px) {
+    @media (max-width: $large-font-max-width) {
       font-size: 28pt;
     }
 
@@ -458,7 +459,7 @@ a.app-store {
   }
 
   #hero p {
-    color: $dark-blue;
+    color: #000;
     text-shadow: 0 0 30px $light-blue;
   }
 

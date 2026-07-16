@@ -1,6 +1,13 @@
 @use "main";
 @use "sass:math";
 
+main {
+  h2,
+  p {
+    text-align: center;
+  }
+}
+
 body header nav {
   background: main.$dark-blue;
   padding-top: 15px;
@@ -187,20 +194,21 @@ body header nav {
 }
 
 .inline-list {
-  margin-bottom: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  list-style-type: "✔︎";
 
   li {
     $size: 0.6em;
 
-    &::before {
-      content: "";
-      display: inline-block;
-      height: $size;
-      width: $size;
-      border-radius: calc($size / 2);
-      margin: 0 0.3em;
-      background-color: main.$red;
-      box-shadow: 0 0 calc($size / 2) main.$red;
+    text-align: left;
+    padding-left: 0.5em;
+    margin: 0 20px;
+
+    &::marker {
+      color: main.$red;
+      font-size: 22pt;
+      line-height: 0.5;
     }
 
     strong {
