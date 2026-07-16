@@ -439,13 +439,13 @@ a.app-store {
     background:
       repeat-x left bottom/200% 20% url("/assets/style/clouds-dark.avif"),
       linear-gradient($dark-blue 0%, #69c 70%);
+  }
 
-    h1::before,
-    header nav menu li:first-child a::before,
-    footer nav menu li:first-child a::before {
-      background-image: url("/assets/style/icon-dark.avif");
-      border: 1px solid $blue;
-    }
+  #hero h1::before,
+  header nav menu li:first-child a::before,
+  footer nav menu li:first-child a::before {
+    background-position: left bottom;
+    border: 1px solid $blue;
   }
 
   main,
