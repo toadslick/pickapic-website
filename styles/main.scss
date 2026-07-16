@@ -431,18 +431,33 @@ a.app-store {
 @mixin dark-mode {
   header,
   footer {
-    nav menu li:first-child a::before {
-      background-image: url("/assets/style/icon-dark.avif");
-    }
+    background:
+      linear-gradient(#0006 50%, $dark-blue 98%, $blue 100%), $dark-blue;
   }
 
-  main {
+  #hero h1::before,
+  header nav menu li:first-child a::before,
+  footer nav menu li:first-child a::before {
+    background-image: url("/assets/style/icon-dark.avif");
+    border: 1px solid $blue;
+  }
+
+  main,
+  .feature-list li {
     background: #000;
     color: #fff;
 
     a {
       color: $blue-dark-mode;
       border-bottom-color: $dark-blue;
+    }
+  }
+
+  .two-column.arrow {
+    @media (min-width: $two-column-min-width) {
+      background:
+        linear-gradient(90deg, #000 0%, #0000 30%, #0000 60%, #000 100%),
+        linear-gradient(#000 60%, $dark-blue 85%, #000 90%);
     }
   }
 }
