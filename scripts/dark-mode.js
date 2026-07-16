@@ -24,7 +24,18 @@
   checkbox.checked = isDark;
 
   const toggleMode = (isDark) => {
-    document.body.className = `mode-set mode-set-${isDark ? "dark" : "light"}`;
+    let oldText = !isDark ? "dark" : "light";
+    let newText = isDark ? "dark" : "light";
+
+    document.body.className = `mode-set mode-set-${newText}`;
+
+    // Replace all video sources
+    document.querySelectorAll("source").forEach((source) => {
+      let oldUrl = source.getAttribute("src");
+      let newUrl = oldUrl.replace(`-${oldText}`, `-${newText}`);
+      source.setAttribute("src", newUrl);
+      source.parentElement.load();
+    });
   };
 
   checkbox.addEventListener("change", (event) => {
