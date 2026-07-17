@@ -65,9 +65,6 @@ body {
 
 header,
 footer {
-  background:
-    linear-gradient($dark-blue 50%, $blue 98%, $light-blue 100%), $dark-blue;
-
   nav {
     menu {
       padding: 0 20px;
@@ -147,11 +144,16 @@ footer {
   }
 }
 
-header nav menu li:first-child a::before {
-  top: 12px;
+header {
+  background:
+    linear-gradient($dark-blue 50%, $blue 98%, $light-blue 100%), $dark-blue;
 
-  @media (max-width: $compact-nav-max-width) {
-    top: 20px;
+  nav menu li:first-child a::before {
+    top: 12px;
+
+    @media (max-width: $compact-nav-max-width) {
+      top: 20px;
+    }
   }
 }
 
@@ -252,7 +254,6 @@ footer {
 
 main {
   background: #fff;
-  padding-bottom: 50px;
   overflow-x: hidden;
 
   p {
@@ -306,8 +307,12 @@ main {
 
   h3 {
     font-size: 20pt;
-    color: $orange;
+    color: $red;
     font-weight: 700;
+  }
+
+  h4 {
+    font-weight: 800;
   }
 
   article {
@@ -320,9 +325,18 @@ main {
       border-left: 3px solid $red;
       padding: 0.5em 0 0 1em;
       margin: 0 0 0 20px;
+
+      @media (max-width: 800px) {
+        float: none;
+        border-left: none;
+        border-bottom: 3px solid $red;
+        padding: 0;
+        margin: 2em 0 1em;
+      }
     }
 
     ul,
+    dl,
     menu {
       list-style-type: disc;
       padding-left: 1em;
@@ -330,14 +344,58 @@ main {
 
       ::marker {
         color: $orange;
-        text-shadow: 0 0 5px $orange;
+        font-weight: 900;
       }
     }
 
-    cite {
-      font-size: 12pt;
+    #research {
+      figure {
+        display: block;
+        padding: 0.4em 0.8em;
+        mask-image: url("/assets/style/paper-mask.png");
+        mask-position: left bottom;
+        mask-repeat: repeat-x;
+        background-color: #0001;
+        margin-bottom: 0.5em;
+      }
+
+      p {
+        padding-left: 0.8em;
+      }
+
+      ul {
+        padding-left: 1.8em;
+      }
+
+      cite {
+        font-size: 12pt;
+        margin-bottom: 1em;
+        display: inline-block;
+
+        em {
+          font-style: italic;
+        }
+      }
+    }
+
+    P,
+    ul {
+      + figure {
+        margin-top: 1.2em;
+      }
+    }
+
+    dl {
       margin-bottom: 1em;
-      display: inline-block;
+
+      dt {
+        font-weight: 900px;
+        display: list-item;
+      }
+
+      dd {
+        margin-left: 1em;
+      }
     }
   }
 }
@@ -468,6 +526,25 @@ a.app-store {
   }
 }
 
+#why cite {
+  position: relative;
+  display: block;
+  margin: 1em auto 1em 1em;
+  height: 5em;
+  mask-size: 100% 100%;
+  background-color: #000;
+
+  span {
+    position: absolute;
+    left: -9999px;
+  }
+
+  &:first-of-type {
+    mask-image: url("/assets/style/sig-james.png");
+    aspect-ratio: 401 / 418;
+  }
+}
+
 .wide-only {
   @media (max-width: 850px) {
     visibility: hidden;
@@ -476,10 +553,14 @@ a.app-store {
 }
 
 @mixin dark-mode {
-  header,
-  footer {
+  header {
     background:
       linear-gradient(#0006 50%, $dark-blue 98%, $blue 100%), $dark-blue;
+  }
+
+  footer {
+    background:
+      linear-gradient($blue 0%, $dark-blue 1.5%, #0006 50%), $dark-blue;
   }
 
   #hero {
@@ -497,7 +578,8 @@ a.app-store {
   footer nav menu li:first-child a {
     &::before {
       background-position: left bottom;
-      border: 2px solid $blue;
+      box-shadow: 0 0 5px $blue;
+      border: 1px solid $blue;
     }
     &::after {
       background-position: left bottom;
@@ -526,6 +608,14 @@ a.app-store {
         linear-gradient(90deg, #000 0%, #0000 30%, #0000 60%, #000 100%),
         linear-gradient(#000 60%, $dark-blue 85%, #000 90%);
     }
+  }
+
+  #research figure {
+    background-color: #fff2;
+  }
+
+  #why cite {
+    background-color: #fff;
   }
 }
 
