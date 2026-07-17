@@ -35,10 +35,12 @@
   });
 
   const speak = function (index) {
-    const className = speechTimes[index].className;
-    frame.className = frameInitialClassName;
+    const speechClass = speechTimes[index].className;
     requestAnimationFrame(() => {
-      frame.className = `${frameInitialClassName} speech-bubble speech-bubble-${className}`;
+      frame.className = frameInitialClassName;
+      requestAnimationFrame(() => {
+        frame.className = `${frameInitialClassName} speech-bubble speech-bubble-${speechClass}`;
+      });
     });
   };
 })();

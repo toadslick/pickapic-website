@@ -149,16 +149,16 @@ body header nav {
     }
 
     &.speech-bubble-blocks::before {
-      @include speech-bubble(math.div(843, 1280), math.div(244, 890), "Blocks");
+      @include speech-bubble(math.div(820, 1280), math.div(210, 890), "Blocks");
     }
     &.speech-bubble-cereal::before {
-      @include speech-bubble(math.div(896, 1280), math.div(445, 890), "Cereal");
+      @include speech-bubble(math.div(880, 1280), math.div(410, 890), "Cereal");
     }
     &.speech-bubble-crayon::before {
-      @include speech-bubble(math.div(439, 1280), math.div(635, 890), "Crayon");
+      @include speech-bubble(math.div(450, 1280), math.div(560, 890), "Crayon");
     }
     &.speech-bubble-apple::before {
-      @include speech-bubble(math.div(439, 1280), math.div(244, 890), "Apple");
+      @include speech-bubble(math.div(450, 1280), math.div(210, 890), "Apple");
     }
   }
 
