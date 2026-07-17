@@ -217,54 +217,166 @@ body header nav {
   }
 }
 
-.two-column.arrow {
-  .video-frame::before {
-    content: "";
-    position: absolute;
+.video-frame {
+  position: relative;
+  aspect-ratio: 1292 / 919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  pointer-events: none;
+  user-select: none;
+
+  video {
+    position: relative;
     display: block;
     width: main.$video-width-in-frame;
     height: main.$video-height-in-frame;
-    left: calc((100% - main.$video-width-in-frame) / 2);
-    top: calc((100% - main.$video-height-in-frame) / 2);
-    background: #000;
-    z-index: 2;
-    opacity: 0;
-    transition: opacity 1s;
-    pointer-events: none;
-    user-select: none;
+    box-shadow: 0 20px 20px #000;
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/style/frame.avif");
+    background-size: 100% 100%;
+    z-index: 3;
+  }
+}
+
+.one-column {
+  margin: 2em auto;
+  padding: 0 20px;
+  max-width: main.$two-column-max-width;
+  text-align: center;
+}
+
+.two-column {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 1em auto;
+  padding: 0 10px;
+  max-width: 1400px;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+  > div {
+    position: relative;
+    padding: 10px;
   }
 
   @media (min-width: main.$two-column-min-width) {
-    figcaption {
-      transition:
-        opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
-        transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    flex-direction: row;
+    margin: auto;
+
+    > div {
+      width: 50%;
+    }
+  }
+
+  figcaption {
+    text-align: center;
+  }
+
+  &.two-column-reverse {
+    flex-direction: column;
+
+    @media (min-width: main.$two-column-min-width) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &.arrow {
+    background: linear-gradient(#9cf0 0%, #9cfd 20%, #9cf0 90%);
+
+    .video-frame::before {
+      content: "||";
+      position: absolute;
+      display: flex;
+      width: main.$video-width-in-frame;
+      height: main.$video-height-in-frame;
+      left: calc((100% - main.$video-width-in-frame) / 2);
+      top: calc((100% - main.$video-height-in-frame) / 2);
+      background: #0006;
+      box-shadow:
+        0 0 40px #000 inset,
+        0 0 10px #000 inset;
+      z-index: 2;
+      opacity: 0;
+      transition: opacity 1s;
+      pointer-events: none;
+      user-select: none;
     }
 
-    $distance: 100px;
-
-    .video-pause {
-      .video-frame::before {
-        opacity: 0.5;
-      }
+    @media (min-width: main.$two-column-min-width) {
       figcaption {
-        opacity: 0;
-        transform: translateX($distance);
+        transition:
+          opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+          transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
       }
 
-      &.video-play-ended figcaption {
-        transform: none;
-        transition: opacity 2s;
+      $distance: 100px;
+
+      .video-pause {
+        .video-frame::before {
+          opacity: 1;
+        }
+        figcaption {
+          opacity: 0;
+          transform: translateX($distance);
+        }
+
+        &.video-play-ended figcaption {
+          transform: none;
+          transition: opacity 2s;
+        }
+      }
+
+      &.two-column-reverse .video-pause {
+        figcaption {
+          transform: translateX(-1 * $distance);
+        }
+
+        &.video-play-ended figcaption {
+          transform: none;
+        }
+      }
+    }
+  }
+
+  @media (min-width: main.$two-column-min-width) {
+    &.arrow {
+      background:
+        linear-gradient(90deg, #fff 0%, #fff0 30%, #fff0 60%, #fff 100%),
+        linear-gradient(#fff 60%, #9cfa 85%, #fff 90%);
+
+      figcaption {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        padding-left: 3em;
+        background: no-repeat left center/2.5em
+          url("/assets/style/bracket-left.avif");
+        min-height: 10em;
       }
     }
 
-    &.two-column-reverse .video-pause {
+    &.two-column-reverse {
       figcaption {
-        transform: translateX(-1 * $distance);
-      }
-
-      &.video-play-ended figcaption {
-        transform: none;
+        display: flex;
+        align-items: center;
+        text-align: right;
+        padding-right: 3em;
+        background: no-repeat right center/2.5em
+          url("/assets/style/bracket-right.avif");
+        min-height: 10em;
       }
     }
   }
