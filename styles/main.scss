@@ -84,6 +84,7 @@ footer {
           color: #adf;
           text-decoration: none;
 
+          &[aria-current],
           &:hover,
           &:focus {
             color: #fff;
