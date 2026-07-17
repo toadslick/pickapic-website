@@ -1,0 +1,12 @@
+---
+pagination:
+  data: pages
+  size: 1
+  alias: item
+permalink: "/{{ item.id }}/"
+layout: layout.njk
+styles: /styles/main.css
+---
+
+{% set item = item %}
+{% include 'content.njk' %}

@@ -11,12 +11,6 @@ custom: [
 ]
 ---
 
-{% if path %}
-  {% set segments = [url, path] %}
-{% else %}
-  {% set segments = [url] %}
-{% endif %}
-
 {% if styles %}
   {% set styles = [styles] %}
 {% else %}
@@ -36,7 +30,6 @@ custom: [
     title = title,
     author = author,
     desc = description,
-    url = segments | join("/"),
     comments = true,
     css = styles,
     custom = custom,
@@ -55,12 +48,16 @@ custom: [
               </span>
             </a>
           </li>
-          <li>
-            <a href="/help">Help</a>
-          </li>
-          <li>
-            <a href="/about">About</a>
-          </li>
+
+          {%- for p in pages %}
+            {% set pagePath = "/" + p.id + "/" %}
+            <li>
+              <a href="{{ pagePath }}"{% if page.url == pagePath %} aria-current="page"{% endif %}>
+                {{ p.title }}
+              </a>
+            </li>
+          {% endfor -%}
+
           <li id="dark-mode-toggle">
             <input type="checkbox" id="dark-mode"/>
             <label for="dark-mode">
@@ -90,12 +87,16 @@ custom: [
               </span>
             </a>
           </li>
-          <li>
-            <a href="/help">Help</a>
-          </li>
-          <li>
-            <a href="/about">About</a>
-          </li>
+
+          {%- for p in pages %}
+            {% set pagePath = "/" + p.id + "/" %}
+            <li>
+              <a href="{{ pagePath }}"{% if page.url == pagePath %} aria-current="page"{% endif %}>
+                {{ p.title }}
+              </a>
+            </li>
+          {% endfor -%}
+
           <li>
             <a class="app-store" href="#">
               <span>Download on the App Store</span>

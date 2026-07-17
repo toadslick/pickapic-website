@@ -2,6 +2,7 @@ import path from "node:path";
 import * as sass from "sass";
 import metagen from "eleventy-plugin-metagen";
 import hamlPlugin from "@11ty/eleventy-plugin-haml";
+import { EleventyRenderPlugin } from "@11ty/eleventy";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
@@ -11,6 +12,7 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addPlugin(metagen);
   eleventyConfig.addPlugin(hamlPlugin);
+  eleventyConfig.addPlugin(EleventyRenderPlugin);
 
   eleventyConfig.addExtension("scss", {
     outputFileExtension: "css",
