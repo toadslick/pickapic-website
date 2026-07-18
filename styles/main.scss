@@ -408,6 +408,10 @@ a.app-store {
 }
 
 #why {
+  p {
+    text-indent: 2em;
+  }
+
   cite {
     &::before {
       content: "";
