@@ -45,3 +45,16 @@
 
   toggleMode(isDark);
 })();
+
+// Add target="_blank" to links in given sections that were written in Markdown.
+(function () {
+  const externalLinkSections = ["#why"];
+
+  externalLinkSections.forEach((selector) => {
+    let section = document.querySelector(selector);
+    section.querySelectorAll("a").forEach((link) => {
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener");
+    });
+  });
+})();

@@ -1,8 +1,7 @@
 Functional communication is a cornerstone of intervention for children with autism. Having an effective, efficient means of communicating with caregivers and peers is essential to meeting one’s needs, establishing and growing meaningful relationships, expressing feelings and ideas, and achieving personal goals. Functional communication is the foundation upon which practitioners and caregivers can help autistic individuals build skills to reach their potential, quality of life, and happiness.
 
 Communication is one of the core skill deficits that defines autism spectrum disorder. Behavior analysts, caregivers and autistic individuals have many tools at their disposal to support individuals in developing communication skills, all of which come with strengths and weaknesses. The
-%a{ href: "https://pecsusa.com/pecs/", target: "\_blank" } Picture Exchange Communication System
-\ , developed by pioneering practitioners Lori Frost and Andy Bondy, is a manualized, evidence-based system that focuses on developing motivation to initiate communication and early manding skills using exchangeable pictures representing items and activities.
+[Picture Exchange Communication System](https://pecsusa.com/pecs/), developed by pioneering practitioners Lori Frost and Andy Bondy, is a manualized, evidence-based system that focuses on developing motivation to initiate communication and early manding skills using exchangeable pictures representing items and activities.
 
 While PECS is manualized and meets the essential need to develop motivation to communicate, many families express frustration with making and maintaining physical materials, and not having all the right icons available in a given moment. Losing a picture, or stopping to flip through pages can derail motivation and lead to frustration.
 
