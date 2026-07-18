@@ -255,6 +255,7 @@ footer {
 
 main {
   background: #fff;
+  padding: 0.1px 0;
 
   p {
     display: block;
@@ -419,7 +420,6 @@ a.app-store {
   position: relative;
   display: block;
   margin: 1em auto 1em 1em;
-  height: 5em;
   mask-size: 100% 100%;
   background-color: #000;
 
@@ -431,6 +431,13 @@ a.app-store {
   &:first-of-type {
     mask-image: url("/assets/style/sig-james.png");
     aspect-ratio: 401 / 418;
+    height: 6em;
+  }
+
+  &:last-of-type {
+    mask-image: url("/assets/style/sig-selina.png");
+    aspect-ratio: 516 / 273;
+    height: 3em;
   }
 }
 
