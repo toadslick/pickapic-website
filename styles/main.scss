@@ -416,28 +416,28 @@ a.app-store {
   }
 }
 
-#why cite {
-  position: relative;
-  display: block;
-  margin: 1em auto 1em 1em;
-  mask-size: 100% 100%;
-  background-color: #000;
-
-  span {
-    position: absolute;
-    left: -9999px;
+#why {
+  p {
+    font-size: 12pt;
   }
 
-  &:first-of-type {
-    mask-image: url("/assets/style/sig-james.png");
-    aspect-ratio: 401 / 418;
-    height: 6em;
-  }
+  cite {
+    &::before {
+      content: "";
+      position: relative;
+      display: block;
+      margin: 1em auto 1em 1em;
+      mask-size: 100% 100%;
+      background-color: #000;
+      mask-image: url("/assets/style/sig-selina.png");
+      aspect-ratio: 516 / 273;
+      height: 3em;
+    }
 
-  &:last-of-type {
-    mask-image: url("/assets/style/sig-selina.png");
-    aspect-ratio: 516 / 273;
-    height: 3em;
+    span {
+      position: absolute;
+      left: -9999px;
+    }
   }
 }
 
@@ -513,7 +513,7 @@ a.app-store {
     background-color: #fff2;
   }
 
-  #why cite {
+  #why cite::before {
     background-color: #fff;
   }
 }
