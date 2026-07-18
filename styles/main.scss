@@ -314,6 +314,11 @@ main {
 
   h4 {
     font-weight: 800;
+
+    strong {
+      color: $orange;
+      display: inline-block;
+    }
   }
 
   article {
@@ -337,7 +342,6 @@ main {
     }
 
     ul,
-    dl,
     menu {
       list-style-type: disc;
       padding-left: 1em;
@@ -383,19 +387,6 @@ main {
     ul {
       + figure {
         margin-top: 1.2em;
-      }
-    }
-
-    dl {
-      margin-bottom: 1em;
-
-      dt {
-        font-weight: 900px;
-        display: list-item;
-      }
-
-      dd {
-        margin-left: 1em;
       }
     }
   }

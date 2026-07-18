@@ -3,6 +3,7 @@ import * as sass from "sass";
 import metagen from "eleventy-plugin-metagen";
 import hamlPlugin from "@11ty/eleventy-plugin-haml";
 import { EleventyRenderPlugin } from "@11ty/eleventy";
+import { load as loadYaml } from "js-yaml";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
@@ -13,6 +14,10 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(metagen);
   eleventyConfig.addPlugin(hamlPlugin);
   eleventyConfig.addPlugin(EleventyRenderPlugin);
+
+  eleventyConfig.addDataExtension("yaml", (contents) => {
+    return loadYaml(contents);
+  });
 
   eleventyConfig.addExtension("scss", {
     outputFileExtension: "css",

@@ -1,0 +1,25 @@
+---
+- id: about
+  title: About
+  sections:
+    - id: why
+      title: Why we made Pick-a-Pic
+      format: md
+    - id: research
+      title: Supporting Research
+      format: haml
+    - id: roadmap
+      title: Product Roadmap
+      format: md
+- id: help
+  title: Help
+  sections:
+    - id: docs
+      title: Documentation
+      format: njk
+    - id: practices
+      title: Best Practices
+      format: md
+    - id: support
+      title: Support
+      format: haml
