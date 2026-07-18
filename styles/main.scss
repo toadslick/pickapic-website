@@ -53,7 +53,7 @@ html,
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   color: #000;
-  font-size: 16pt;
+  font-size: 14pt;
   font-weight: 500;
   line-height: 1.5;
   background: $dark-blue;
@@ -417,10 +417,6 @@ a.app-store {
 }
 
 #why {
-  p {
-    font-size: 12pt;
-  }
-
   cite {
     &::before {
       content: "";

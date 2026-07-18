@@ -6,6 +6,11 @@ main {
   p {
     text-align: center;
   }
+
+  p,
+  figcaption {
+    font-size: 16pt;
+  }
 }
 
 body header nav {
