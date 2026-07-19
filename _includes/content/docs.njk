@@ -6,25 +6,43 @@
     </h3>
 
     {% for h4 in h3.items %}
-      <hgroup id="{{ h4.title | slugify }}">
+      <hgroup id="{{ h3.title + "_" + h4.title | slugify }}">
 
         <h4>
           {{ h4.title | safe }}
         </h4>
 
-        {% for p in h4.text %}
-          <p>{{p}}</p>
+        <p>
+          {% for p in h4.text %}
+            <span>{{p}}</span>
+          {% endfor %}
+        </p>
+
+        {% for image in h4.images %}
+          {% set url = "/assets/docs/" + image + ".l.jpg" %}
+          <a class="docs-image {{ 'docs-wide-image' if h4.wide }}"  href="{{url}}" target="_blank">
+            <img srcset="{{url}} 2x"/>
+          </a>
         {% endfor %}
 
         {% for h5 in h4.items %}
-          <hgroup id="{{ h4.title | slugify }}">
+          <hgroup id="{{ h3.title + "_" + h4.title + "_" + h5.title | slugify }}">
 
             <h5>
               {{ h5.title | safe }}
             </h5>
 
-            {% for p in h5.text %}
-              <p>{{p}}</p>
+            <p>
+              {% for p in h5.text %}
+                <span>{{p}}</span>
+              {% endfor %}
+            </p>
+
+            {% for image in h5.images %}
+              {% set url = "/assets/docs/" + image + ".l.jpg" %}
+              <a class="docs-image {{ 'docs-wide-image' if h5.wide }}" href="{{url}}" target="_blank">
+                <img srcset="{{url}} 2x"/>
+              </a>
             {% endfor %}
 
           </hgroup>

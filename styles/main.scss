@@ -322,6 +322,19 @@ main {
     }
   }
 
+  hgroup {
+    p span {
+      display: block;
+    }
+    hgroup {
+      margin-left: 1em;
+
+      hgroup {
+        margin-left: 1em;
+      }
+    }
+  }
+
   article {
     max-width: $two-column-max-width;
     margin: auto;
@@ -433,6 +446,55 @@ a.app-store {
   }
 }
 
+#docs {
+  a.docs-image {
+    display: inline-block;
+    border: 3px solid $blue;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    transition: box-shadow 0.1s ease-out;
+
+    &::after {
+      content: "";
+      display: flex;
+      position: absolute;
+      height: 1em;
+      width: 1em;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      top: -0.1px;
+      right: -0.1px;
+      border-bottom-left-radius: 8px;
+      background:
+        no-repeat 60% 40%/55% url("/assets/style/arrow-top-right.png"),
+        $blue;
+      transition:
+        height 0.1s ease-out,
+        width 0.1s ease-out;
+    }
+
+    img {
+      max-height: 200px;
+    }
+
+    &.docs-wide-image img {
+      max-height: 100px;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 10px $blue;
+
+      &::after {
+        height: 1.3em;
+        width: 1.3em;
+      }
+    }
+  }
+}
+
 .wide-only {
   @media (max-width: 850px) {
     visibility: hidden;
@@ -506,6 +568,22 @@ a.app-store {
 
   #why cite::before {
     background-color: #fff;
+  }
+
+  #docs a.docs-image {
+    border-color: $blue-dark-mode;
+
+    &:hover,
+    &:focus {
+      box-shadow:
+        0 0 10px $blue-dark-mode,
+        0 0 10px $blue-dark-mode,
+        0 0 10px $blue-dark-mode;
+    }
+
+    &::after {
+      background-color: $blue-dark-mode;
+    }
   }
 }
 

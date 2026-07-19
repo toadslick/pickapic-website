@@ -3,11 +3,12 @@ docs:
     items:
       - title: "Create or open document"
         text:
+          - "Your picture library and collection of button books live in a file known as a Pick-a-Pic document."
           - "The app first opens to the document picker. Tap the 'Create Document' icon or the plus button to create a new Pick-a-Pic document."
-          - "Each document contains its own Picture Library and collection of Picture Books."
           - "To open an existing document, tap that document's icon."
         images:
           - "1-1"
+        wide: true
       - title: "Rename document"
         text:
           - "To rename your Pick-a-Pic document, long-press the document's icon until a menu appears. Then tap the 'Rename' item in the menu."
@@ -19,12 +20,14 @@ docs:
           - "Tap the back button to close your document and return to the document picker."
         images:
           - "1-3"
+        wide: true
       - title: "Undo / redo"
         text:
           - "To undo a change you've made to your document, tap the left-facing arrow button. To redo a change that you've undone, tap the right-facing arrow button."
           - "The buttons will be disabled if there are no changes to undo or redo."
         images:
           - "1-4"
+        wide: true
   - title: "Picture library"
     items:
       - title: "Add picture"
@@ -55,7 +58,8 @@ docs:
               - "If your device's copy-paste clipboard contains an image, this menu item will be enabled."
               - "After tapping the menu item, you will be prompted to allow the paste operation."
               - "Images can be copied from many sources. For example, an image can be copied from the web by long-pressing the image and selecting 'Copy' from the menu."
-            images: "2-1-6"
+            images:
+              - "2-1-6"
           - title: "Download from gallery"
             text:
               - "Download one or more pictures from our gallery of examples."
@@ -64,7 +68,8 @@ docs:
               - "After adding a picture from the photo library, camera, file browser, or copy-paste, you will be prompted to crop the image."
               - "Pinch and drag the image with two fingers to zoom and move it. Tap the buttons on either side of the crop boundary to rotate the image 90 degrees."
               - "Tap the 'Crop' button to crop the image and add it to your picture library."
-            images: "2-1-8"
+            images:
+              - "2-1-8"
       - title: "Rename picture"
         text:
           - "Long-press a picture in your library and select 'Rename' from the menu."
