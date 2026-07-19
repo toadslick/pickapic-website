@@ -52,6 +52,10 @@
 
   externalLinkSections.forEach((selector) => {
     let section = document.querySelector(selector);
+    if (!section) {
+      return;
+    }
+
     section.querySelectorAll("a").forEach((link) => {
       link.setAttribute("target", "_blank");
       link.setAttribute("rel", "noopener");

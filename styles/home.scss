@@ -273,7 +273,6 @@ body header nav {
   justify-content: center;
   align-items: center;
   flex: 1;
-  overflow: hidden;
 
   > div {
     position: relative;
@@ -324,6 +323,16 @@ body header nav {
     }
 
     @media (min-width: main.$two-column-min-width) {
+      > div {
+        &:first-child {
+          overflow: visible;
+        }
+
+        &:last-child {
+          overflow: hidden;
+        }
+      }
+
       figcaption {
         transition:
           opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1),
