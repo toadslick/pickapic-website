@@ -1,25 +1,25 @@
 ---
 - id: about
-  title: About
+  title: "About"
   sections:
     - id: why
-      title: Why we made Pick-a-Pic
+      title: "Why we made <strong>Pick-a-Pic</strong>"
       format: md
     - id: research
-      title: Supporting Research
+      title: "Supporting Research"
       format: haml
     - id: roadmap
-      title: Product Roadmap
+      title: "Product Roadmap"
       format: md
 - id: help
-  title: Help
+  title: "Help"
   sections:
     - id: docs
-      title: Documentation
+      title: "Documentation"
       format: njk
     - id: practices
-      title: Best Practices
+      title: "Best Practices"
       format: md
     - id: support
-      title: Support
+      title: "Support"
       format: haml

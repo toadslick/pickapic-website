@@ -17,7 +17,7 @@ styles: /styles/main.css
 
         <li>
           <a href="#{{ section.id }}">
-            {{ section.title }}
+            {{ section.title | safe }}
           </a>
         </li>
 
@@ -30,7 +30,7 @@ styles: /styles/main.css
 
     <section id="{{ section.id }}">
       <h2>
-        {{ section.title }}
+        {{ section.title | safe }}
       </h2>
       {% renderFile "_includes/content/" + section.id + "." + section.format %}
     </section>

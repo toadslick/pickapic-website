@@ -303,6 +303,7 @@ main {
 
     strong {
       color: $red;
+      white-space: nowrap;
     }
   }
 
@@ -491,7 +492,6 @@ a.app-store {
 
   .two-column.arrow {
     background: linear-gradient(#1470 0%, $dark-blue 20%, #1470 90%);
-    overflow: hidden;
 
     @media (min-width: $two-column-min-width) {
       background:

@@ -7,6 +7,6 @@ Throughout my 20-year career, I've witnessed many families express frustration w
 
 I approached James with these concerns and with questions about how to design an app for establishing early communication skills. Why isn’t it easier to add a picture? Why can’t I make a new page? How could we make this easier and more accessible to families who desperately want to establish functional communication for their loved ones?
 
-I am a long time proponent of PECS and a strong believer in the power of motivation. I wanted to create a simple app to help with the earliest stages of functional communication as a springboard to more complex communication with existing AAC devices. I want to make communicating motivating and meaningful for our learners while empowering caregivers with a tool that doesn't require a steep learning curve or substantial financial investment.
+I am a long time proponent of PECS and a strong believer in the power of motivation. I wanted to create a simple app to help with the earliest stages of functional communication as a springboard to more complex communication with existing AAC devices. I want to make communication motivating and meaningful for our learners while empowering caregivers with a tool that doesn't require a steep learning curve or substantial financial investment.
 
 <cite>Selina Field, MEd., BCBA</cite>
