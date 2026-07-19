@@ -32,7 +32,8 @@ styles: /styles/main.css
       <h2>
         {{ section.title | safe }}
       </h2>
-      {% renderFile "_includes/content/" + section.id + "." + section.format %}
+      {% renderFile "_includes/content/" + section.id + "." + section.format,
+      docs %}
     </section>
 
   {% endfor %}
