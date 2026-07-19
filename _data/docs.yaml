@@ -1,0 +1,207 @@
+---
+- title: "Pick-a-Pic Documents"
+  items:
+    - title: "Create or open document"
+      text:
+        - "The app first opens to the document picker. Tap the 'Create Document' icon or the plus button to create a new Pick-a-Pic document."
+        - "Each document contains its own Picture Library and collection of Picture Books."
+        - "To open an existing document, tap that document's icon."
+      images:
+        - "1-1"
+    - title: "Rename document"
+      text:
+        - "To rename your Pick-a-Pic document, tap and hold the document's icon until a menu appears. Then tap the 'Rename' item in the menu."
+      images:
+        - "1-2"
+    - title: "Save and close"
+      text:
+        - "After you've opened your document, it will auto-save as you make changes."
+        - "Tap the back button to close your document and return to the document picker."
+      images:
+        - "1-3"
+    - title: "Undo / redo"
+      text:
+        - "To undo a change you've made to your document, tap the left-facing arrow button. To redo a change that you've undone, tap the right-facing arrow button."
+        - "The buttons will be disabled if there are no changes to undo or redo."
+      images:
+        - "1-4"
+- title: "Picture library"
+  items:
+    - title: "Add picture"
+      text:
+        - ""
+      images:
+        - "2-1a"
+        - "2-1b"
+      items:
+        - title: "Photo library"
+          text:
+            - ""
+        - title: "Camera"
+          text:
+            - ""
+        - title: "File"
+          text:
+            - ""
+        - title: "Emoji"
+          text:
+            - ""
+        - title: "Text"
+          text:
+            - ""
+        - title: "Copy/paste"
+          text:
+            - ""
+        - title: "Pick-a-Pic gallery"
+          text:
+            - ""
+    - title: "Rename picture"
+      text:
+        - ""
+      images:
+        - ""
+    - title: "Delete picture"
+      text:
+        - ""
+      images:
+        - ""
+    - title: "Tag picture"
+      text:
+        - ""
+      images:
+        - ""
+    - title: "Sort"
+      text:
+        - ""
+      images:
+        - ""
+    - title: "Search"
+      text:
+        - ""
+      images:
+        - ""
+    - title: "Filter by tag"
+      text:
+        - ""
+      images:
+        - ""
+- title: "Tags"
+  items:
+    - title: "Add"
+      text:
+        - ""
+      images:
+        - ""
+    - title: "Rename"
+      text:
+        - ""
+      images:
+        - ""
+    - title: "Delete"
+      text:
+        - ""
+      images:
+        - ""
+- title: "Books list"
+  items:
+    - title: "Add book"
+      text:
+        - ""
+      images:
+        - ""
+    - title: "Rename book"
+      text:
+        - ""
+      images:
+        - ""
+    - title: "Delete book"
+      text:
+        - ""
+      images:
+        - ""
+    - title: "Lock books"
+      text:
+        - ""
+      images:
+        - ""
+    - title: "Sort"
+      text:
+        - ""
+      images:
+        - ""
+    - title: "Search"
+      text:
+        - ""
+      images:
+        - ""
+- title: "Edit book"
+  items:
+    - title: "Add pic to page"
+      text:
+        - ""
+      images:
+        - ""
+    - title: "Remove pic from page"
+      text:
+        - ""
+      images:
+        - ""
+    - title: "Arrange pics on page"
+      text:
+        - ""
+      images:
+        - ""
+    - title: "Book settings: unique to page/book"
+      text:
+        - ""
+      images:
+        - ""
+    - title: "Voice settings"
+      text:
+        - ""
+      images:
+        - ""
+    - title: "Arrange pages"
+      text:
+        - ""
+      images:
+        - ""
+        - title: "Rearrange pages"
+          text:
+            - ""
+          images:
+            - ""
+        - title: "Delete page"
+          text:
+            - ""
+          images:
+            - ""
+        - title: "Go to page"
+          text:
+            - ""
+          images:
+            - ""
+- title: "View book"
+  items:
+    - title: "Exit book"
+      text:
+        - ""
+      images:
+        - ""
+    - title: "Force app to foreground"
+      text:
+        - ""
+      images:
+        - ""
+- title: "Misc"
+  items:
+    - title: "Help"
+      text:
+        - ""
+      images:
+        - ""
+    - title: "Purchase"
+      text:
+        - ""
+      images:
+        - ""
