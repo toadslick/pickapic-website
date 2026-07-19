@@ -10,7 +10,7 @@
         - "1-1"
     - title: "Rename document"
       text:
-        - "To rename your Pick-a-Pic document, tap and hold the document's icon until a menu appears. Then tap the 'Rename' item in the menu."
+        - "To rename your Pick-a-Pic document, long-press the document's icon until a menu appears. Then tap the 'Rename' item in the menu."
       images:
         - "1-2"
     - title: "Save and close"
@@ -29,47 +29,57 @@
   items:
     - title: "Add picture"
       text:
-        - ""
+        - "Tap the plus button at the top of your picture library to create a new picture."
+        - "Then select how you would like to create your picture."
       images:
         - "2-1a"
         - "2-1b"
       items:
-        - title: "Photo library"
+        - title: "Pick from photo library"
           text:
-            - ""
-        - title: "Camera"
+            - "Select an image to import from your photo library."
+        - title: "Take a photo"
           text:
-            - ""
-        - title: "File"
+            - "Use your device's camera to take a photo."
+        - title: "Import a file"
           text:
-            - ""
-        - title: "Emoji"
+            - "Browse your files and select an image to import."
+        - title: "Create from emoji"
           text:
-            - ""
-        - title: "Text"
+            - "Create a picture by selecting an emoji and a background color."
+        - title: "Create from text"
           text:
-            - ""
+            - "Create a picture by entering text and selecting a background color."
         - title: "Copy/paste"
           text:
-            - ""
-        - title: "Pick-a-Pic gallery"
+            - "If your device's copy-paste clipboard contains an image, this menu item will be enabled."
+            - "After tapping the menu item, you will be prompted to allow the paste operation."
+            - "Images can be copied from many sources. For example, an image can be copied from the web by long-pressing the image and selecting 'Copy' from the menu."
+          images: "2-1-6"
+        - title: "Download from gallery"
           text:
-            - ""
+            - "Download one or more pictures from our gallery of examples."
+        - title: "Crop your picture"
+          text:
+            - "After adding a picture from the photo library, camera, file browser, or copy-paste, you will be prompted to crop the image."
+            - "Pinch and drag the image with two fingers to zoom and move it. Tap the buttons on either side of the crop boundary to rotate the image 90 degrees."
+            - "Tap the 'Crop' button to crop the image and add it to your picture library."
+          images: "2-1-8"
     - title: "Rename picture"
       text:
-        - ""
+        - "Long-press a picture in your library and select 'Rename' from the menu."
       images:
-        - ""
+        - "2-2,2-3,2-4"
     - title: "Delete picture"
       text:
-        - ""
+        - "Long-press a picture in your library and select 'Delete' from the menu."
       images:
-        - ""
+        - "2-2,2-3,2-4"
     - title: "Tag picture"
       text:
-        - ""
+        - "Long-press a picture in your library and select 'Tag' from the menu. See the Tags section of the documentation for more about tagging images."
       images:
-        - ""
+        - "2-2,2-3,2-4"
     - title: "Sort"
       text:
         - ""
