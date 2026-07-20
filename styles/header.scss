@@ -1,0 +1,194 @@
+@use "vars";
+@use "sass:math";
+
+header,
+footer {
+  nav {
+    menu {
+      padding: 0 20px;
+      max-width: vars.$two-column-max-width;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      li {
+        + li {
+          margin-left: 30px;
+        }
+
+        a {
+          font-weight: 700;
+          color: #adf;
+          text-decoration: none;
+
+          &[aria-current],
+          &:hover,
+          &:focus {
+            color: #fff;
+            border-bottom: 3px solid vars.$blue;
+          }
+        }
+
+        &:first-child {
+          margin-right: auto;
+
+          a {
+            @include vars.app-logo;
+
+            border: none;
+            display: flex;
+            align-items: center;
+
+            &::before {
+              position: relative;
+              width: 80px;
+            }
+
+            &::after {
+              position: relative;
+              height: 50px;
+              margin-left: 20px;
+
+              @media (max-width: 1000px) {
+                height: 40px;
+              }
+
+              @media (max-width: 800px) {
+                display: none;
+              }
+            }
+          }
+        }
+
+        &:last-child a {
+          height: 60px;
+          border: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: vars.$compact-nav-max-width) {
+    nav menu {
+      padding-bottom: 60px;
+      position: relative;
+
+      li:last-child {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+      }
+    }
+  }
+}
+
+header {
+  background:
+    linear-gradient(vars.$dark-blue 50%, vars.$blue 98%, vars.$light-blue 100%),
+    vars.$dark-blue;
+
+  nav menu li:first-child a::before {
+    top: 12px;
+
+    @media (max-width: vars.$compact-nav-max-width) {
+      top: 20px;
+    }
+  }
+}
+
+footer {
+  padding-bottom: 20px;
+  background:
+    linear-gradient(vars.$light-blue 0%, vars.$blue 1%, vars.$dark-blue 100%),
+    vars.$dark-blue;
+
+  nav {
+    padding-bottom: 20px;
+
+    ul li:first-child a::before {
+      top: -12px;
+
+      @media (max-width: vars.$compact-nav-max-width) {
+        top: 20px;
+      }
+    }
+  }
+
+  p {
+    color: #fffd;
+    font-size: 12pt;
+    text-align: center;
+
+    strong {
+      color: vars.$orange;
+      font-weight: 800;
+    }
+  }
+}
+
+#dark-mode-toggle {
+  $size: 1.7em;
+  $handle-size: $size * 0.75;
+  $offset: math.div($size - $handle-size, 2);
+
+  display: none;
+  position: relative;
+
+  input,
+  span {
+    position: absolute;
+    left: -9999px;
+  }
+
+  label {
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      display: block;
+      height: $size;
+      width: $size * 2;
+      border-radius: math.div($size, 2);
+      background: #0007;
+      box-shadow:
+        0 1px 0 #fff3,
+        0 1px 5px #000 inset;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      height: $handle-size;
+      aspect-ratio: 1;
+      border-radius: math.div($handle-size, 2);
+      position: absolute;
+      left: $offset;
+      top: $offset;
+      background: no-repeat left top/200% 100%
+        url("/assets/style/dark-mode.png");
+      background-color: vars.$dark-blue;
+      transition:
+        left 1s vars.$curve,
+        background-position 1s vars.$curve;
+      color: vars.$light-blue;
+      box-shadow:
+        0 1px 0 #fff5 inset,
+        0 1px 2px #000;
+      font-weight: bolder;
+      line-height: 1.2;
+    }
+  }
+
+  input:checked + label::after {
+    background-position: 100% top;
+    left: ($size * 2) - $offset - $handle-size;
+  }
+}
+
+.mode-set #dark-mode-toggle {
+  display: block;
+}

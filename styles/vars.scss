@@ -1,0 +1,45 @@
+$orange: #ff9535;
+$red: #fd6153;
+$blue: #07b;
+$blue-dark-mode: #39c;
+$dark-blue: #147;
+$light-blue: #adf;
+
+$two-column-max-width: 1400px;
+$two-column-min-width: 1000px;
+$compact-nav-max-width: 600px;
+$large-font-max-width: 768px;
+
+$video-width-in-frame: 93.7%;
+$video-height-in-frame: 91.73%;
+
+$curve: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+@mixin app-logo {
+  position: relative;
+  display: block;
+
+  span {
+    position: absolute;
+    left: -9999px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    aspect-ratio: 1;
+    background-image: url("/assets/style/icon.avif");
+    background-size: 100%;
+    border-radius: 20%;
+    box-shadow: 0 3px 6px #000a;
+    transform: rotate(-8deg);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    aspect-ratio: 852 / 151;
+    background-image: url("/assets/style/title.avif");
+    background-size: 100%;
+  }
+}

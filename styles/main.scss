@@ -1,53 +1,8 @@
 @use "_reset";
 @use "sass:math";
-
-$orange: #ff9535;
-$red: #fd6153;
-$blue: #07b;
-$blue-dark-mode: #39c;
-$dark-blue: #147;
-$light-blue: #adf;
-
-$two-column-max-width: 1400px;
-$two-column-min-width: 1000px;
-
-$video-width-in-frame: 93.7%;
-$video-height-in-frame: 91.73%;
-
-$compact-nav-max-width: 600px;
-
-$large-font-max-width: 768px;
-
-$curve: cubic-bezier(0.075, 0.82, 0.165, 1);
-
-@mixin app-logo {
-  position: relative;
-  display: block;
-
-  span {
-    position: absolute;
-    left: -9999px;
-  }
-
-  &::before {
-    content: "";
-    display: block;
-    aspect-ratio: 1;
-    background-image: url("/assets/style/icon.avif");
-    background-size: 100%;
-    border-radius: 20%;
-    box-shadow: 0 3px 6px #000a;
-    transform: rotate(-8deg);
-  }
-
-  &::after {
-    content: "";
-    display: block;
-    aspect-ratio: 852 / 151;
-    background-image: url("/assets/style/title.avif");
-    background-size: 100%;
-  }
-}
+@use "vars";
+@use "dark";
+@use "header";
 
 html,
 body {
@@ -56,201 +11,11 @@ body {
   font-size: 14pt;
   font-weight: 500;
   line-height: 1.5;
-  background: $dark-blue;
+  background: vars.$dark-blue;
 
-  @media (max-width: $large-font-max-width) {
+  @media (max-width: vars.$large-font-max-width) {
     font-size: 14pt;
   }
-}
-
-header,
-footer {
-  nav {
-    menu {
-      padding: 0 20px;
-      max-width: $two-column-max-width;
-      margin: auto;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-
-      li {
-        + li {
-          margin-left: 30px;
-        }
-
-        a {
-          font-weight: 700;
-          color: #adf;
-          text-decoration: none;
-
-          &[aria-current],
-          &:hover,
-          &:focus {
-            color: #fff;
-            border-bottom: 3px solid $blue;
-          }
-        }
-
-        &:first-child {
-          margin-right: auto;
-
-          a {
-            @include app-logo;
-
-            border: none;
-            display: flex;
-            align-items: center;
-
-            &::before {
-              position: relative;
-              width: 80px;
-            }
-
-            &::after {
-              position: relative;
-              height: 50px;
-              margin-left: 20px;
-
-              @media (max-width: 1000px) {
-                height: 40px;
-              }
-
-              @media (max-width: 800px) {
-                display: none;
-              }
-            }
-          }
-        }
-
-        &:last-child a {
-          height: 60px;
-          border: none;
-        }
-      }
-    }
-  }
-
-  @media (max-width: $compact-nav-max-width) {
-    nav menu {
-      padding-bottom: 60px;
-      position: relative;
-
-      li:last-child {
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-      }
-    }
-  }
-}
-
-header {
-  background:
-    linear-gradient($dark-blue 50%, $blue 98%, $light-blue 100%), $dark-blue;
-
-  nav menu li:first-child a::before {
-    top: 12px;
-
-    @media (max-width: $compact-nav-max-width) {
-      top: 20px;
-    }
-  }
-}
-
-footer {
-  padding-bottom: 20px;
-  background:
-    linear-gradient($light-blue 0%, $blue 1%, $dark-blue 100%), $dark-blue;
-
-  nav {
-    padding-bottom: 20px;
-
-    ul li:first-child a::before {
-      top: -12px;
-
-      @media (max-width: $compact-nav-max-width) {
-        top: 20px;
-      }
-    }
-  }
-
-  p {
-    color: #fffd;
-    font-size: 12pt;
-    text-align: center;
-
-    strong {
-      color: $orange;
-      font-weight: 800;
-    }
-  }
-}
-
-#dark-mode-toggle {
-  $size: 1.7em;
-  $handle-size: $size * 0.75;
-  $offset: math.div($size - $handle-size, 2);
-
-  display: none;
-  position: relative;
-
-  input,
-  span {
-    position: absolute;
-    left: -9999px;
-  }
-
-  label {
-    cursor: pointer;
-
-    &::before {
-      content: "";
-      display: block;
-      height: $size;
-      width: $size * 2;
-      border-radius: math.div($size, 2);
-      background: #0007;
-      box-shadow:
-        0 1px 0 #fff3,
-        0 1px 5px #000 inset;
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      height: $handle-size;
-      aspect-ratio: 1;
-      border-radius: math.div($handle-size, 2);
-      position: absolute;
-      left: $offset;
-      top: $offset;
-      background: no-repeat left top/200% 100%
-        url("/assets/style/dark-mode.png");
-      background-color: $dark-blue;
-      transition:
-        left 1s $curve,
-        background-position 1s $curve;
-      color: $light-blue;
-      box-shadow:
-        0 1px 0 #fff5 inset,
-        0 1px 2px #000;
-      font-weight: bolder;
-      line-height: 1.2;
-    }
-  }
-
-  input:checked + label::after {
-    background-position: 100% top;
-    left: ($size * 2) - $offset - $handle-size;
-  }
-}
-
-.mode-set #dark-mode-toggle {
-  display: block;
 }
 
 main {
@@ -268,7 +33,7 @@ main {
 
   a {
     text-decoration: none;
-    color: $blue;
+    color: vars.$blue;
     border-bottom: 0 solid #07a3;
     font-weight: 700;
 
@@ -292,24 +57,24 @@ main {
       sans-serif;
     font-size: 38pt;
     font-weight: 800;
-    color: $orange;
+    color: vars.$orange;
     text-align: left;
     line-height: 0.97;
     letter-spacing: -0.03em;
 
-    @media (max-width: $large-font-max-width) {
+    @media (max-width: vars.$large-font-max-width) {
       font-size: 28pt;
     }
 
     strong {
-      color: $red;
+      color: vars.$red;
       white-space: nowrap;
     }
   }
 
   h3 {
     font-size: 20pt;
-    color: $red;
+    color: vars.$red;
     font-weight: 700;
   }
 
@@ -317,7 +82,7 @@ main {
     font-weight: 800;
 
     strong {
-      color: $orange;
+      color: vars.$orange;
       display: inline-block;
     }
   }
@@ -334,7 +99,7 @@ main {
   }
 
   section {
-    max-width: $two-column-max-width;
+    max-width: vars.$two-column-max-width;
     margin: auto;
     padding: 0 30px;
     display: flex;
@@ -347,7 +112,7 @@ main {
 
       @media (max-width: 800px) {
         border-left: none;
-        border-bottom: 3px solid $red;
+        border-bottom: 3px solid vars.$red;
         padding: 0;
         margin: 2em 0 1em;
       }
@@ -360,7 +125,7 @@ main {
       margin-bottom: 1em;
 
       ::marker {
-        color: $orange;
+        color: vars.$orange;
         font-weight: 900;
       }
     }
@@ -447,9 +212,11 @@ a.app-store {
 #docs {
   hgroup {
     > div {
-      margin-bottom: 1em;
+      margin: 0 0 1em 1em;
       border-bottom: 1px solid green;
+    }
 
+    &:not(.docs-wide) > div {
       > div {
         float: right;
         margin: 0 0 1em 1em;
@@ -463,13 +230,13 @@ a.app-store {
     }
 
     a.docs-image {
-      border: 3px solid $blue;
+      border: 3px solid vars.$blue;
       border-radius: 8px;
       overflow: hidden;
       display: inline-block;
       position: relative;
       transition: box-shadow 0.1s ease-out;
-      margin-right: 1em;
+      margin-left: 1em;
 
       &::after {
         content: "";
@@ -485,7 +252,7 @@ a.app-store {
         border-bottom-left-radius: 8px;
         background:
           no-repeat 60% 40%/55% url("/assets/style/arrow-top-right.png"),
-          $blue;
+          vars.$blue;
         transition:
           height 0.1s ease-out,
           width 0.1s ease-out;
@@ -493,7 +260,7 @@ a.app-store {
 
       &:hover,
       &:focus {
-        box-shadow: 0 0 10px $blue;
+        box-shadow: 0 0 10px vars.$blue;
 
         &::after {
           height: 1.3em;
@@ -508,7 +275,7 @@ a.app-store {
 
     &.docs-wide .docs-image {
       display: inline-block;
-      margin-right: auto;
+      margin: auto;
 
       img {
         max-height: 100px;
@@ -522,101 +289,4 @@ a.app-store {
     visibility: hidden;
     position: absolute;
   }
-}
-
-@mixin dark-mode {
-  header {
-    background:
-      linear-gradient(#0006 50%, $dark-blue 98%, $blue 100%), $dark-blue;
-  }
-
-  footer {
-    background:
-      linear-gradient($blue 0%, $dark-blue 1.5%, #0006 50%), $dark-blue;
-  }
-
-  #hero {
-    background:
-      repeat-x left bottom/200% 20% url("/assets/style/clouds-dark.avif"),
-      linear-gradient($dark-blue 0%, #69c 70%);
-
-    .video-frame.speech-bubble::before {
-      color: #000;
-    }
-  }
-
-  #hero h1,
-  header nav menu li:first-child a,
-  footer nav menu li:first-child a {
-    &::before {
-      background-position: left bottom;
-      box-shadow: 0 0 5px $blue;
-      border: 1px solid $blue;
-    }
-    &::after {
-      background-position: left bottom;
-    }
-  }
-
-  #hero p {
-    color: #000;
-    text-shadow: 0 0 30px $light-blue;
-  }
-
-  main,
-  .feature-list li {
-    background: #000;
-    color: #fff;
-
-    a {
-      color: $blue-dark-mode;
-      border-bottom-color: $dark-blue;
-    }
-  }
-
-  .two-column.arrow {
-    background: linear-gradient(#1470 0%, $dark-blue 20%, #1470 90%);
-
-    @media (min-width: $two-column-min-width) {
-      background:
-        linear-gradient(90deg, #000 0%, #0000 30%, #0000 60%, #000 100%),
-        linear-gradient(#000 60%, $dark-blue 85%, #000 90%);
-    }
-  }
-
-  #research figure {
-    background-color: #fff2;
-  }
-
-  #why cite::before {
-    background-color: #fff;
-  }
-
-  #docs {
-    a.docs-image {
-      border-color: $blue-dark-mode;
-
-      &:hover,
-      &:focus {
-        box-shadow:
-          0 0 10px $blue-dark-mode,
-          0 0 10px $blue-dark-mode,
-          0 0 10px $blue-dark-mode;
-      }
-
-      &::after {
-        background-color: $blue-dark-mode;
-      }
-    }
-  }
-}
-
-body:not(.mode-set-light) {
-  @media (prefers-color-scheme: dark) {
-    @include dark-mode;
-  }
-}
-
-body.mode-set-dark {
-  @include dark-mode;
 }

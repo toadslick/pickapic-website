@@ -1,3 +1,4 @@
+@use "vars";
 @use "main";
 @use "sass:math";
 
@@ -16,7 +17,7 @@ main {
 }
 
 body header nav {
-  background: main.$dark-blue;
+  background: vars.$dark-blue;
   padding-top: 15px;
 
   menu {
@@ -32,7 +33,7 @@ body header nav {
     }
   }
 
-  @media (max-width: main.$two-column-min-width) {
+  @media (max-width: vars.$two-column-min-width) {
     menu li {
       + li {
         margin: 0 10px;
@@ -53,10 +54,10 @@ body header nav {
 #hero {
   background:
     repeat-x left bottom/200% 20% url("/assets/style/clouds.avif"),
-    linear-gradient(main.$dark-blue 0%, #69c 70%);
+    linear-gradient(vars.$dark-blue 0%, #69c 70%);
 
   h1 {
-    @include main.app-logo;
+    @include vars.app-logo;
 
     $padding-left: calc((151 / 852) * 110%);
 
@@ -85,7 +86,7 @@ body header nav {
     margin: 0.5em 0 1em;
     text-align: center;
     font-weight: 500;
-    text-shadow: 0 0 30px main.$dark-blue;
+    text-shadow: 0 0 30px vars.$dark-blue;
 
     @media (max-width: 700px) {
       font-size: 18pt;
@@ -184,13 +185,13 @@ body header nav {
     padding: 0.3em 0.7em;
     margin: 0.4em 0.2em;
     border-radius: 1em;
-    border: 3px solid main.$orange;
+    border: 3px solid vars.$orange;
     background: #fff;
-    box-shadow: 0 0 10px main.$orange;
+    box-shadow: 0 0 10px vars.$orange;
 
     &:nth-child(2n) {
-      border-color: main.$red;
-      box-shadow: 0 0 10px main.$red;
+      border-color: vars.$red;
+      box-shadow: 0 0 10px vars.$red;
     }
   }
 
@@ -213,7 +214,7 @@ body header nav {
     margin: 0 20px;
 
     &::marker {
-      color: main.$red;
+      color: vars.$red;
       font-size: 22pt;
       line-height: 0.5;
     }
@@ -237,8 +238,8 @@ body header nav {
   video {
     position: relative;
     display: block;
-    width: main.$video-width-in-frame;
-    height: main.$video-height-in-frame;
+    width: vars.$video-width-in-frame;
+    height: vars.$video-height-in-frame;
     box-shadow: 0 20px 20px #000;
     z-index: 1;
   }
@@ -259,7 +260,7 @@ body header nav {
 .one-column {
   margin: 2em auto;
   padding: 0 20px;
-  max-width: main.$two-column-max-width;
+  max-width: vars.$two-column-max-width;
   text-align: center;
 }
 
@@ -279,7 +280,7 @@ body header nav {
     padding: 10px;
   }
 
-  @media (min-width: main.$two-column-min-width) {
+  @media (min-width: vars.$two-column-min-width) {
     flex-direction: row;
     margin: auto;
 
@@ -295,7 +296,7 @@ body header nav {
   &.two-column-reverse {
     flex-direction: column;
 
-    @media (min-width: main.$two-column-min-width) {
+    @media (min-width: vars.$two-column-min-width) {
       flex-direction: row-reverse;
     }
   }
@@ -307,10 +308,10 @@ body header nav {
       content: "||";
       position: absolute;
       display: flex;
-      width: main.$video-width-in-frame;
-      height: main.$video-height-in-frame;
-      left: calc((100% - main.$video-width-in-frame) / 2);
-      top: calc((100% - main.$video-height-in-frame) / 2);
+      width: vars.$video-width-in-frame;
+      height: vars.$video-height-in-frame;
+      left: calc((100% - vars.$video-width-in-frame) / 2);
+      top: calc((100% - vars.$video-height-in-frame) / 2);
       background: #0006;
       box-shadow:
         0 0 40px #000 inset,
@@ -322,7 +323,7 @@ body header nav {
       user-select: none;
     }
 
-    @media (min-width: main.$two-column-min-width) {
+    @media (min-width: vars.$two-column-min-width) {
       > div {
         &:first-child {
           overflow: visible;
@@ -368,7 +369,7 @@ body header nav {
     }
   }
 
-  @media (min-width: main.$two-column-min-width) {
+  @media (min-width: vars.$two-column-min-width) {
     &.arrow {
       background:
         linear-gradient(90deg, #fff 0%, #fff0 30%, #fff0 60%, #fff 100%),

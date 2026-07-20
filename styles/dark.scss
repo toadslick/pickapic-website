@@ -1,0 +1,90 @@
+@use "vars";
+
+@mixin dark-mode {
+  body:not(.mode-set-light) {
+    @media (prefers-color-scheme: dark) {
+      @content;
+    }
+  }
+  body.mode-set-dark {
+    @content;
+  }
+}
+
+@include dark-mode {
+  header {
+    background:
+      linear-gradient(#0006 50%, vars.$dark-blue 98%, vars.$blue 100%),
+      vars.$dark-blue;
+  }
+
+  footer {
+    background:
+      linear-gradient(vars.$blue 0%, vars.$dark-blue 1.5%, #0006 50%),
+      vars.$dark-blue;
+  }
+
+  #hero {
+    background:
+      repeat-x left bottom/200% 20% url("/assets/style/clouds-dark.avif"),
+      linear-gradient(vars.$dark-blue 0%, #69c 70%);
+
+    .video-frame.speech-bubble::before {
+      color: #000;
+    }
+  }
+
+  #hero h1,
+  header nav menu li:first-child a,
+  footer nav menu li:first-child a {
+    &::before {
+      background-position: left bottom;
+      box-shadow: 0 0 5px vars.$blue;
+      border: 1px solid vars.$blue;
+    }
+    &::after {
+      background-position: left bottom;
+    }
+  }
+
+  #hero p {
+    color: #000;
+    text-shadow: 0 0 30px vars.$light-blue;
+  }
+
+  main {
+    background: #000;
+    color: #fff;
+
+    a {
+      color: vars.$blue-dark-mode;
+      border-bottom-color: vars.$dark-blue;
+    }
+  }
+
+  #research figure {
+    background-color: #fff2;
+  }
+
+  #why cite::before {
+    background-color: #fff;
+  }
+
+  #docs {
+    a.docs-image {
+      border-color: vars.$blue-dark-mode;
+
+      &:hover,
+      &:focus {
+        box-shadow:
+          0 0 10px vars.$blue-dark-mode,
+          0 0 10px vars.$blue-dark-mode,
+          0 0 10px vars.$blue-dark-mode;
+      }
+
+      &::after {
+        background-color: vars.$blue-dark-mode;
+      }
+    }
+  }
+}
