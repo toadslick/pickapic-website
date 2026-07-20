@@ -36,6 +36,18 @@
       source.setAttribute("src", newUrl);
       source.parentElement.load();
     });
+
+    // Replace all images
+    document.querySelectorAll("img").forEach((image) => {
+      let oldAttr = image.getAttribute("srcset");
+      if (oldAttr) {
+        let newAttr = oldAttr.replace(
+          `.${oldText[0]}.jpg`,
+          `.${newText[0]}.jpg`,
+        );
+        image.setAttribute("srcset", newAttr);
+      }
+    });
   };
 
   checkbox.addEventListener("change", (event) => {
