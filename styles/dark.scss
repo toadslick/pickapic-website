@@ -71,6 +71,10 @@
   }
 
   #docs {
+    h3 {
+      color: #000;
+    }
+
     a.docs-image {
       border-color: vars.$blue-dark-mode;
 
@@ -85,6 +89,10 @@
       &::after {
         background-color: vars.$blue-dark-mode;
       }
+    }
+
+    hgroup > hgroup {
+      border-color: #fff3;
     }
   }
 }

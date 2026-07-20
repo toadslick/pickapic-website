@@ -98,6 +98,13 @@ main {
     }
   }
 
+  .wide-only {
+    @media (max-width: 850px) {
+      visibility: hidden;
+      position: absolute;
+    }
+  }
+
   section {
     max-width: vars.$two-column-max-width;
     margin: auto;
@@ -130,36 +137,6 @@ main {
       }
     }
 
-    #research {
-      figure {
-        display: block;
-        padding: 0.4em 0.8em;
-        mask-image: url("/assets/style/paper-mask.png");
-        mask-position: left bottom;
-        mask-repeat: repeat-x;
-        background-color: #0001;
-        margin-bottom: 0.5em;
-      }
-
-      p {
-        padding-left: 0.8em;
-      }
-
-      ul {
-        padding-left: 1.8em;
-      }
-
-      cite {
-        font-size: 12pt;
-        margin-bottom: 1em;
-        display: inline-block;
-
-        em {
-          font-style: italic;
-        }
-      }
-    }
-
     P,
     ul {
       + figure {
@@ -181,6 +158,36 @@ a.app-store {
   span {
     position: absolute;
     left: -9999px;
+  }
+}
+
+#research {
+  figure {
+    display: block;
+    padding: 0.4em 0.8em;
+    mask-image: url("/assets/style/paper-mask.png");
+    mask-position: left bottom;
+    mask-repeat: repeat-x;
+    background-color: #0001;
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    padding-left: 0.8em;
+  }
+
+  ul {
+    padding-left: 1.8em;
+  }
+
+  cite {
+    font-size: 12pt;
+    margin-bottom: 1em;
+    display: inline-block;
+
+    em {
+      font-style: italic;
+    }
   }
 }
 
@@ -210,83 +217,91 @@ a.app-store {
 }
 
 #docs {
+  h3 {
+    padding: 0.3em 0.8em;
+    border-radius: 6px;
+    background: linear-gradient(vars.$red, #fd6153aa);
+    color: #fff;
+  }
+
+  a.docs-image {
+    border: 3px solid vars.$blue;
+    border-radius: 8px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    transition: box-shadow 0.1s ease-out;
+
+    &::after {
+      content: "";
+      display: flex;
+      position: absolute;
+      height: 1em;
+      width: 1em;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      top: -0.1px;
+      right: -0.1px;
+      border-bottom-left-radius: 8px;
+      background:
+        no-repeat 60% 40%/55% url("/assets/style/arrow-top-right.png"),
+        vars.$blue;
+      transition:
+        height 0.1s ease-out,
+        width 0.1s ease-out;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 10px vars.$blue;
+
+      &::after {
+        height: 1.3em;
+        width: 1.3em;
+      }
+    }
+  }
+
   hgroup {
+    > hgroup {
+      margin-left: 1em;
+      padding: 1em 0;
+
+      + hgroup {
+        border-top: 3px solid #0003;
+      }
+    }
+
     > div {
-      margin: 0 0 1em 1em;
-      border-bottom: 1px solid green;
+      display: flex;
     }
 
     &:not(.docs-wide) > div {
-      > div {
-        float: right;
-        margin: 0 0 1em 1em;
-      }
+      flex-direction: row;
 
-      &::after {
-        content: "";
-        display: block;
-        clear: both;
-      }
-    }
-
-    a.docs-image {
-      border: 3px solid vars.$blue;
-      border-radius: 8px;
-      overflow: hidden;
-      display: inline-block;
-      position: relative;
-      transition: box-shadow 0.1s ease-out;
-      margin-left: 1em;
-
-      &::after {
-        content: "";
-        display: flex;
-        position: absolute;
-        height: 1em;
-        width: 1em;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        top: -0.1px;
-        right: -0.1px;
-        border-bottom-left-radius: 8px;
-        background:
-          no-repeat 60% 40%/55% url("/assets/style/arrow-top-right.png"),
-          vars.$blue;
-        transition:
-          height 0.1s ease-out,
-          width 0.1s ease-out;
-      }
-
-      &:hover,
-      &:focus {
-        box-shadow: 0 0 10px vars.$blue;
-
-        &::after {
-          height: 1.3em;
-          width: 1.3em;
-        }
-      }
-
-      > img {
+      img {
         max-height: 200px;
       }
+
+      > div:last-child {
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        flex-shrink: 0;
+
+        > div {
+          margin-left: 1em;
+        }
+      }
     }
 
-    &.docs-wide .docs-image {
-      display: inline-block;
-      margin: auto;
+    &.docs-wide > div {
+      flex-direction: column;
 
       img {
         max-height: 100px;
       }
     }
-  }
-}
-
-.wide-only {
-  @media (max-width: 850px) {
-    visibility: hidden;
-    position: absolute;
   }
 }
