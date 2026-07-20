@@ -4,8 +4,7 @@ docs:
       - title: "Create or open document"
         text:
           - "Your picture library and collection of button books live in a file known as a Pick-a-Pic document."
-          - "The app first opens to the document picker. Tap the 'Create Document' icon or the plus button to create a new Pick-a-Pic document."
-          - "To open an existing document, tap that document's icon."
+          - "The app first opens to the document picker. Tap the 'Create Document' icon or the plus button to create a new Pick-a-Pic document. To open an existing document, tap that document's icon."
         images:
           - "1-1"
         wide: true
@@ -32,27 +31,12 @@ docs:
     items:
       - title: "Add picture"
         text:
-          - "Tap the plus button at the top of your picture library to create a new picture."
-          - "Then select how you would like to create your picture."
+          - "Tap the plus button at the top of your picture library to create a new picture. Then select how you would like to create your picture."
+          - ""
         images:
           - "2-1a"
           - "2-1b"
         items:
-          - title: "Pick from photo library"
-            text:
-              - "Select an image to import from your photo library."
-          - title: "Take a photo"
-            text:
-              - "Use your device's camera to take a photo."
-          - title: "Import a file"
-            text:
-              - "Browse your files and select an image to import."
-          - title: "Create from emoji"
-            text:
-              - "Create a picture by selecting an emoji and a background color."
-          - title: "Create from text"
-            text:
-              - "Create a picture by entering text and selecting a background color."
           - title: "Copy/paste"
             text:
               - "If your device's copy-paste clipboard contains an image, this menu item will be enabled."
@@ -60,9 +44,6 @@ docs:
               - "Images can be copied from many sources. For example, an image can be copied from the web by long-pressing the image and selecting 'Copy' from the menu."
             images:
               - "2-1-6"
-          - title: "Download from gallery"
-            text:
-              - "Download one or more pictures from our gallery of examples."
           - title: "Crop your picture"
             text:
               - "After adding a picture from the photo library, camera, file browser, or copy-paste, you will be prompted to crop the image."

@@ -220,8 +220,12 @@ a.app-store {
   h3 {
     padding: 0.3em 0.8em;
     border-radius: 6px;
-    background: linear-gradient(vars.$red, #fd6153aa);
+    background: linear-gradient(#fd6153bb, vars.$red);
     color: #fff;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
   }
 
   a.docs-image {
@@ -267,9 +271,22 @@ a.app-store {
     > hgroup {
       margin-left: 1em;
       padding: 1em 0;
+      border-top: 0 solid #0003;
 
       + hgroup {
-        border-top: 3px solid #0003;
+        border-top-width: 3px;
+      }
+
+      > hgroup {
+        border-top-width: 3px;
+
+        &:nth-child(2) {
+          margin-top: 1em;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
 
@@ -298,6 +315,10 @@ a.app-store {
 
     &.docs-wide > div {
       flex-direction: column;
+
+      .docs-image {
+        margin-top: 1em;
+      }
 
       img {
         max-height: 100px;
