@@ -323,15 +323,27 @@ main {
   }
 
   article {
+    > hgroup {
+      margin-top: 2em;
+
+      + hgroup {
+        border-top: 3px solid #0002;
+        padding-top: 1em;
+      }
+    }
+  }
+
+  section {
     max-width: $two-column-max-width;
     margin: auto;
     padding: 0 30px;
+    display: flex;
+    flex-direction: row;
 
     nav {
-      float: right;
-      border-left: 3px solid $red;
-      padding: 0.5em 0 0 1em;
-      margin: 0 0 0 20px;
+      flex-grow: 1;
+      flex-shrink: 0;
+      margin: 2em 2em 0 0;
 
       @media (max-width: 800px) {
         float: none;
@@ -440,24 +452,23 @@ a.app-store {
     }
 
     div {
+      margin-bottom: 1em;
+
       &::after {
         content: "";
         display: block;
         clear: both;
       }
-
-      > hgroup {
-        margin-left: 1em;
-      }
     }
 
     a.docs-image {
-      display: inline-block;
+      float: left;
       border: 3px solid $blue;
       border-radius: 8px;
       overflow: hidden;
       position: relative;
       transition: box-shadow 0.1s ease-out;
+      margin-right: 1em;
 
       &::after {
         content: "";
@@ -488,10 +499,6 @@ a.app-store {
           width: 1.3em;
         }
       }
-    }
-
-    .docs-image {
-      float: left;
 
       > img {
         max-height: 200px;
@@ -499,7 +506,9 @@ a.app-store {
     }
 
     &.docs-wide .docs-image {
+      display: inline-block;
       float: none;
+      margin-right: auto;
 
       img {
         max-height: 100px;
@@ -549,6 +558,10 @@ a.app-store {
     }
   }
 
+  h4 {
+    background-color: #147;
+  }
+
   #hero p {
     color: #000;
     text-shadow: 0 0 30px $light-blue;
@@ -583,19 +596,21 @@ a.app-store {
     background-color: #fff;
   }
 
-  #docs a.docs-image {
-    border-color: $blue-dark-mode;
+  #docs {
+    a.docs-image {
+      border-color: $blue-dark-mode;
 
-    &:hover,
-    &:focus {
-      box-shadow:
-        0 0 10px $blue-dark-mode,
-        0 0 10px $blue-dark-mode,
-        0 0 10px $blue-dark-mode;
-    }
+      &:hover,
+      &:focus {
+        box-shadow:
+          0 0 10px $blue-dark-mode,
+          0 0 10px $blue-dark-mode,
+          0 0 10px $blue-dark-mode;
+      }
 
-    &::after {
-      background-color: $blue-dark-mode;
+      &::after {
+        background-color: $blue-dark-mode;
+      }
     }
   }
 }

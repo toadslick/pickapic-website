@@ -6,7 +6,7 @@
     </h3>
 
     {% for h4 in h3.items %}
-      <hgroup {{ 'class=docs-wide' if h4.wide }} id="{{ h3.title + "_" + h4.title | slugify }}">
+      <hgroup {{ 'class=docs-wide' if h4.wide }} id="{{ (h3.title + "_" + h4.title) | slugify }}">
 
         <h4>
           {{ h4.title | safe }}
@@ -28,7 +28,7 @@
         </div>
 
         {% for h5 in h4.items %}
-          <hgroup {{ 'class=docs-wide' if h5.wide }} id="{{ h3.title + "_" + h4.title + "_" + h5.title | slugify }}">
+          <hgroup {{ 'class=docs-wide' if h5.wide }} id="{{ (h3.title + "_" + h4.title + "_" + h5.title) | slugify }}">
 
             <h5>
               {{ h5.title | safe }}
