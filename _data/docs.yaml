@@ -137,11 +137,17 @@ docs:
           - ""
         images:
           - ""
-      - title: "Book settings: unique to page/book"
+      - title: "Book settings"
         text:
           - ""
         images:
           - ""
+        items:
+          - title: "Unique to page/book"
+            text:
+              - ""
+            images:
+              - ""
       - title: "Voice settings"
         text:
           - ""

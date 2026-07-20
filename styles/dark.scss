@@ -63,8 +63,8 @@
 
     nav menu,
     nav ul {
-      li[aria-current] a {
-        background: #1476;
+      li[aria-current] > a {
+        color: #fff;
       }
     }
   }

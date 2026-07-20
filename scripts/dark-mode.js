@@ -74,3 +74,40 @@
     });
   });
 })();
+
+// Highlight link in side nav
+(function () {
+  const visibleIDs = new Set();
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      for (const entry of entries) {
+        let id = `#${entry.target.id}`;
+        if (entry.intersectionRatio > 0) {
+          visibleIDs.add(id);
+        } else {
+          visibleIDs.delete(id);
+        }
+      }
+
+      for (const link of document.querySelectorAll("nav li a")) {
+        if (visibleIDs.has(link.getAttribute("href"))) {
+          link.parentElement.setAttribute("aria-current", "location");
+        } else {
+          link.parentElement.removeAttribute("aria-current");
+        }
+      }
+
+      console.log(visibleIDs);
+    },
+    {
+      threshold: [0, 0.0000001],
+      delay: 300,
+    },
+  );
+
+  const headings = document.querySelectorAll("hgroup[id]");
+  headings.forEach((h) => {
+    observer.observe(h);
+  });
+})();

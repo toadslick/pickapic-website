@@ -43,10 +43,7 @@ main {
     }
   }
 
-  h1 {
-    font-weight: 700;
-  }
-
+  h1,
   h2 {
     display: block;
     margin: 0.5em auto 0.2em;
@@ -57,7 +54,6 @@ main {
       sans-serif;
     font-size: 38pt;
     font-weight: 800;
-    color: vars.$orange;
     text-align: left;
     line-height: 0.97;
     letter-spacing: -0.03em;
@@ -65,7 +61,10 @@ main {
     @media (max-width: vars.$large-font-max-width) {
       font-size: 28pt;
     }
+  }
 
+  h2 {
+    color: vars.$orange;
     strong {
       color: vars.$red;
       white-space: nowrap;
@@ -76,6 +75,10 @@ main {
     font-size: 20pt;
     color: vars.$red;
     font-weight: 700;
+
+    @media (max-width: vars.$large-font-max-width) {
+      font-size: 18pt;
+    }
   }
 
   h4 {
@@ -89,9 +92,8 @@ main {
 
   article {
     > hgroup {
-      margin-top: 2em;
-
       + hgroup {
+        margin-top: 2em;
         border-top: 3px solid #0002;
         padding-top: 1em;
       }
@@ -109,60 +111,52 @@ main {
     max-width: vars.$two-column-max-width;
     margin: auto;
     padding: 0 30px;
-    display: flex;
-    flex-direction: row;
+
+    @media (min-width: vars.$large-font-max-width) {
+      display: flex;
+      flex-direction: row;
+    }
 
     nav {
       flex-grow: 1;
       flex-shrink: 0;
-      margin: 2em 2em 0 0;
+      margin: 0 2em 0 0;
 
       @media (max-width: 800px) {
         border-left: none;
         border-bottom: 3px solid vars.$red;
         padding: 0;
-        margin: 2em 0 1em;
-      }
-    }
-
-    ul,
-    menu {
-      list-style-type: none;
-      padding-left: 0.5em;
-      margin-bottom: 1em;
-
-      ::marker {
-        color: vars.$orange;
-        font-weight: 900;
+        margin: 0 0 1em;
       }
 
-      ul {
-        font-size: 12pt;
-        margin-bottom: 0;
-
-        a {
-          font-weight: 600;
-        }
+      ul,
+      menu {
+        list-style-type: none;
+        margin-bottom: 1em;
 
         ul {
-          font-size: 10pt;
+          margin-bottom: 0;
+          margin-left: 20px;
+          font-size: 14pt;
+
+          a {
+            font-weight: 600;
+          }
+
+          ul {
+            font-size: 11pt;
+
+            a {
+              font-weight: 500;
+            }
+          }
         }
-      }
 
-      li a {
-        padding: 3px 6px;
-        display: block;
-        cursor: pointer;
-
-        &:hover,
-        &:focus {
-          padding-bottom: 0;
+        li[aria-current] {
+          > a {
+            color: #000;
+          }
         }
-      }
-
-      li.current a {
-        border-radius: 6px;
-        background: #1479;
       }
     }
 
@@ -324,21 +318,31 @@ a.app-store {
     }
 
     &:not(.docs-wide) > div {
-      flex-direction: row;
+      @media (min-width: vars.$large-font-max-width) {
+        flex-direction: row;
+
+        > div:last-child {
+          display: flex;
+          flex-direction: row;
+          margin-left: auto;
+          flex-shrink: 0;
+
+          > div {
+            margin-left: 1em;
+          }
+        }
+      }
+
+      @media (max-width: vars.$large-font-max-width) {
+        flex-direction: column;
+
+        .docs-image {
+          margin-top: 1em;
+        }
+      }
 
       img {
         max-height: 200px;
-      }
-
-      > div:last-child {
-        display: flex;
-        flex-direction: row;
-        margin-left: auto;
-        flex-shrink: 0;
-
-        > div {
-          margin-left: 1em;
-        }
       }
     }
 
