@@ -346,7 +346,6 @@ main {
       margin: 2em 2em 0 0;
 
       @media (max-width: 800px) {
-        float: none;
         border-left: none;
         border-bottom: 3px solid $red;
         padding: 0;
@@ -447,12 +446,14 @@ a.app-store {
 
 #docs {
   hgroup {
-    > hgroup {
-      margin-left: 1em;
-    }
-
-    div {
+    > div {
       margin-bottom: 1em;
+      border-bottom: 1px solid green;
+
+      > div {
+        float: right;
+        margin: 0 0 1em 1em;
+      }
 
       &::after {
         content: "";
@@ -462,10 +463,10 @@ a.app-store {
     }
 
     a.docs-image {
-      float: left;
       border: 3px solid $blue;
       border-radius: 8px;
       overflow: hidden;
+      display: inline-block;
       position: relative;
       transition: box-shadow 0.1s ease-out;
       margin-right: 1em;
@@ -507,7 +508,6 @@ a.app-store {
 
     &.docs-wide .docs-image {
       display: inline-block;
-      float: none;
       margin-right: auto;
 
       img {
@@ -556,10 +556,6 @@ a.app-store {
     &::after {
       background-position: left bottom;
     }
-  }
-
-  h4 {
-    background-color: #147;
   }
 
   #hero p {

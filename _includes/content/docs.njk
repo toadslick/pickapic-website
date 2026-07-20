@@ -8,45 +8,51 @@
     {% for h4 in h3.items %}
       <hgroup {{ 'class=docs-wide' if h4.wide }} id="{{ (h3.title + "_" + h4.title) | slugify }}">
 
-        <h4>
-          {{ h4.title | safe }}
-        </h4>
-
         <div>
-          {% for image in h4.images %}
-            {% set url = "/assets/docs/" + image + ".l.jpg" %}
-            <a class="docs-image"  href="{{url}}" target="_blank">
-              <img srcset="{{url}} 2x"/>
-            </a>
-          {% endfor %}
 
+          <div>
+            {% for image in h4.images %}
+              {% set url = "/assets/docs/" + image + ".l.jpg" %}
+              <a class="docs-image"  href="{{url}}" target="_blank">
+                <img srcset="{{url}} 2x"/>
+              </a>
+            {% endfor %}
+          </div>
+
+          <h4>
+            {{ h4.title | safe }}
+          </h4>
           <p>
             {% for p in h4.text %}
               <span>{{p}}</span>
             {% endfor %}
           </p>
+
         </div>
 
         {% for h5 in h4.items %}
           <hgroup {{ 'class=docs-wide' if h5.wide }} id="{{ (h3.title + "_" + h4.title + "_" + h5.title) | slugify }}">
 
-            <h5>
-              {{ h5.title | safe }}
-            </h5>
-
             <div>
-              {% for image in h5.images %}
-                {% set url = "/assets/docs/" + image + ".l.jpg" %}
-                <a class="docs-image" href="{{url}}" target="_blank">
-                  <img srcset="{{url}} 2x"/>
-                </a>
-              {% endfor %}
 
+              <div>
+                {% for image in h5.images %}
+                  {% set url = "/assets/docs/" + image + ".l.jpg" %}
+                  <a class="docs-image"  href="{{url}}" target="_blank">
+                    <img srcset="{{url}} 2x"/>
+                  </a>
+                {% endfor %}
+              </div>
+
+              <h5>
+                {{ h5.title | safe }}
+              </h5>
               <p>
                 {% for p in h5.text %}
                   <span>{{p}}</span>
                 {% endfor %}
               </p>
+
             </div>
 
           </hgroup>
