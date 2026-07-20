@@ -127,8 +127,8 @@ main {
 
     ul,
     menu {
-      list-style-type: disc;
-      padding-left: 1em;
+      list-style-type: none;
+      padding-left: 0.5em;
       margin-bottom: 1em;
 
       ::marker {
@@ -147,6 +147,22 @@ main {
         ul {
           font-size: 10pt;
         }
+      }
+
+      li a {
+        padding: 3px 6px;
+        display: block;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+          padding-bottom: 0;
+        }
+      }
+
+      li.current a {
+        border-radius: 6px;
+        background: #1479;
       }
     }
 

@@ -60,6 +60,13 @@
       color: vars.$blue-dark-mode;
       border-bottom-color: vars.$dark-blue;
     }
+
+    nav menu,
+    nav ul {
+      li[aria-current] a {
+        background: #1476;
+      }
+    }
   }
 
   #research figure {
