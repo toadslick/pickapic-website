@@ -135,6 +135,19 @@ main {
         color: vars.$orange;
         font-weight: 900;
       }
+
+      ul {
+        font-size: 12pt;
+        margin-bottom: 0;
+
+        a {
+          font-weight: 600;
+        }
+
+        ul {
+          font-size: 10pt;
+        }
+      }
     }
 
     P,
@@ -321,7 +334,7 @@ a.app-store {
       }
 
       img {
-        max-height: 100px;
+        max-height: 150px;
       }
     }
   }

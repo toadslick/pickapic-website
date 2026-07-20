@@ -37,33 +37,23 @@ docs:
           - "2-1a"
           - "2-1b"
         items:
-          - title: "Copy/paste"
+          - title: "Paste from clipboard"
             text:
               - "If your device's copy-paste clipboard contains an image, this menu item will be enabled."
               - "After tapping the menu item, you will be prompted to allow the paste operation."
               - "Images can be copied from many sources. For example, an image can be copied from the web by long-pressing the image and selecting 'Copy' from the menu."
             images:
               - "2-1-6"
-          - title: "Crop your picture"
+          - title: "Crop picture"
             text:
               - "After adding a picture from the photo library, camera, file browser, or copy-paste, you will be prompted to crop the image."
               - "Pinch and drag the image with two fingers to zoom and move it. Tap the buttons on either side of the crop boundary to rotate the image 90 degrees."
               - "Tap the 'Crop' button to crop the image and add it to your picture library."
             images:
               - "2-1-8"
-      - title: "Rename picture"
+      - title: "Rename, delete, or tag picture"
         text:
-          - "Long-press a picture in your library and select 'Rename' from the menu."
-        images:
-          - "2-2,2-3,2-4"
-      - title: "Delete picture"
-        text:
-          - "Long-press a picture in your library and select 'Delete' from the menu."
-        images:
-          - "2-2,2-3,2-4"
-      - title: "Tag picture"
-        text:
-          - "Long-press a picture in your library and select 'Tag' from the menu. See the Tags section of the documentation for more about tagging images."
+          - "Long-press a picture in your library and select the corresponding item from the menu."
         images:
           - "2-2,2-3,2-4"
       - title: "Sort"
