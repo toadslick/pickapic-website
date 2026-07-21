@@ -1,38 +1,38 @@
 docs:
   - title: "Pick-a-Pic Documents"
     items:
-      - title: "Create or open document"
+      - title: "Create or open a document"
         text:
-          - "Your picture library and collection of button books live in a file known as a Pick-a-Pic document."
+          - "Your Picture Library and Button Books live in a file known as a Pick-a-Pic document."
           - "The app first opens to the document picker. Tap the 'Create Document' icon or the plus button to create a new Pick-a-Pic document. To open an existing document, tap that document's icon."
         images:
           - "1-1"
         wide: true
-      - title: "Rename document"
+      - title: "Rename a document"
         text:
           - "From the document picker, long-press the document's icon until a menu appears. Then tap the 'Rename' item in the menu."
         images:
           - "1-2"
-      - title: "Save and close"
+      - title: "Save and close a document"
         text:
           - "After you've opened your document, it will auto-save as you make changes."
           - "Tap the back button to close your document and return to the document picker."
         images:
           - "1-3"
         wide: true
-      - title: "Undo / redo"
+      - title: "Undo or redo changes"
         text:
           - "To undo a change you've made to your document, tap the left-facing arrow button. To redo a change that you've undone, tap the right-facing arrow button."
           - "The buttons will be disabled if there are no changes to undo or redo."
         images:
           - "1-4"
         wide: true
-      - title: "Sort"
+      - title: "Sort books and pictures"
         text:
           - "Tap the name of your document and then tap the 'Sort books and pictures...' item of the menu. A submenu will open that allows you to choose the order that your Picture Library and Button Books are sorted."
         images:
           - "1-5"
-      - title: "Search"
+      - title: "Search books and pictures"
         text:
           - "Enter text into the search bar to filter your Picture Library and Button Books. Only pictures and books whose titles match your search text will be shown."
           - "Tap the 'X' button in the search field to clear the text and show all of your pictures and books."
@@ -42,9 +42,9 @@ docs:
 
   - title: "Picture library"
     items:
-      - title: "Add picture"
+      - title: "Add a picture"
         text:
-          - "Tap the plus button at the top of your picture library to create a new picture. Then select how you would like to create your picture."
+          - "Tap the plus button at the top of your Picture Library to create a new picture. Then select how you would like to create your picture."
         images:
           - "2-1a"
           - "2-1b"
@@ -61,15 +61,15 @@ docs:
             text:
               - "After adding a picture from the photo library, camera, file browser, or copy-paste, you will be prompted to crop the image."
               - "Pinch and drag the image with two fingers to zoom and move it. Tap the buttons on either side of the crop boundary to rotate the image 90 degrees."
-              - "Tap the 'Crop' button to crop the image and add it to your picture library."
+              - "Tap the 'Crop' button to crop the image and add it to your Picture Library."
             images:
               - "2-1-8"
-      - title: "Rename, delete, or tag picture"
+      - title: "Rename, delete, or tag a picture"
         text:
-          - "Long-press a picture in your library and select the corresponding item from the menu."
+          - "Long-press a picture in your Picture Library and select the corresponding item from the menu."
         images:
           - "2-2,2-3,2-4"
-      - title: "Filter by tag"
+      - title: "Filter pictures by tag"
         text:
           - ""
         images:
