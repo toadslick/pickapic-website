@@ -321,9 +321,12 @@ a.app-store {
 
   hgroup {
     > hgroup {
-      margin-left: 1em;
       padding: 1em 0;
       border-top: 0 solid #0003;
+
+      @media (min-width: vars.$large-font-max-width) {
+        margin-left: 1em;
+      }
 
       + hgroup {
         border-top-width: 3px;
@@ -342,44 +345,44 @@ a.app-store {
       }
     }
 
-    > div {
-      display: flex;
-    }
-
     &:not(.docs-wide) > div {
-      @media (min-width: vars.$two-column-min-width) {
-        flex-direction: row;
+      img {
+        max-height: 300px;
+        max-width: 300px;
 
-        > div:last-child {
+        @media (max-width: 1100px) {
+          max-width: 200px;
+        }
+
+        @media (max-width: 600px) {
+          max-width: 150px;
+        }
+      }
+
+      > div {
+        float: right;
+
+        @media (min-width: vars.$two-column-min-width) {
           display: flex;
           flex-direction: row;
-          margin-left: auto;
-          flex-shrink: 0;
-
-          > div {
-            margin-left: 1em;
-          }
+          flex: 1 0;
         }
       }
 
-      @media (max-width: vars.$two-column-min-width) {
-        flex-direction: column;
-
-        .docs-image {
-          margin-top: 1em;
-        }
+      .docs-image {
+        margin: 0 0 1em 1em;
       }
 
-      img {
-        max-height: 200px;
+      &::after {
+        display: block;
+        content: "";
+        clear: both;
       }
     }
 
     &.docs-wide > div {
-      flex-direction: column;
-
       .docs-image {
-        margin-top: 1em;
+        margin-bottom: 1em;
       }
 
       img {
