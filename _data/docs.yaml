@@ -71,9 +71,14 @@ docs:
           - "2-2,2-3,2-4"
       - title: "Filter pictures by tag"
         text:
-          - ""
+          - "Tap the tag icon at the top left of the Picture Library to open the Filter by Tag menu."
+          - "The icon is an outline if no tags are currently selected. It is filled if your Picture Library is being filtered by one or more selected tags."
+          - "From the menu, tap any tag to select it. Selected tags have a filled icon and a checkmark. Your Picture Library will only show pictures that have one or more of the selected tags."
+          - "Tap the 'Clear' button to deselect all tags. Tap the plus button to create a new tag."
+          - "Some tags are created automatically and applied to pictures based on how the picture was created."
         images:
-          - ""
+          - "2-5a"
+          - "2-5b"
   - title: "Tags"
     items:
       - title: "Add"

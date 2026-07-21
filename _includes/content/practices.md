@@ -37,11 +37,11 @@ Once your learner shows a consistent response, try varying the format in small w
 
 If you see an increase in challenging or harmful behavior, or your learner is not having success with a change, return to the last format where they had consistent success. Give your learner time to experience success and positive reinforcement before trying another incremental change.
 
-Long-term goals for your learner:
+### Work toward long-term goals:
 
-- Ability to make requests for items in different categories. For example: having buttons for snacks and buttons for toys.
-- Ability to use buttons for purposes beyond requesting tangible objects. For example: using buttons to request activities or to express feelings.
-- Ability to make requests in various settings, such as outside or at the grocery store.
-- Ability to use buttons that require increased visual discrimination. For example: buttons with pictures that are line drawings or emoji instead of photographs, or buttons with more complex backgrounds.
+The goal of developing **functional communication** is to establish consistent social initiation as a foundation for more complex interactions. When your learner has met these goals, they may be ready to graduate from Pick-a-Pic to more advanced AAC apps:
 
-The ultimate goal is to establish consistent social initiation and requests as a foundation for more complex communication and more advanced AAC apps.
+- Ability to make requests for items in different categories, such as use of buttons for snacks as well as toys.
+- Ability to use buttons for purposes beyond requesting tangible objects, such as use of buttons to request activities or to express feelings.
+- Ability to make requests in various settings, such as outside, at the grocery store, or with other people.
+- Ability to use buttons that require increased visual discrimination, such as buttons that have line drawings or emoji instead of photographs.
