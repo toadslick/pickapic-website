@@ -19,3 +19,29 @@ Photographs, as opposed to icons or illustrations, minimize any barriers related
 ### **Establish yourself** as a source of reinforcement.
 
 Ensure that the requests indicated by your Pick-a-Pic buttons are things you can quickly fulfill. This establishes the link between the communicative exchange and access to the desired items or activities.
+
+### Be **specific** in your praise.
+
+Provide lots of praise in a style that is motivating for your learner and that is descriptive of their behavior. Instead of saying “Great job!”, you could say “Great job showing me what you want! I love how you looked at the button!”
+
+Make sure your style fits your learner. One learner may be startled if you raise the volume of your voice, while another learner may enjoy clapping and cheering.
+
+Skills to look for and encourage:
+
+- **Social approach** - body oriented towards you, movement towards you, reaching, eye contact, possibly smiling or laughing or demonstrating enjoyment.
+- **Increased or purposeful vocalizations** - reinforce all attempts at vocal communication (including non-speech sounds) and any attempts at words.
+
+### Make small, **incremental** changes.
+
+Once your learner shows a consistent response, try varying the format in small ways. If you started with a single button on a single page, try adding a second button, and work your way toward multiple buttons on multiple pages. Have your learner try to communicate with a different person or in a different setting.
+
+If you see an increase in challenging or harmful behavior, or your learner is not having success with a change, return to the last format where they had consistent success. Give your learner time to experience success and positive reinforcement before trying another incremental change.
+
+Long-term goals for your learner:
+
+- Ability to make requests for items in different categories. For example: having buttons for snacks and buttons for toys.
+- Ability to use buttons for purposes beyond requesting tangible objects. For example: using buttons to request activities or to express feelings.
+- Ability to make requests in various settings, such as outside or at the grocery store.
+- Ability to use buttons that require increased visual discrimination. For example: buttons with pictures that are line drawings or emoji instead of photographs, or buttons with more complex backgrounds.
+
+The ultimate goal is to establish consistent social initiation and requests as a foundation for more complex communication and more advanced AAC apps.
