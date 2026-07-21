@@ -347,7 +347,7 @@ a.app-store {
     }
 
     &:not(.docs-wide) > div {
-      @media (min-width: vars.$large-font-max-width) {
+      @media (min-width: vars.$two-column-min-width) {
         flex-direction: row;
 
         > div:last-child {
@@ -362,7 +362,7 @@ a.app-store {
         }
       }
 
-      @media (max-width: vars.$large-font-max-width) {
+      @media (max-width: vars.$two-column-min-width) {
         flex-direction: column;
 
         .docs-image {

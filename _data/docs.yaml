@@ -34,9 +34,11 @@ docs:
           - "1-5"
       - title: "Search"
         text:
-          - ""
+          - "Enter text into the search bar to filter your Picture Library and Button Books. Only pictures and books whose titles match your search text will be shown."
+          - "Tap the 'X' button in the search field to clear the text and show all of your pictures and books."
         images:
-          - ""
+          - "1-6"
+        wide: true
 
   - title: "Picture library"
     items:
