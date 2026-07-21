@@ -323,6 +323,7 @@ a.app-store {
     > hgroup {
       padding: 1em 0;
       border-top: 0 solid #0003;
+      margin-bottom: 0;
 
       @media (min-width: vars.$large-font-max-width) {
         margin-left: 1em;
@@ -337,10 +338,6 @@ a.app-store {
 
         &:nth-child(2) {
           margin-top: 1em;
-        }
-
-        &:last-child {
-          margin-bottom: 0;
         }
       }
     }

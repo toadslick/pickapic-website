@@ -40,7 +40,7 @@ docs:
           - "1-6"
         wide: true
 
-  - title: "Picture library"
+  - title: "Picture Library"
     items:
       - title: "Add a picture"
         text:
@@ -69,6 +69,14 @@ docs:
           - "Long-press a picture in your Picture Library and select the corresponding item from the menu."
         images:
           - "2-2,2-3,2-4"
+        items:
+          - title: "Tag a picture"
+            text:
+              - "Tapping the 'Tag...' menu item reveals the 'Tag your picture' menu."
+              - "From that menu, tap any tag to apply it to the image."
+              - "Tap the 'Clear' button to remove all tags from the picture. Tap the plus button to create a new tag."
+            images:
+              - "2-4-1"
       - title: "Filter pictures by tag"
         text:
           - "Tap the tag icon at the top left of the Picture Library to open the Filter by Tag menu."
@@ -79,51 +87,45 @@ docs:
         images:
           - "2-5a"
           - "2-5b"
-  - title: "Tags"
+        items:
+          - title: "Rename or delete a tag"
+            text:
+              - "Long-press a tag to reveal a menu. Then select the appropriate item from that menu."
+            images:
+              - "2-5-1"
+  - title: "Button Books"
     items:
-      - title: "Add"
+      - title: "Add a Button Book"
         text:
-          - ""
+          - "Tap the plus button on the top right of the Button Books list to create a new book. Then you will be prompted to name your book."
+          - "After your book is created, you'll be taken to the edit screen."
         images:
           - ""
-      - title: "Rename"
+      - title: "Edit a Button Book"
         text:
-          - ""
+          - "Tap the ellipsis (three dots) icon at the top right corner of any Button Book to open the book in editing mode."
+          - "See the 'Edit a Button Book' section below."
         images:
           - ""
-      - title: "Delete"
+      - title: "Rename or delete a Button Book"
         text:
-          - ""
+          - "Long-press a Button Book and then select the appropriate menu item."
         images:
           - ""
-  - title: "Books list"
-    items:
-      - title: "Add book"
+      - title: "View a Button Book"
         text:
-          - ""
+          - "Tap anywhere except the ellipsis icon to open the Button Book in viewing mode."
         images:
           - ""
-      - title: "Rename book"
-        text:
-          - ""
-        images:
-          - ""
-      - title: "Delete book"
-        text:
-          - ""
-        images:
-          - ""
-      - title: "Lock books"
-        text:
-          - ""
-        images:
-          - ""
-      - title: "Sort"
-        text:
-          - ""
-        images:
-          - ""
-      - title: "Search"
+        items:
+          - title: "Exit from a Button Book"
+            text:
+              - "While a Button Book is open in viewing mode, no header or back button is visible."
+              - "to exit from the book, while on the first page, drag to the right and hold."
+              - "An X icon with a circle meter will appear on the left-hand side of the screen. Hold to the right until the meter is filled."
+            images:
+              - ""
+      - title: "Lock Button Books"
         text:
           - ""
         images:
