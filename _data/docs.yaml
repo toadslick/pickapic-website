@@ -10,7 +10,7 @@ docs:
         wide: true
       - title: "Rename document"
         text:
-          - "To rename your Pick-a-Pic document, long-press the document's icon until a menu appears. Then tap the 'Rename' item in the menu."
+          - "From the document picker, long-press the document's icon until a menu appears. Then tap the 'Rename' item in the menu."
         images:
           - "1-2"
       - title: "Save and close"
@@ -27,12 +27,22 @@ docs:
         images:
           - "1-4"
         wide: true
+      - title: "Sort"
+        text:
+          - "Tap the name of your document and then tap the 'Sort books and pictures...' item of the menu. A submenu will open that allows you to choose the order that your Picture Library and Button Books are sorted."
+        images:
+          - "1-5"
+      - title: "Search"
+        text:
+          - ""
+        images:
+          - ""
+
   - title: "Picture library"
     items:
       - title: "Add picture"
         text:
           - "Tap the plus button at the top of your picture library to create a new picture. Then select how you would like to create your picture."
-          - ""
         images:
           - "2-1a"
           - "2-1b"
@@ -43,7 +53,8 @@ docs:
               - "After tapping the menu item, you will be prompted to allow the paste operation."
               - "Images can be copied from many sources. For example, an image can be copied from the web by long-pressing the image and selecting 'Copy' from the menu."
             images:
-              - "2-1-6"
+              - "2-1-6b"
+              - "2-1-6a"
           - title: "Crop picture"
             text:
               - "After adding a picture from the photo library, camera, file browser, or copy-paste, you will be prompted to crop the image."
@@ -56,16 +67,6 @@ docs:
           - "Long-press a picture in your library and select the corresponding item from the menu."
         images:
           - "2-2,2-3,2-4"
-      - title: "Sort"
-        text:
-          - ""
-        images:
-          - ""
-      - title: "Search"
-        text:
-          - ""
-        images:
-          - ""
       - title: "Filter by tag"
         text:
           - ""

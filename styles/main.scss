@@ -14,7 +14,7 @@ body {
   background: vars.$dark-blue;
 
   @media (max-width: vars.$large-font-max-width) {
-    font-size: 14pt;
+    font-size: 12pt;
   }
 }
 
@@ -72,22 +72,38 @@ main {
   }
 
   h3 {
+    position: relative;
     font-size: 20pt;
     color: vars.$red;
-    font-weight: 700;
+    font-weight: 600;
 
     @media (max-width: vars.$large-font-max-width) {
       font-size: 18pt;
     }
+
+    strong {
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      font-style: italic;
+    }
   }
 
   h4 {
-    font-weight: 800;
+    font-size: 18pt;
+    font-weight: 700;
+
+    @media (max-width: vars.$large-font-max-width) {
+      font-size: 14pt;
+    }
 
     strong {
       color: vars.$orange;
       display: inline-block;
     }
+  }
+
+  h5 {
+    font-weight: 800;
   }
 
   article {
@@ -96,6 +112,19 @@ main {
         margin-top: 2em;
         border-top: 3px solid #0002;
         padding-top: 1em;
+      }
+    }
+
+    ul {
+      list-style-type: disc;
+      margin: 0 0 1em 1em;
+
+      ::marker {
+        color: vars.$orange;
+      }
+
+      strong {
+        font-weight: 700;
       }
     }
   }
@@ -200,7 +229,7 @@ a.app-store {
   }
 
   ul {
-    padding-left: 1.8em;
+    padding-left: 0.8em;
   }
 
   cite {
