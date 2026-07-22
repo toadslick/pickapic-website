@@ -83,6 +83,10 @@
       background: linear-gradient(vars.$red, #fd6153aa);
     }
 
+    p em {
+      background: #f606;
+    }
+
     a.docs-image {
       border-color: vars.$blue-dark-mode;
 

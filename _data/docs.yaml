@@ -100,31 +100,30 @@ docs:
           - "Tap the *+* button on the top right of the Button Books list to create a new book. Then you will be prompted to name your book."
           - "After your book is created, you'll be taken to the edit screen."
         images:
-          - ""
+          - "3-1"
+        wide: true
       - title: "Edit a Button Book"
         text:
           - "Tap the *⋯* icon at the top right corner of any Button Book to open the book in editing mode."
           - "See the 'Edit a Button Book' section below."
         images:
-          - ""
+          - "3-2"
       - title: "Rename or delete a Button Book"
         text:
           - "Long-press a Button Book and then select the appropriate menu item."
         images:
-          - ""
+          - "3-3"
       - title: "View a Button Book"
         text:
           - "Tap anywhere on a Button Book except the edit icon to open the book in viewing mode."
-        images:
-          - ""
         items:
           - title: "Exit from a Button Book"
             text:
               - "While a Button Book is open in viewing mode, no header or back button is visible."
-              - "to exit from the book, while on the first page, drag to the right and hold."
+              - "To exit from the book, drag to the right and hold while you are on the first page of the book."
               - "An *✕* icon with a circle meter will appear on the left-hand side of the screen. Hold to the right until the meter is filled."
             images:
-              - ""
+              - "3-4-1"
       - title: "Lock Button Books"
         text:
           - ""
