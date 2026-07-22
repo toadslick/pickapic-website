@@ -3,39 +3,39 @@ docs:
     items:
       - title: "Create or open a document"
         text:
-          - "Your Picture Library and Button Books live in a file known as a Pick-a-Pic document."
-          - "The app first opens to the document picker. Tap the 'Create Document' icon or the plus button to create a new Pick-a-Pic document. To open an existing document, tap that document's icon."
+          - "Your Picture Library and Button Books live in a file known as a **Pick-a-Pic document**."
+          - "The app first opens to the document picker. Tap the *Create Document* icon or the *+* button to create a new Pick-a-Pic document. To open an existing document, tap that document's icon."
         images:
           - "1-1"
         wide: true
       - title: "Rename a document"
         text:
-          - "From the document picker, long-press the document's icon until a menu appears. Then tap the 'Rename' item in the menu."
+          - "From the document picker, long-press the document's icon until a menu appears. Then tap the *Rename* item in the menu."
         images:
           - "1-2"
       - title: "Save and close a document"
         text:
           - "After you've opened your document, it will auto-save as you make changes."
-          - "Tap the back button to close your document and return to the document picker."
+          - "Tap the *❮* button to close your document and return to the document picker."
         images:
           - "1-3"
         wide: true
       - title: "Undo or redo changes"
         text:
-          - "To undo a change you've made to your document, tap the left-facing arrow button. To redo a change that you've undone, tap the right-facing arrow button."
+          - "To undo a change you've made to your document, tap the *↺* button. To redo a change that you've undone, tap the *↻* button."
           - "The buttons will be disabled if there are no changes to undo or redo."
         images:
           - "1-4"
         wide: true
       - title: "Sort books and pictures"
         text:
-          - "Tap the name of your document and then tap the 'Sort books and pictures...' item of the menu. A submenu will open that allows you to choose the order that your Picture Library and Button Books are sorted."
+          - "Tap the name of your document and then tap the *Sort books and pictures...* item of the menu. A submenu will open that allows you to choose the order that your Picture Library and Button Books are sorted."
         images:
           - "1-5"
       - title: "Search books and pictures"
         text:
           - "Enter text into the search bar to filter your Picture Library and Button Books. Only pictures and books whose titles match your search text will be shown."
-          - "Tap the 'X' button in the search field to clear the text and show all of your pictures and books."
+          - "Tap the *✕* button in the search field to clear the text and show all of your pictures and books."
         images:
           - "1-6"
         wide: true
@@ -44,7 +44,7 @@ docs:
     items:
       - title: "Add a picture"
         text:
-          - "Tap the plus button at the top of your Picture Library to create a new picture. Then select how you would like to create your picture."
+          - "Tap the *+* button at the top of your Picture Library to create a new picture. Then select how you would like to create your picture."
         images:
           - "2-1a"
           - "2-1b"
@@ -53,7 +53,7 @@ docs:
             text:
               - "If your device's copy-paste clipboard contains an image, this menu item will be enabled."
               - "After tapping the menu item, you will be prompted to allow the paste operation."
-              - "Images can be copied from many sources. For example, an image can be copied from the web by long-pressing the image and selecting 'Copy' from the menu."
+              - "Images can be copied from many sources. For example, an image can be copied from the web by long-pressing the image and selecting *Copy* from the menu."
             images:
               - "2-1-6b"
               - "2-1-6a"
@@ -61,7 +61,7 @@ docs:
             text:
               - "After adding a picture from the photo library, camera, file browser, or copy-paste, you will be prompted to crop the image."
               - "Pinch and drag the image with two fingers to zoom and move it. Tap the buttons on either side of the crop boundary to rotate the image 90 degrees."
-              - "Tap the 'Crop' button to crop the image and add it to your Picture Library."
+              - "Tap the *Crop* button to crop the image and add it to your Picture Library."
             images:
               - "2-1-8"
       - title: "Rename, delete, or tag a picture"
@@ -72,17 +72,17 @@ docs:
         items:
           - title: "Tag a picture"
             text:
-              - "Tapping the 'Tag...' menu item reveals the 'Tag your picture' menu."
+              - "Tap the *Tag...* menu item to reveal the **Tag your picture** menu."
               - "From that menu, tap any tag to apply it to the image."
-              - "Tap the 'Clear' button to remove all tags from the picture. Tap the plus button to create a new tag."
+              - "Tap the *Clear* button to remove all tags from the picture. Tap the *+* button to create a new tag."
             images:
               - "2-4-1"
       - title: "Filter pictures by tag"
         text:
-          - "Tap the tag icon at the top left of the Picture Library to open the Filter by Tag menu."
+          - "Tap the **tag** icon at the top left of the Picture Library to open the Filter by Tag menu."
           - "The icon is an outline if no tags are currently selected. It is filled if your Picture Library is being filtered by one or more selected tags."
           - "From the menu, tap any tag to select it. Selected tags have a filled icon and a checkmark. Your Picture Library will only show pictures that have one or more of the selected tags."
-          - "Tap the 'Clear' button to deselect all tags. Tap the plus button to create a new tag."
+          - "Tap the *Clear* button to deselect all tags. Tap the *+* button to create a new tag."
           - "Some tags are created automatically and applied to pictures based on how the picture was created."
         images:
           - "2-5a"
@@ -97,13 +97,13 @@ docs:
     items:
       - title: "Add a Button Book"
         text:
-          - "Tap the plus button on the top right of the Button Books list to create a new book. Then you will be prompted to name your book."
+          - "Tap the *+* button on the top right of the Button Books list to create a new book. Then you will be prompted to name your book."
           - "After your book is created, you'll be taken to the edit screen."
         images:
           - ""
       - title: "Edit a Button Book"
         text:
-          - "Tap the ellipsis (three dots) icon at the top right corner of any Button Book to open the book in editing mode."
+          - "Tap the *⋯* icon at the top right corner of any Button Book to open the book in editing mode."
           - "See the 'Edit a Button Book' section below."
         images:
           - ""
@@ -114,7 +114,7 @@ docs:
           - ""
       - title: "View a Button Book"
         text:
-          - "Tap anywhere except the ellipsis icon to open the Button Book in viewing mode."
+          - "Tap anywhere on a Button Book except the edit icon to open the book in viewing mode."
         images:
           - ""
         items:
@@ -122,7 +122,7 @@ docs:
             text:
               - "While a Button Book is open in viewing mode, no header or back button is visible."
               - "to exit from the book, while on the first page, drag to the right and hold."
-              - "An X icon with a circle meter will appear on the left-hand side of the screen. Hold to the right until the meter is filled."
+              - "An *✕* icon with a circle meter will appear on the left-hand side of the screen. Hold to the right until the meter is filled."
             images:
               - ""
       - title: "Lock Button Books"

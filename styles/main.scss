@@ -276,6 +276,15 @@ a.app-store {
     color: #fff;
   }
 
+  p em {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0 0.3em;
+    background: #f603;
+    font-weight: 700;
+    border-radius: 6px;
+  }
+
   p:last-child {
     margin-bottom: 0;
   }
