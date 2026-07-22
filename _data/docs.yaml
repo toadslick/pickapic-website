@@ -154,6 +154,7 @@ items:
       - title: "View a Button Book"
         text:
           - "Tap anywhere on a Button Book except the edit icon to open the book in viewing mode."
+          - "While in viewing mode, any button can be tapped to speak its title."
         items:
           - title: "Exit from a Button Book"
             text:
@@ -189,92 +190,95 @@ items:
           - title: "Keep Pick-a-Pic on-screen"
             text:
               - "You can use your iPad as a dedicated Pick-a-Pic device by setting up [Guided Access](https://support.apple.com/guide/ipad/lock-ipad-to-one-app-ipada16d1374/ipados) on your iPad. Combine this with Lock Settings to force a single Button Book to remain on-screen."
-  - title: "Edit book"
+  - title: "Editing a Button Book"
     items:
-      - title: "Add pic to page"
+      - title: "View all pages"
         text:
           - ""
         images:
-          - file: ""
-            width: 0
-            height: 0
-      - title: "Remove pic from page"
+          - file: "4-0a"
+            width: 2360
+            height: 378
+          - file: "4-0b"
+            width: 2360
+            height: 378
+        wide: true
+      - title: "Add a page to a Button Book"
         text:
           - ""
         images:
-          - file: ""
-            width: 0
-            height: 0
-      - title: "Arrange pics on page"
+          - file: "4-1a"
+            width: 1793
+            height: 1513
+          - file: "4-1b"
+            width: 1785
+            height: 978
+      - title: "Remove a page from a Button Book"
         text:
           - ""
         images:
-          - file: ""
-            width: 0
-            height: 0
-      - title: "Book settings"
+          - file: "4-2"
+            width: 857
+            height: 693
+      - title: "Arrange the pages in a Button Book"
         text:
           - ""
         images:
-          - file: ""
-            width: 0
-            height: 0
-        items:
-          - title: "Unique to page/book"
-            text:
-              - ""
-            images:
-              - file: ""
-            width: 0
-            height: 0
-      - title: "Voice settings"
+          - file: "4-3"
+            width: 1310
+            height: 855
+      - title: "Add a button to a page"
         text:
           - ""
         images:
-          - file: ""
-            width: 0
-            height: 0
-      - title: "Arrange pages"
+          - file: "4-4,4-5a"
+            width: 2360
+            height: 1640
+      - title: "Remove a button from a page"
         text:
           - ""
         images:
-          - file: ""
-            width: 0
-            height: 0
-      - title: "Rearrange pages"
+          - file: "4-4,4-5a"
+            width: 2360
+            height: 1640
+          - file: "4-5b"
+            width: 770
+            height: 976
+      - title: "Arrange the buttons on a page"
         text:
           - ""
         images:
-          - file: ""
-            width: 0
-            height: 0
-      - title: "Delete page"
+          - file: "4-6"
+            width: 1366
+            height: 1439
+      - title: "Set the voice for a Button Book"
         text:
           - ""
         images:
-          - file: ""
-            width: 0
-            height: 0
-      - title: "Go to page"
+          - file: "4-7"
+            width: 832
+            height: 1597
+      - title: "Other book settings"
         text:
           - ""
         images:
-          - file: ""
-            width: 0
-            height: 0
-  - title: "Misc"
+          - file: "4-8"
+            width: 972
+            height: 768
+  - title: "Purchasing Pick-a-Pic"
     items:
-      - title: "Help"
+      - title: "Manage your subscription"
+        text:
+          - ""
+          - "You can also manage your subscription from the App Store app."
+        images:
+          - file: "5-1"
+            width: 699
+            height: 661
+      - title: "Restore your subscription"
         text:
           - ""
         images:
-          - file: ""
-            width: 0
-            height: 0
-      - title: "Purchase"
-        text:
-          - ""
-        images:
-          - file: ""
-            width: 0
-            height: 0
+          - file: "5-2"
+            width: 1252
+            height: 1392
