@@ -1,0 +1,31 @@
+{% for item in i.items %}
+  <hgroup {{ 'class=docs-wide' if item.wide }} id="{{ (i.title + " " + item.title) | slugify }}">
+    <div>
+
+      <div>
+        {% for image in item.images %}
+          {% set url = "/assets/docs/" + image.file + ".l.jpg" %}
+          <div>
+            <a class="docs-image"  href="{{url}}" target="_blank">
+              <img srcset="{{url}} 2x" width="{{image.width}}" height="{{image.height}}" loading="lazy"/>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+
+      <h{{h}}>
+        {{ item.title | safe }}
+      </h{{h}}>
+      {% renderTemplate "liquid, md",
+      item %}
+      {% for p in text %}
+        {{ p }}
+      {% endfor %}
+      {% endrenderTemplate %}
+
+    </div>
+
+    {% renderFile "_includes/docs-item-content.njk", { i: item, h: h + 1 } %}
+
+  </hgroup>
+{% endfor %}

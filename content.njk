@@ -23,45 +23,8 @@ styles: /styles/main.css
 
           {% if section.id == "docs" %}
             <ul>
-
-              {% for h3 in docs.docs %}
-                <li>
-                  <a href="#{{ h3.title | slugify }}">
-                    {{ h3.title | safe }}
-                  </a>
-                </li>
-
-                {% if h3.items %}
-                  <ul>
-
-                    {% for h4 in h3.items %}
-                      <li>
-                        <a href="#{{ (h3.title + "_" + h4.title) | slugify }}">
-                          {{ h4.title | safe }}
-                        </a>
-
-                        {% if h4.items %}
-                          <ul>
-
-                            {% for h5 in h4.items %}
-                              <li>
-                                <a href="#{{ (h3.title + "_" + h4.title + "_" + h5.title) | slugify }}">
-                                  {{ h5.title | safe }}
-                                </a>
-                              </li>
-                            {% endfor %}
-
-                          </ul>
-                        {% endif %}
-
-                      </li>
-                    {% endfor %}
-
-                  </ul>
-                {% endif %}
-
-              {% endfor %}
-
+              {% renderFile "_includes/docs-item-nav.njk",
+              { items: docs.items, title: "" } %}
           </ul>
         {% endif %}
 

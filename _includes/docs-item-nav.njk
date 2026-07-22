@@ -1,0 +1,16 @@
+{% for item in items %}
+
+  <li>
+    <a href="#{{ (title + " " + item.title) | slugify }}">
+      {{ item.title | safe }}
+    </a>
+  </li>
+
+  {% if items %}
+    <ul>
+      {% renderFile "_includes/docs-item-nav.njk",
+              item %}
+  </ul>
+{% endif %}
+
+{% endfor %}
