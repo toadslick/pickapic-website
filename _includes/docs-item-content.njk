@@ -7,7 +7,7 @@
           {% set url = "/assets/docs/" + image.file + ".l.jpg" %}
           <div>
             <a class="docs-image"  href="{{url}}" target="_blank">
-              <img srcset="{{url}} 2x" width="{{image.width}}" height="{{image.height}}" loading="lazy"/>
+              <img srcset="{{url}} 2x" width="{{image.width}}" height="{{image.height}}" loading="lazy" style="aspect-ratio: {{image.width}} / {{image.height}};"/>
             </a>
           </div>
         {% endfor %}
@@ -16,6 +16,7 @@
       <h{{h}}>
         {{ item.title | safe }}
       </h{{h}}>
+
       {% renderTemplate "liquid, md",
       item %}
       {% for p in text %}

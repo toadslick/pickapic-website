@@ -361,6 +361,10 @@ a.app-store {
       }
     }
 
+    img {
+      width: auto;
+    }
+
     &:not(.docs-wide) > div {
       img {
         max-height: 300px;
