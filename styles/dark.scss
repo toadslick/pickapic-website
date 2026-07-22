@@ -52,6 +52,16 @@
     text-shadow: 0 0 30px vars.$light-blue;
   }
 
+  .two-column.arrow {
+    background: linear-gradient(#1470 0%, vars.$dark-blue 20%, #1470 90%);
+
+    @media (min-width: vars.$two-column-min-width) {
+      background:
+        linear-gradient(90deg, #000 0%, #0000 30%, #0000 60%, #000 100%),
+        linear-gradient(#000 60%, vars.$dark-blue 85%, #000 90%);
+    }
+  }
+
   main {
     background: #000;
     color: #fff;
