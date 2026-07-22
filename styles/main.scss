@@ -141,21 +141,26 @@ main {
     margin: auto;
     padding: 0 30px;
 
-    @media (min-width: vars.$large-font-max-width) {
+    @media (min-width: 850px) {
       display: flex;
       flex-direction: row;
+
+      article {
+        margin-left: 2em;
+      }
     }
 
     nav {
       flex-grow: 1;
       flex-shrink: 0;
-      margin: 0 2em 0 0;
+      max-width: 25%;
 
       @media (max-width: 800px) {
         border-left: none;
         border-bottom: 3px solid vars.$red;
         padding: 0;
         margin: 0 0 1em;
+        max-width: none;
       }
 
       ul,
@@ -167,6 +172,11 @@ main {
           margin-bottom: 0;
           margin-left: 20px;
           font-size: 14pt;
+          list-style-type: disc;
+
+          ::marker {
+            color: #888;
+          }
 
           a {
             font-weight: 600;
@@ -356,7 +366,7 @@ a.app-store {
         max-height: 300px;
         max-width: 300px;
 
-        @media (max-width: 1100px) {
+        @media (max-width: 1300px) {
           max-width: 200px;
         }
 
@@ -393,6 +403,10 @@ a.app-store {
 
       img {
         max-height: 150px;
+
+        @media (max-width: 1300px) {
+          max-height: 100px;
+        }
       }
     }
   }

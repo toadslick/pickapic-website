@@ -120,21 +120,29 @@ docs:
           - title: "Exit from a Button Book"
             text:
               - "While a Button Book is open in viewing mode, no header or back button is visible."
-              - "To exit from the book, drag to the right and hold while you are on the first page of the book."
-              - "An *✕* icon with a circle meter will appear on the left-hand side of the screen. Hold to the right until the meter is filled."
+              - "To exit from the book, return to the first page and then drag to the right until an *✕* icon in a circle appears."
+              - "Hold until the meter is filled to exit the book."
             images:
               - "3-4-1"
       - title: "Lock Button Books"
         text:
-          - ""
+          - "The lock settings applies to every Button Book in your Pick-a-Pic document."
+          - "To open the **Lock Settings** menu, tap the **lock button** at the top left of the Button Books list."
+          - "You may lock books with either Face ID or Touch ID (depending on your device) or a 4-digit passcode."
+          - "Tap the switch next to the setting that you wish to apply. If both switches are off then books are unlocked."
         images:
-          - ""
+          - "3-5"
         items:
-          - title: "Force app to foreground"
+          - title: "Lock with 4-digit passcode"
             text:
-              - ""
+              - "When you select *Lock books with passcode*, you will be prompted to enter a 4-digit passcode."
+              - "After you enter your passcode, the label next to the switch will display the passcode you entered."
             images:
-              - ""
+              - "3-5-1a"
+              - "3-5-1b"
+          - title: "Keep Pick-a-Pic on-screen"
+            text:
+              - "You can use your iPad as a dedicated Pick-a-Pic device by setting up [Guided Access](https://support.apple.com/guide/ipad/lock-ipad-to-one-app-ipada16d1374/ipados) on your iPad. Combine this with Lock Settings to force a single Button Book to remain on-screen."
   - title: "Edit book"
     items:
       - title: "Add pic to page"

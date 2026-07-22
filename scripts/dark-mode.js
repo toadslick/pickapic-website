@@ -60,7 +60,7 @@
 
 // Add target="_blank" to links in given sections that were written in Markdown.
 (function () {
-  const externalLinkSections = ["#why"];
+  const externalLinkSections = ["#why", "#docs"];
 
   externalLinkSections.forEach((selector) => {
     let section = document.querySelector(selector);
