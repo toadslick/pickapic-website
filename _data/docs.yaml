@@ -130,6 +130,12 @@ docs:
           - ""
         images:
           - ""
+        items:
+          - title: "Force app to foreground"
+            text:
+              - ""
+            images:
+              - ""
   - title: "Edit book"
     items:
       - title: "Add pic to page"
@@ -183,18 +189,6 @@ docs:
               - ""
             images:
               - ""
-  - title: "View book"
-    items:
-      - title: "Exit book"
-        text:
-          - ""
-        images:
-          - ""
-      - title: "Force app to foreground"
-        text:
-          - ""
-        images:
-          - ""
   - title: "Misc"
     items:
       - title: "Help"

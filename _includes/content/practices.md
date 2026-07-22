@@ -39,9 +39,9 @@ If you see an increase in challenging or harmful behavior, or your learner is no
 
 ### Work toward long-term goals:
 
-The goal of developing **functional communication** is to establish consistent social initiation as a foundation for more complex interactions. When your learner has met these goals, they may be ready to graduate from Pick-a-Pic to more advanced AAC apps:
+The goal of **functional communication** is to establish consistent social initiation as a foundation for more complex interactions. When your learner has developed the following abilities, they may be ready to graduate from Pick-a-Pic to more advanced AAC apps:
 
-- Ability to make requests for items in different categories, such as use of buttons for snacks as well as toys.
-- Ability to use buttons for purposes beyond requesting tangible objects, such as use of buttons to request activities or to express feelings.
-- Ability to make requests in various settings, such as outside, at the grocery store, or with other people.
-- Ability to use buttons that require increased visual discrimination, such as buttons that have line drawings or emoji instead of photographs.
+- The ability to make requests for different categories of items, such snacks and toys.
+- The ability to use buttons for more than requesting tangible objects, such as using buttons to request activities or to express feelings.
+- The ability to make requests in various settings, such as outside, at the grocery store, or with other people.
+- The ability to use buttons that require increased visual discrimination, such as buttons that have line drawings or emoji instead of photographs.
