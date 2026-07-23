@@ -8,10 +8,11 @@ layout: layout.njk
 styles: /styles/main.css
 ---
 <section>
-  <nav>
+  <nav id="navigation-container" class="navigation-hidden">
 
-    <h1>
-      {{ item.title }}
+    <h1 id="navigation-heading">
+      <input type="checkbox" id="navigation-toggle"/>
+      <label for="navigation-toggle">{{ item.title }}</label>
     </h1>
 
     <menu>
