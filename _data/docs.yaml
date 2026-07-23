@@ -194,18 +194,20 @@ items:
     items:
       - title: "View all pages"
         text:
-          - ""
+          - "The editing screen starts in single-page view, where you can add, move, or remove buttons from pages of your Button Book. Swipe horizontally to go to the previous or next page."
+          - "Tap the **grid button** to toggle between viewing a single page and viewing all pages."
+          - "From the all-pages view, tap any page to navigate to it in single-page view."
         images:
           - file: "4-0a"
             width: 2360
             height: 378
-          - file: "4-0b"
-            width: 2360
-            height: 378
+          # - file: "4-0b"
+          #   width: 2360
+          #   height: 378
         wide: true
       - title: "Add a page to a Button Book"
         text:
-          - ""
+          - "From either the single-page or all-pages view, tap the *+* button that appears after the last page of the book."
         images:
           - file: "4-1a"
             width: 1793
@@ -215,28 +217,30 @@ items:
             height: 978
       - title: "Remove a page from a Button Book"
         text:
-          - ""
+          - "while in the **all-pages** view, long-press a page and then tap *Delete page* on the menu"
         images:
           - file: "4-2"
             width: 857
             height: 693
       - title: "Arrange the pages in a Button Book"
         text:
-          - ""
+          - "While in the **all-pages** view, long-press a page and then drag it to change its placement in your Button Book."
         images:
           - file: "4-3"
             width: 1310
             height: 855
       - title: "Add a button to a page"
         text:
-          - ""
+          - "While in the **single-page** view, tap a picture in your Picture Library to create a button on the current page. No need to drag-and-drop!"
         images:
           - file: "4-4,4-5a"
             width: 2360
             height: 1640
       - title: "Remove a button from a page"
         text:
-          - ""
+          - "While in the **single-page** view, if you tap the picture in your Picture Library of a button that is on the current page, that button will be removed from the page."
+          - "If you tap a picture that has already been added to a different page, the single-page view will scroll to that page."
+          - "You may also long-press a button and delete it from the menu that appears."
         images:
           - file: "4-4,4-5a"
             width: 2360
@@ -246,21 +250,23 @@ items:
             height: 976
       - title: "Arrange the buttons on a page"
         text:
-          - ""
+          - "While in the **single-page** view, long-press a button and drag it to change where it appears on the page."
+          - "The layout of buttons is fixed and depends on the number of buttons you have added to the page. However, you can drag to change the order in which your buttons appear."
         images:
           - file: "4-6"
             width: 1366
             height: 1439
       - title: "Set the voice for a Button Book"
         text:
-          - ""
+          - "Tap the **speech bubble** button to open the *Voice settings* menu. From that menu, you may select the voice that speaks when buttons are tapped."
         images:
           - file: "4-7"
             width: 832
             height: 1597
       - title: "Other book settings"
         text:
-          - ""
+          - "If you would prefer to be able to add the same button to multiple pages of your Button Book, you may enable the *Allow duplicate pictures* setting."
+          - "While this settings is enabled, page numbers will not be shown for pictures that have been added as buttons to your Button Book."
         images:
           - file: "4-8"
             width: 972
@@ -269,15 +275,15 @@ items:
     items:
       - title: "Manage your subscription"
         text:
-          - ""
-          - "You can also manage your subscription from the App Store app."
+          - "Tap the title of your Pick-a-Pic document and then tap *Purchases* from the menu."
+          - "To cancel your subscription, you must do so through the App Store."
         images:
           - file: "5-1"
             width: 699
             height: 661
-      - title: "Restore your subscription"
+      - title: "Restore your purchase"
         text:
-          - ""
+          - "If you are already subscribed or have purchased the full version of Pick-a-Pic, tap the *Restore previous purchases* button to pull that information from the App Store."
         images:
           - file: "5-2"
             width: 1252
