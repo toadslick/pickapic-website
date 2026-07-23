@@ -5,13 +5,16 @@ $blue-dark-mode: #39c;
 $dark-blue: #147;
 $light-blue: #adf;
 
-$two-column-max-width: 1400px;
-$two-column-min-width: 1000px;
-$compact-nav-max-width: 600px;
-$large-font-max-width: 768px;
-
 $video-width-in-frame: 93.7%;
 $video-height-in-frame: 91.73%;
+
+$compact-nav-max-width: 1000px;
+$extra-compact-nav-max-width: 800px;
+$ultra-compact-nav-max-width: 500px;
+
+$two-column-max-width: 1400px;
+$two-column-min-width: 1000px;
+$large-font-max-width: $extra-compact-nav-max-width;
 
 $curve: cubic-bezier(0.075, 0.82, 0.165, 1);
 

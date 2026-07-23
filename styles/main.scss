@@ -130,7 +130,7 @@ main {
   }
 
   .wide-only {
-    @media (max-width: 850px) {
+    @media (max-width: vars.$extra-compact-nav-max-width) {
       visibility: hidden;
       position: absolute;
     }
@@ -139,9 +139,10 @@ main {
   section {
     max-width: vars.$two-column-max-width;
     margin: auto;
-    padding: 0 30px;
+    padding: 0 10px;
 
-    @media (min-width: 850px) {
+    @media (min-width: vars.$extra-compact-nav-max-width) {
+      padding: 0 30px;
       display: flex;
       flex-direction: row;
 
@@ -155,7 +156,7 @@ main {
       flex-shrink: 0;
       max-width: 25%;
 
-      @media (max-width: 800px) {
+      @media (max-width: vars.$extra-compact-nav-max-width) {
         border-left: none;
         border-bottom: 3px solid vars.$red;
         padding: 0;
