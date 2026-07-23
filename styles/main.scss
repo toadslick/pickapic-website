@@ -249,10 +249,11 @@ a.app-store {
     &.navigation-hidden,
     &.navigation-visible {
       #navigation-heading {
+        padding: 0;
         backdrop-filter: blur(20px);
-        padding: 16px;
         font-size: 14pt;
         font-weight: 800;
+        z-index: 100;
       }
 
       input {
@@ -262,6 +263,9 @@ a.app-store {
       }
 
       label {
+        display: block;
+        padding: 16px;
+
         &::after {
           content: "⬇︎";
           display: flex;
@@ -304,6 +308,14 @@ a.app-store {
     }
 
     &.navigation-hidden {
+      #navigation-heading.navigation-heading-fixed {
+        margin: 0;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+      }
+
       menu {
         overflow: hidden;
         height: 0;
