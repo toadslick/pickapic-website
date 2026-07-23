@@ -3,6 +3,8 @@
 @use "sass:math";
 
 main {
+  padding-top: 0;
+
   h2,
   p {
     text-align: center;
@@ -12,8 +14,6 @@ main {
   figcaption {
     font-size: 16pt;
   }
-
-  padding-top: 0;
 }
 
 body header nav {
@@ -104,6 +104,10 @@ body header nav {
 
   .two-column {
     margin-top: 0;
+
+    @media (max-width: vars.$compact-nav-max-width) {
+      padding-top: 0;
+    }
   }
 
   .video-frame.speech-bubble {

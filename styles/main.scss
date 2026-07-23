@@ -39,7 +39,7 @@ main {
 
     &:hover,
     &:focus {
-      border-width: 3px;
+      border-bottom-width: 3px;
     }
   }
 
@@ -61,6 +61,10 @@ main {
     @media (max-width: vars.$large-font-max-width) {
       font-size: 28pt;
     }
+  }
+
+  h1 {
+    font-weight: 500;
   }
 
   h2 {
@@ -154,48 +158,50 @@ main {
     nav {
       flex-grow: 1;
       flex-shrink: 0;
-      max-width: 25%;
 
-      @media (max-width: vars.$extra-compact-nav-max-width) {
-        border-left: none;
-        border-bottom: 3px solid vars.$red;
-        padding: 0;
-        margin: 0 0 1em;
-        max-width: none;
+      @media (min-width: vars.$extra-compact-nav-max-width) {
+        max-width: 25%;
+      }
+
+      h1 {
+        padding-left: 6px;
+      }
+
+      li[aria-current] {
+        > a {
+          color: #000;
+
+          &:hover,
+          &:focus {
+            color: #fff;
+          }
+        }
+      }
+
+      a {
+        font-weight: 500;
+        padding: 2px 6px;
+        display: block;
+        border-top: 1px solid vars.$blue;
+
+        &:hover,
+        &:focus {
+          color: #fff;
+          background-color: vars.$blue;
+          border-radius: 4px;
+          border-width: 1px;
+        }
       }
 
       ul,
       menu {
         list-style-type: none;
-        margin-bottom: 1em;
+        font-size: 14pt;
+        font-weight: 500;
 
         ul {
-          margin-bottom: 0;
           margin-left: 20px;
-          font-size: 14pt;
-          list-style-type: disc;
-
-          ::marker {
-            color: #888;
-          }
-
-          a {
-            font-weight: 600;
-          }
-
-          ul {
-            font-size: 11pt;
-
-            a {
-              font-weight: 500;
-            }
-          }
-        }
-
-        li[aria-current] {
-          > a {
-            color: #000;
-          }
+          font-size: 11pt;
         }
       }
     }

@@ -7,10 +7,7 @@
   $offset: math.div($size - $handle-size, 2);
 
   display: none;
-
-  @media (min-width: vars.$ultra-compact-nav-max-width) {
-    position: relative;
-  }
+  position: relative;
 
   input,
   span {
@@ -133,7 +130,7 @@ footer {
   }
 }
 
-header,
+header:not(.home),
 footer {
   nav menu {
     @media (max-width: vars.$compact-nav-max-width) {
@@ -165,7 +162,7 @@ footer {
   }
 }
 
-header nav menu {
+header:not(.home) nav menu {
   @media (max-width: vars.$extra-compact-nav-max-width) {
     padding-top: 80px;
 
@@ -210,7 +207,7 @@ header nav menu {
       margin-left: 0;
     }
 
-    li:nth-child(4) {
+    li#dark-mode-toggle {
       position: absolute;
       top: 14px;
       right: 10px;

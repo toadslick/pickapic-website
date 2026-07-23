@@ -38,7 +38,7 @@ custom: [
   </head>
   <body>
 
-    <header>
+    <header{% if page.url == "/" %} class="home"{% endif %}>
       <nav>
         <menu>
           <li>
@@ -49,14 +49,14 @@ custom: [
             </a>
           </li>
 
-          {%- for p in pages %}
+          {% for p in pages %}
             {% set pagePath = "/" + p.id + "/" %}
             <li>
               <a href="{{ pagePath }}"{% if page.url == pagePath %} aria-current="page"{% endif %}>
                 {{ p.title }}
               </a>
             </li>
-          {% endfor -%}
+          {% endfor %}
 
           <li id="dark-mode-toggle">
             <input type="checkbox" id="dark-mode"/>

@@ -12,18 +12,6 @@
 }
 
 @include dark-mode {
-  header {
-    background:
-      linear-gradient(#0006 50%, vars.$dark-blue 98%, vars.$blue 100%),
-      vars.$dark-blue;
-  }
-
-  footer {
-    background:
-      linear-gradient(vars.$blue 0%, vars.$dark-blue 1.5%, #0006 50%),
-      vars.$dark-blue;
-  }
-
   #hero {
     background:
       repeat-x left bottom/200% 20% url("/assets/style/clouds-dark.avif"),
@@ -75,6 +63,13 @@
     nav ul {
       li[aria-current] > a {
         color: #fff;
+      }
+    }
+
+    section nav a {
+      &:hover,
+      &:focus {
+        background-color: vars.$dark-blue;
       }
     }
   }
