@@ -71,13 +71,13 @@ footer {
 
   @media (max-width: vars.$compact-nav-max-width) {
     nav menu {
-      padding-bottom: 60px;
+      padding-bottom: 70px;
       position: relative;
 
       li:last-child {
         position: absolute;
         bottom: 10px;
-        right: 10px;
+        right: 20px;
       }
     }
   }
