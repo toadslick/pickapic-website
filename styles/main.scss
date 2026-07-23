@@ -237,7 +237,6 @@ a.app-store {
 #navigation-container {
   #navigation-heading {
     display: block;
-    position: relative;
 
     input {
       display: none;
@@ -245,12 +244,15 @@ a.app-store {
   }
 
   @media (max-width: vars.$extra-compact-nav-max-width) {
+    background: #fff;
+
     &.navigation-hidden,
     &.navigation-visible {
       #navigation-heading {
-        background: pink;
-        padding: 8px 16px;
-        margin: 0 -10px;
+        backdrop-filter: blur(20px);
+        padding: 16px;
+        font-size: 14pt;
+        font-weight: 800;
       }
 
       input {
@@ -260,36 +262,52 @@ a.app-store {
       }
 
       label {
-        padding-right: 50px;
-
         &::after {
           content: "⬇︎";
           display: flex;
           aspect-ratio: 1;
-          background: green;
           position: absolute;
-          right: 0;
+          right: 20px;
           top: 0;
           height: 100%;
           align-items: center;
           justify-content: center;
         }
       }
+
+      input:checked + label::after {
+        transform: rotate(180deg);
+      }
     }
 
     &.navigation-visible {
       position: fixed;
+      z-index: 100;
       left: 0;
       top: 0;
       bottom: 0;
       right: 0;
       overflow-y: scroll;
+      padding-top: 4em;
+
+      #navigation-heading {
+        margin: 0;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+      }
+
+      menu {
+        padding: 0 10px 10px 10px;
+      }
     }
 
     &.navigation-hidden {
       menu {
         overflow: hidden;
         height: 0;
+        padding: 0;
       }
     }
   }
