@@ -1,0 +1,33 @@
+items:
+  - title: "A Systematic Review of Research Comparing Mobile Technology Speech-Generating Devices to Other AAC Modes with Individuals with Autism Spectrum Disorder"
+    linkURL: "https://link.springer.com/article/10.1007/s10882-021-09803-y"
+    cite: "Lorah, E.R., Holyfield, C., Miller, J. et al. *J Dev Phys Disabil* 34, 187-210 (2022)."
+    doiURL: "https://doi.org/10.1007/s10882-021-09803-y"
+  - title: "Clinical Effectiveness of AAC Intervention in Minimally Verbal Children With ASD: A Systematic Review"
+    linkURL: "https://www.neuroregulation.org/article/view/23389"
+    cite: "Atiya Aftab, Chhavi Arora Sehgal, Majumi M. Noohu, & Ghufran Jaleel. (2023). *NeuroRegulation*, 10(4), 239."
+    doiURL: "https://doi.org/10.15540/nr.10.4.239"
+    text:
+      - "These first two articles validated our rationale for developing an app. High-tech devices — especially ones that generate speech — are both more motivating and more successful with children for fostering functional social interactions."
+
+  - title: "Design Specifications of Augmentative and Alternative Communication Apps for Individuals with Autism Spectrum Disorder"
+    linkURL: "https://files.eric.ed.gov/fulltext/EJ1378311.pdf"
+    cite: "Polat, H., & Delialioglu, O. (2023). *International Journal of Technology in Education (IJTE)*, 6(1), 19-36."
+    doiURL: "https://doi.org/10.46328/ijte.396"
+    text:
+      - "Pick-a-Pic's essential feature is what this article refers to as a *just-in-time programming strategy*: when a learner has a new request, we need to be able to capture it in the app as quickly as possible."
+
+  - title: "Parents' Perceptions and Experiences with Their Children's Use of Augmentative/Alternative Communication: A Systematic Review and Qualitative Meta-Synthesis"
+    linkURL: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9266194/"
+    cite: "Berenguer, C.; Martínez, E.R.; De Stasio, S.; Baixauli, I. *Int. J. Environ. Res. Public Health* 2022, 19, 8091."
+    doiURL: "https://doi.org/10.3390/ijerph19138091"
+    text:
+      - "This article confirmed our own experiences with individuals that stopped using their AAC apps. It lists these common barriers to AAC app adoption: high cost, time investment, training needed, lack of individualization, and inconsistent use across settings."
+      - "Our goal is for Pick-a-Pic to address all of these barriers. Our app needed to be inexpensive and intuitive, with files that can be shared between professionals and caregivers."
+
+  - title: "A Systematic Review of Evidence-based Instruction for Individuals with Autism Using Mobile Augmentative and Alternative Communication Technology"
+    linkURL: "https://link.springer.com/article/10.1007/s40489-022-00334-6"
+    cite: "Lorah, E.R., Holyfield, C., Griffen, B. et al. *Rev J Autism Dev Disord* 11, 210-224 (2024)."
+    doiURL: "https://doi.org/10.1007/s40489-022-00334-6"
+    text:
+      - "This analysis validated the ways that we envision Pick-a-Pic being useful in educational settings."

@@ -7,7 +7,7 @@
       format: md
     - id: research
       title: "Supporting Research"
-      format: haml
+      format: njk
     - id: roadmap
       title: "Product Roadmap"
       format: md

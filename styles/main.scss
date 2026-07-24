@@ -357,6 +357,15 @@ $heading-height: 50px;
 
   p {
     padding-left: 0.8em;
+
+    em {
+      font-style: italic;
+      font-weight: 800;
+    }
+  }
+
+  p + figure {
+    margin-top: 2em;
   }
 
   ul {

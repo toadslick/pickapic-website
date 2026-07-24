@@ -1,0 +1,21 @@
+{% for item in items %}
+  <figure>
+
+    <h3>
+      <a href="{{item.linkURL}}" target="_blank" rel="noopener">
+        {{ item.title | safe }}
+      </a>
+    </h3>
+
+    <cite>
+      {{ item.cite | markdownInline | safe }}
+      <a href="{{item.doiURL}}" target="_blank" rel="noopener">{{item.doiURL}}</a>
+    </cite>
+
+  </figure>
+
+  {% for p in item.text %}
+    <p>{{ p | markdownInline | safe }}</p>
+  {% endfor %}
+
+{% endfor %}

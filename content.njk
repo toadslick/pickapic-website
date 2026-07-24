@@ -43,8 +43,16 @@ styles: /styles/main.css
         {{ section.title | safe }}
       </h2>
 
+      {% if section.id == "docs" %}
+        {% set data = docs %}
+      {% endif %}
+
+      {% if section.id == "research" %}
+        {% set data = research %}
+      {% endif %}
+
       {% renderFile "_includes/content/" + section.id + "." + section.format,
-      docs %}
+      data %}
 
     </hgroup>
   {% endfor %}

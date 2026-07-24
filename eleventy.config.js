@@ -4,6 +4,7 @@ import metagen from "eleventy-plugin-metagen";
 import hamlPlugin from "@11ty/eleventy-plugin-haml";
 import { EleventyRenderPlugin } from "@11ty/eleventy";
 import { load as loadYaml } from "js-yaml";
+import markdownIt from "markdown-it";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
@@ -17,6 +18,11 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addDataExtension("yaml", (contents) => {
     return loadYaml(contents);
+  });
+
+  eleventyConfig.addFilter("markdownInline", (value) => {
+    if (!value) return "";
+    return markdownIt().renderInline(value);
   });
 
   eleventyConfig.addExtension("scss", {
