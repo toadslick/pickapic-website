@@ -112,4 +112,17 @@
       border-color: #fff3;
     }
   }
+
+  #navigation-container {
+    @media (max-width: vars.$extra-compact-nav-max-width) {
+      background: #000;
+
+      &.navigation-hidden,
+      &.navigation-visible {
+        #navigation-heading {
+          background: #000a;
+        }
+      }
+    }
+  }
 }

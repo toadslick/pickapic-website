@@ -76,38 +76,89 @@
 })();
 
 // Highlight link in side nav
+// (function () {
+//   const visibleIDs = new Set();
+
+//   const observer = new IntersectionObserver(
+//     (entries, observer) => {
+//       for (const entry of entries) {
+//         let id = `#${entry.target.id}`;
+//         if (entry.intersectionRatio > 0) {
+//           visibleIDs.add(id);
+//         } else {
+//           visibleIDs.delete(id);
+//         }
+//       }
+
+//       for (const link of document.querySelectorAll("nav li a")) {
+//         if (visibleIDs.has(link.getAttribute("href"))) {
+//           link.parentElement.setAttribute("aria-current", "location");
+//         } else {
+//           link.parentElement.removeAttribute("aria-current");
+//         }
+//       }
+
+//       console.log(visibleIDs);
+//     },
+//     {
+//       threshold: [0, 0.0000001],
+//       delay: 300,
+//     },
+//   );
+
+//   const headings = document.querySelectorAll("hgroup[id]");
+//   headings.forEach((h) => {
+//     observer.observe(h);
+//   });
+// })();
+
+// Mobile-width side-nav
 (function () {
-  const visibleIDs = new Set();
+  const nav = document.querySelector("#navigation-container");
+  if (nav == null) {
+    return;
+  }
+
+  const setNavVisible = (isVisible) => {
+    checkbox.checked = isVisible;
+    if (isVisible) {
+      nav.className = "navigation-visible";
+    } else {
+      nav.className = "navigation-hidden";
+    }
+  };
+
+  const checkbox = document.querySelector("#navigation-toggle");
+  checkbox.addEventListener("change", (event) => {
+    setNavVisible(event.target.checked);
+  });
+
+  setNavVisible(false);
 
   const observer = new IntersectionObserver(
     (entries, observer) => {
-      for (const entry of entries) {
-        let id = `#${entry.target.id}`;
-        if (entry.intersectionRatio > 0) {
-          visibleIDs.add(id);
-        } else {
-          visibleIDs.delete(id);
-        }
-      }
+      const entry = entries[0];
+      const heading = document.querySelector("#navigation-heading");
+      const main = document.querySelector("main");
 
-      for (const link of document.querySelectorAll("nav li a")) {
-        if (visibleIDs.has(link.getAttribute("href"))) {
-          link.parentElement.setAttribute("aria-current", "location");
-        } else {
-          link.parentElement.removeAttribute("aria-current");
-        }
+      if (entry.intersectionRatio <= 0) {
+        heading.className = "navigation-heading-fixed";
+        main.className = "navigation-heading-fixed";
+      } else {
+        heading.className = "";
+        main.className = "";
       }
-
-      console.log(visibleIDs);
     },
     {
-      threshold: [0, 0.0000001],
-      delay: 300,
+      threshold: [0],
+      delay: 200,
     },
   );
+  observer.observe(document.querySelector("header nav"));
 
-  const headings = document.querySelectorAll("hgroup[id]");
-  headings.forEach((h) => {
-    observer.observe(h);
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      setNavVisible(false);
+    });
   });
 })();

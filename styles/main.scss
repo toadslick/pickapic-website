@@ -234,6 +234,14 @@ a.app-store {
   }
 }
 
+$heading-height: 50px;
+
+@media (max-width: vars.$extra-compact-nav-max-width) {
+  main.navigation-heading-fixed {
+    padding-top: $heading-height;
+  }
+}
+
 #navigation-container {
   #navigation-heading {
     display: block;
@@ -250,7 +258,8 @@ a.app-store {
     &.navigation-visible {
       #navigation-heading {
         padding: 0;
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(5px);
+        background: #fffa;
         font-size: 14pt;
         font-weight: 800;
         z-index: 100;
@@ -263,24 +272,29 @@ a.app-store {
       }
 
       label {
-        display: block;
-        padding: 16px;
+        display: flex;
+        height: $heading-height;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 10px;
 
         &::after {
-          content: "⬇︎";
+          content: "❯";
+          font-size: 18pt;
           display: flex;
           aspect-ratio: 1;
           position: absolute;
-          right: 20px;
+          right: 0;
           top: 0;
           height: 100%;
           align-items: center;
           justify-content: center;
+          transform: rotate(90deg);
         }
       }
 
       input:checked + label::after {
-        transform: rotate(180deg);
+        transform: rotate(-90deg);
       }
     }
 
@@ -314,6 +328,10 @@ a.app-store {
         left: 0;
         right: 0;
         top: 0;
+      }
+
+      #navigation-heading:not(.navigation-heading-fixed) {
+        margin: 0 -10px;
       }
 
       menu {
