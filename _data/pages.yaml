@@ -22,4 +22,4 @@
       format: njk
     - id: support
       title: "Support"
-      format: haml
+      format: md

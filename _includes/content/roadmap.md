@@ -1,7 +1,7 @@
 ### Known bugs and fixes
 
 Bugs will be listed here as they are reported and confirmed. Fixing bugs is our highest priority and fixes will be released as soon as possible.
-Please [contact us](#TODO) contact us if you've found a bug that isn't listed here.
+Please [contact us](/help#support) if you've found a bug that isn't listed here.
 
 ### Internationalization
 
