@@ -38,8 +38,5 @@
   const sections = document.querySelectorAll(".arrow");
   sections.forEach((section) => {
     observer.observe(section);
-
-    // Remove video tag's `autoplay` attribute otherwise their appearance becomes janky when paused.
-    section.removeAttribute("autoplay");
   });
 })();

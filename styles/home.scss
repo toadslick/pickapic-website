@@ -235,8 +235,6 @@ body header nav {
   justify-content: center;
   align-items: center;
   max-width: 700px;
-  pointer-events: none;
-  user-select: none;
 
   video {
     position: relative;
@@ -257,6 +255,7 @@ body header nav {
     background-image: url("/assets/style/frame.avif");
     background-size: 100% 100%;
     z-index: 3;
+    pointer-events: none;
   }
 }
 
