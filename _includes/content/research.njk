@@ -1,3 +1,5 @@
+<p>Part of our planning for Pick-a-Pic was to ensure that the app aligned with recent peer-reviewed research. Here is a selection of studies that informed our design decisions.</p>
+
 {% for item in items %}
   <figure>
 
@@ -9,6 +11,7 @@
 
     <cite>
       {{ item.cite | markdownInline | safe }}
+      <br/>
       <a href="{{item.doiURL}}" target="_blank" rel="noopener">{{item.doiURL}}</a>
     </cite>
 
