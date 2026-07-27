@@ -40,8 +40,8 @@ items:
           - "Tap the name of your document and then tap the *Sort books and pictures...* item of the menu. A submenu will open that allows you to choose the order that your Picture Library and Button Books are sorted."
         images:
           - file: "1-5"
-            width: 1075
-            height: 707
+            width: 764
+            height: 543
       - title: "Search books and pictures"
         text:
           - "Enter text into the search bar to filter your Picture Library and Button Books. Only pictures and books whose titles match your search text will be shown."
@@ -273,18 +273,18 @@ items:
             height: 768
   - title: "Purchasing Pick-a-Pic"
     items:
-      - title: "Manage your subscription"
+      - title: "Unlock the full app"
         text:
-          - "Tap the title of your Pick-a-Pic document and then tap *Purchases* from the menu."
-          - "To cancel your subscription, you must do so through the App Store."
+          - "The free version of Pick-a-Pic has a limit of 20 pictures in your Picture Library."
+          - "To remove that limit, tap the *Support Pick-a-Pic* button at the bottom of the screen. If that button is not visible then you've already unlocked the full version."
         images:
           - file: "5-1"
-            width: 699
-            height: 661
+            width: 1768
+            height: 1492
       - title: "Restore your purchase"
         text:
-          - "If you are already subscribed or have purchased the full version of Pick-a-Pic, tap the *Restore previous purchases* button to pull that information from the App Store."
+          - "If you've already purchased Pick-a-Pic then there is no need to purchase it again. Instead, tap the name of the file and then tap the *Restore previous purchases* menu item."
         images:
           - file: "5-2"
-            width: 1252
-            height: 1392
+            width: 779
+            height: 638
