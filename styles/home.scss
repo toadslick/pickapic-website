@@ -160,11 +160,8 @@ body header nav {
       content: $text;
     }
 
-    &.speech-bubble-blocks::before {
-      @include speech-bubble(math.div(820, 1280), math.div(210, 890), "Blocks");
-    }
-    &.speech-bubble-cereal::before {
-      @include speech-bubble(math.div(880, 1280), math.div(410, 890), "Cereal");
+    &.speech-bubble-rice::before {
+      @include speech-bubble(math.div(880, 1280), math.div(410, 890), "Rice");
     }
     &.speech-bubble-crayon::before {
       @include speech-bubble(math.div(450, 1280), math.div(560, 890), "Crayon");

@@ -7,10 +7,9 @@
   const frameInitialClassName = frame.className;
 
   const speechTimes = [
-    { light: 1.5, dark: 1.25, className: "blocks" },
-    { light: 4.25, dark: 4.15, className: "cereal" },
-    { light: 7.2, dark: 7.0, className: "crayon" },
-    { light: 10.2, dark: 10.3, className: "apple" },
+    { light: 3.2, dark: 2.95, className: "rice" },
+    { light: 6.3, dark: 6.1, className: "crayon" },
+    { light: 9.1, dark: 9.6, className: "apple" },
   ];
 
   var isDarkMode = false;
