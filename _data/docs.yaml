@@ -6,51 +6,36 @@ items:
           - "Your Picture Library and Button Books live in a file known as a **Pick-a-Pic document**."
           - "The app first opens to the document picker. Tap the *Create Document* icon or the *+* button to create a new Pick-a-Pic document. To open an existing document, tap that document's icon."
         images:
-          - file: "1-1"
-            width: 2360
-            height: 562
-        wide: true
+          - "1-1"
       - title: "Rename a document"
         text:
           - "From the document picker, long-press the document's icon until a menu appears. Then tap the *Rename* item in the menu."
         images:
-          - file: "1-2"
-            width: 678
-            height: 1098
+          - "1-2"
       - title: "Save and close a document"
         text:
           - "After you've opened your document, it will auto-save as you make changes."
           - "Tap the *❮* button to close your document and return to the document picker."
         images:
-          - file: "1-3"
-            width: 2360
-            height: 350
-        wide: true
+          - "1-3"
       - title: "Undo or redo changes"
         text:
           - "To undo a change you've made to your document, tap the *↺* button. To redo a change that you've undone, tap the *↻* button."
           - "The buttons will be disabled if there are no changes to undo or redo."
         images:
-          - file: "1-4"
-            width: 2360
-            height: 359
-        wide: true
+          - "1-4"
       - title: "Sort books and pictures"
         text:
           - "Tap the name of your document and then tap the *Sort books and pictures...* item of the menu. A submenu will open that allows you to choose the order that your Picture Library and Button Books are sorted."
         images:
-          - file: "1-5"
-            width: 764
-            height: 543
+          - "1-5a"
+          - "1-5b"
       - title: "Search books and pictures"
         text:
           - "Enter text into the search bar to filter your Picture Library and Button Books. Only pictures and books whose titles match your search text will be shown."
           - "Tap the *✕* button in the search field to clear the text and show all of your pictures and books."
         images:
-          - file: "1-6"
-            width: 2360
-            height: 313
-        wide: true
+          - "1-6"
 
   - title: "Picture Library"
     items:
@@ -58,12 +43,7 @@ items:
         text:
           - "Tap the *+* button at the top of your Picture Library to create a new picture. Then select how you would like to create your picture."
         images:
-          - file: "2-1a"
-            width: 805
-            height: 788
-          - file: "2-1b"
-            width: 766
-            height: 964
+          - "2-1"
         items:
           - title: "Paste from clipboard"
             text:
@@ -71,28 +51,20 @@ items:
               - "After tapping the menu item, you will be prompted to allow the paste operation."
               - "Images can be copied from many sources. For example, an image can be copied from the web by long-pressing the image and selecting *Copy* from the menu."
             images:
-              - file: "2-1-6b"
-                width: 766
-                height: 964
-              - file: "2-1-6a"
-                width: 1633
-                height: 1095
+              - "2-1-6b"
+              - "2-1-6a"
           - title: "Crop picture"
             text:
               - "After adding a picture from the photo library, camera, file browser, or copy-paste, you will be prompted to crop the image."
               - "Pinch and drag the image with two fingers to zoom and move it. Tap the buttons on either side of the crop boundary to rotate the image 90 degrees."
               - "Tap the *Crop* button to crop the image and add it to your Picture Library."
             images:
-              - file: "2-1-8"
-                width: 1503
-                height: 1554
+              - "2-1-8"
       - title: "Rename, delete, or tag a picture"
         text:
           - "Long-press a picture in your Picture Library and select the corresponding item from the menu."
         images:
-          - file: "2-2,2-3,2-4"
-            width: 725
-            height: 698
+          - "2-2,2-3,2-4"
         items:
           - title: "Tag a picture"
             text:
@@ -100,9 +72,7 @@ items:
               - "From that menu, tap any tag to apply it to the image."
               - "Tap the *Clear* button to remove all tags from the picture. Tap the *+* button to create a new tag."
             images:
-              - file: "2-4-1"
-                width: 848
-                height: 832
+              - "2-4-1"
       - title: "Filter pictures by tag"
         text:
           - "Tap the **tag** icon at the top left of the Picture Library to open the Filter by Tag menu."
@@ -111,20 +81,14 @@ items:
           - "Tap the *Clear* button to deselect all tags. Tap the *+* button to create a new tag."
           - "Some tags are created automatically and applied to pictures based on how the picture was created."
         images:
-          - file: "2-5a"
-            width: 741
-            height: 631
-          - file: "2-5b"
-            width: 955
-            height: 786
+          - "2-5a"
+          - "2-5b"
         items:
           - title: "Rename or delete a tag"
             text:
               - "Long-press a tag to reveal a menu. Then select the appropriate item from that menu."
             images:
-              - file: "2-5-1"
-                width: 859
-                height: 703
+              - "2-5-1"
   - title: "Button Books"
     items:
       - title: "Add a Button Book"
@@ -132,25 +96,18 @@ items:
           - "Tap the *+* button on the top right of the Button Books list to create a new book. Then you will be prompted to name your book."
           - "After your book is created, you'll be taken to the edit screen."
         images:
-          - file: "3-1"
-            width: 2360
-            height: 523
-        wide: true
+          - "3-1"
       - title: "Edit a Button Book"
         text:
           - "Tap the *⋯* icon at the top right corner of any Button Book to open the book in editing mode."
           - "See the 'Edit a Button Book' section below."
         images:
-          - file: "3-2"
-            width: 822
-            height: 528
+          - "3-2"
       - title: "Rename or delete a Button Book"
         text:
           - "Long-press a Button Book and then select the appropriate menu item."
         images:
-          - file: "3-3"
-            width: 1048
-            height: 1221
+          - "3-3"
       - title: "View a Button Book"
         text:
           - "Tap anywhere on a Button Book except the edit icon to open the book in viewing mode."
@@ -162,9 +119,7 @@ items:
               - "To exit from the book, return to the first page and then drag to the right until an *✕* icon in a circle appears."
               - "Hold until the meter is filled to exit the book."
             images:
-              - file: "3-4-1"
-                width: 2360
-                height: 1640
+              - "3-4-1"
       - title: "Lock Button Books"
         text:
           - "The lock settings applies to every Button Book in your Pick-a-Pic document."
@@ -172,21 +127,14 @@ items:
           - "You may lock books with either Face ID or Touch ID (depending on your device) or a 4-digit passcode."
           - "Tap the switch next to the setting that you wish to apply. If both switches are off then books are unlocked."
         images:
-          - file: "3-5"
-            width: 1037
-            height: 357
+          - "3-5"
         items:
           - title: "Lock with 4-digit passcode"
             text:
               - "When you select *Lock books with passcode*, you will be prompted to enter a 4-digit passcode."
               - "After you enter your passcode, the label next to the switch will display the passcode you entered."
             images:
-              - file: "3-5-1a"
-                width: 970
-                height: 667
-              - file: "3-5-1b"
-                width: 1136
-                height: 660
+              - "3-5-1"
           - title: "Keep Pick-a-Pic on-screen"
             text:
               - "You can use your iPad as a dedicated Pick-a-Pic device by setting up [Guided Access](https://support.apple.com/guide/ipad/lock-ipad-to-one-app-ipada16d1374/ipados) on your iPad. Combine this with Lock Settings to force a single Button Book to remain on-screen."
@@ -198,79 +146,52 @@ items:
           - "Tap the **grid button** to toggle between viewing a single page and viewing all pages."
           - "From the all-pages view, tap any page to navigate to it in single-page view."
         images:
-          - file: "4-0a"
-            width: 2360
-            height: 378
-          # - file: "4-0b"
-          #   width: 2360
-          #   height: 378
-        wide: true
+          - "4-0"
       - title: "Add a page to a Button Book"
         text:
           - "From either the single-page or all-pages view, tap the *+* button that appears after the last page of the book."
         images:
-          - file: "4-1a"
-            width: 1793
-            height: 1513
-          - file: "4-1b"
-            width: 1785
-            height: 978
+          - "4-1a"
+          - "4-1b"
       - title: "Remove a page from a Button Book"
         text:
           - "while in the **all-pages** view, long-press a page and then tap *Delete page* on the menu"
         images:
-          - file: "4-2"
-            width: 857
-            height: 693
+          - "4-2"
       - title: "Arrange the pages in a Button Book"
         text:
           - "While in the **all-pages** view, long-press a page and then drag it to change its placement in your Button Book."
         images:
-          - file: "4-3"
-            width: 1310
-            height: 855
+          - "4-3"
       - title: "Add a button to a page"
         text:
           - "While in the **single-page** view, tap a picture in your Picture Library to create a button on the current page. No need to drag-and-drop!"
         images:
-          - file: "4-4,4-5a"
-            width: 2360
-            height: 1640
+          - "4-4"
       - title: "Remove a button from a page"
         text:
           - "While in the **single-page** view, if you tap the picture in your Picture Library of a button that is on the current page, that button will be removed from the page."
           - "If you tap a picture that has already been added to a different page, the single-page view will scroll to that page."
           - "You may also long-press a button and delete it from the menu that appears."
         images:
-          - file: "4-4,4-5a"
-            width: 2360
-            height: 1640
-          - file: "4-5b"
-            width: 770
-            height: 976
+          - "4-5"
       - title: "Arrange the buttons on a page"
         text:
           - "While in the **single-page** view, long-press a button and drag it to change where it appears on the page."
           - "The layout of buttons is fixed and depends on the number of buttons you have added to the page. However, you can drag to change the order in which your buttons appear."
         images:
-          - file: "4-6"
-            width: 1366
-            height: 1439
+          - "4-6"
       - title: "Set the voice for a Button Book"
         text:
           - "Tap the **speech bubble** button to open the *Voice settings* menu. From that menu, you may select the voice that speaks when buttons are tapped."
         images:
-          - file: "4-7"
-            width: 832
-            height: 1597
+          - "4-7"
       - title: "Other book settings"
         text:
           - "If you would prefer to be able to add the same button to multiple pages of your Button Book, you may enable the *Allow duplicate pictures* setting."
           - "While this settings is enabled, page numbers will not be shown for pictures that have been added as buttons to your Button Book."
         images:
-          - file: "4-8"
-            width: 972
-            height: 768
+          - "4-8"
   - title: "Purchasing Pick-a-Pic"
     items:
       - title: "Unlock the full app"
@@ -278,13 +199,11 @@ items:
           - "The free version of Pick-a-Pic has a limit of 20 pictures in your Picture Library."
           - "To remove that limit, tap the *Support Pick-a-Pic* button at the bottom of the screen. If that button is not visible then you've already unlocked the full version."
         images:
-          - file: "5-1"
-            width: 1768
-            height: 1492
+          - "5-1"
       - title: "Restore your purchase"
         text:
           - "If you've already purchased Pick-a-Pic then there is no need to purchase it again. Instead, tap the name of the file and then tap the *Restore previous purchases* menu item."
+          - "The same button can also be found on the purchasing modal."
         images:
-          - file: "5-2"
-            width: 779
-            height: 638
+          - "5-2a"
+          - "5-2b"

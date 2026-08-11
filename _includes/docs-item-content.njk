@@ -1,13 +1,13 @@
 {% for item in i.items %}
-  <hgroup {{ 'class=docs-wide' if item.wide }} id="{{ (i.title + " " + item.title) | slugify }}">
+  <hgroup d="{{ (i.title + " " + item.title) | slugify }}">
     <div>
 
       <div>
         {% for image in item.images %}
-          {% set url = "/assets/docs/" + image.file + ".l.jpg" %}
+          {% set url = "/assets/help/" + image + ".l.jpg" %}
           <div>
             <a class="docs-image"  href="{{url}}" target="_blank">
-              <img srcset="{{url}} 2x" width="{{image.width}}" height="{{image.height}}" loading="lazy" style="aspect-ratio: {{image.width}} / {{image.height}};"/>
+              <img srcset="{{url}} 2x" width="590" height="410" loading="lazy"/>
             </a>
           </div>
         {% endfor %}

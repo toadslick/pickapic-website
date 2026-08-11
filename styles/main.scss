@@ -20,7 +20,7 @@ body {
 
 main {
   background: #fff;
-  padding: 0.1px 0 0.1px;
+  padding: 0.1px 0 3em;
 
   p {
     display: block;
@@ -429,6 +429,7 @@ $heading-height: 50px;
     display: inline-block;
     position: relative;
     transition: box-shadow 0.1s ease-out;
+    aspect-ratio: 1180 / 820;
 
     &::after {
       content: "";
@@ -488,7 +489,7 @@ $heading-height: 50px;
       width: auto;
     }
 
-    &:not(.docs-wide) > div {
+    > div {
       img {
         max-height: 300px;
         max-width: 300px;
@@ -504,12 +505,6 @@ $heading-height: 50px;
 
       > div {
         float: right;
-
-        @media (min-width: vars.$two-column-min-width) {
-          display: flex;
-          flex-direction: row;
-          flex: 1 0;
-        }
       }
 
       .docs-image {
@@ -520,20 +515,6 @@ $heading-height: 50px;
         display: block;
         content: "";
         clear: both;
-      }
-    }
-
-    &.docs-wide > div {
-      .docs-image {
-        margin-bottom: 1em;
-      }
-
-      img {
-        max-height: 150px;
-
-        @media (max-width: 1300px) {
-          max-height: 100px;
-        }
       }
     }
   }
