@@ -377,7 +377,7 @@ body header nav {
       figcaption {
         display: flex;
         align-items: center;
-        text-align: left;
+        justify-content: flex-start;
         padding-left: 3em;
         background: no-repeat left center/2.5em
           url("/assets/style/bracket-left.avif");
@@ -389,7 +389,7 @@ body header nav {
       figcaption {
         display: flex;
         align-items: center;
-        text-align: right;
+        justify-content: flex-end;
         padding-right: 3em;
         background: no-repeat right center/2.5em
           url("/assets/style/bracket-right.avif");

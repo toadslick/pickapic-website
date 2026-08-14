@@ -491,15 +491,10 @@ $heading-height: 50px;
 
     > div {
       img {
-        max-height: 300px;
-        max-width: 300px;
+        width: 300px;
 
         @media (max-width: 1300px) {
-          max-width: 200px;
-        }
-
-        @media (max-width: 600px) {
-          max-width: 150px;
+          width: 200px;
         }
       }
 
