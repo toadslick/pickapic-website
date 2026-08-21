@@ -181,20 +181,33 @@ main {
 
       a {
         font-weight: 600;
-        padding: 2px 6px;
+        padding: 4px 6px 4px 8px;
         display: block;
-        border-top: 1px solid vars.$blue;
+        border-top: 1px solid vars.$blue-fade;
 
         &:hover,
         &:focus {
           color: #fff;
           background-color: vars.$blue;
-          border-radius: 4px;
+          border-radius: 8px;
           border-width: 1px;
+
+          + ul > li:first-child a {
+            border-top: 1px solid transparent;
+          }
         }
 
         strong {
           white-space: nowrap;
+        }
+      }
+
+      li:has(a:focus),
+      li:has(a:hover) {
+        + li > a,
+        + ul > li:first-child a,
+        > ul:first-child > li:first-child a {
+          border-top: 1px solid transparent;
         }
       }
 
@@ -344,6 +357,13 @@ $heading-height: 50px;
   }
 }
 
+#roadmap,
+#practices {
+  p {
+    text-indent: 1em;
+  }
+}
+
 #research {
   figure {
     display: block;
@@ -356,7 +376,7 @@ $heading-height: 50px;
   }
 
   p {
-    padding-left: 0.8em;
+    text-indent: 1em;
 
     em {
       font-style: italic;
@@ -385,7 +405,7 @@ $heading-height: 50px;
 
 #why {
   p {
-    text-indent: 2em;
+    text-indent: 1em;
   }
 
   cite {
