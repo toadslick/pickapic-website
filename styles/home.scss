@@ -11,7 +11,8 @@ main {
   }
 
   p,
-  figcaption {
+  figcaption,
+  li {
     font-size: 16pt;
   }
 }
@@ -201,30 +202,6 @@ body header nav {
   }
 }
 
-.inline-list {
-  margin: 0 auto 1em;
-  display: inline-block;
-  list-style-type: "✔︎";
-
-  li {
-    $size: 0.6em;
-
-    text-align: left;
-    padding-left: 0.5em;
-    margin: 0 20px;
-
-    &::marker {
-      color: vars.$red;
-      font-size: 22pt;
-      line-height: 0.5;
-    }
-
-    strong {
-      font-weight: 700;
-    }
-  }
-}
-
 .video-frame {
   position: relative;
   aspect-ratio: 1292 / 919;
@@ -304,7 +281,7 @@ body header nav {
     background: linear-gradient(#9cf0 0%, #9cfd 20%, #9cf0 90%);
 
     .video-frame::before {
-      content: "||";
+      content: "";
       position: absolute;
       display: flex;
       width: vars.$video-width-in-frame;
