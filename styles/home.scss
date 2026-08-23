@@ -37,7 +37,7 @@ body header nav {
   @media (max-width: vars.$two-column-min-width) {
     menu li {
       + li {
-        margin: 0 10px;
+        margin: 0 15px;
       }
 
       &:first-child,
@@ -45,7 +45,7 @@ body header nav {
         display: none;
       }
 
-      &:nth-child(3) {
+      &:nth-child(4) {
         margin-right: auto;
       }
     }

@@ -26,8 +26,8 @@
 - id: press
   title: "Press"
   sections:
-    - id: pick-a-pic
-      title: "Pick-a-Pic"
+    - id: press
+      title: "Press Kit"
       format: haml
     - id: facts
       title: "Fact Sheet"

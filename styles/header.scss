@@ -168,26 +168,28 @@ footer {
     @media (max-width: vars.$extra-compact-nav-max-width) {
       padding-top: 80px;
 
-      li:first-child {
-        position: absolute;
-        top: 10px;
-        left: 10px;
+      li {
+        &:first-child {
+          position: absolute;
+          top: 10px;
+          left: 10px;
 
-        a {
-          &::after {
-            margin-left: 10px;
+          a {
+            &::after {
+              margin-left: 10px;
+            }
           }
         }
-      }
 
-      li:nth-child(2) {
-        margin-left: 10px;
-      }
+        &:nth-child(2) {
+          margin-left: 10px;
+        }
 
-      li:last-child {
-        margin-left: auto;
-        a {
-          height: 50px;
+        &:last-child {
+          margin-left: auto;
+          a {
+            margin-left: 30px;
+          }
         }
       }
     }
@@ -195,24 +197,34 @@ footer {
     @media (max-width: vars.$ultra-compact-nav-max-width) {
       padding-top: 60px;
 
-      li:first-child a {
-        &::before {
-          content: none;
+      li {
+        &:first-child a {
+          &::before {
+            content: none;
+          }
+
+          &::after {
+            margin-left: 0;
+          }
         }
 
-        &::after {
-          margin-left: 0;
+        &:nth-child(2) {
+          margin-left: 5px;
         }
-      }
 
-      li:nth-child(2) {
-        margin-left: 0;
-      }
+        &#dark-mode-toggle {
+          margin-left: auto;
+        }
 
-      li#dark-mode-toggle {
-        position: absolute;
-        top: 14px;
-        right: 10px;
+        &:last-child {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+
+          a {
+            height: 40px;
+          }
+        }
       }
     }
   }
