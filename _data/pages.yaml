@@ -23,3 +23,30 @@
     - id: support
       title: "Support"
       format: md
+- id: press
+  title: "Press"
+  sections:
+    - id: pick-a-pic
+      title: "Pick-a-Pic"
+      format: haml
+    - id: facts
+      title: "Fact Sheet"
+      format: haml
+    - id: about
+      title: "About Pick-a-Pic"
+      format: md
+    - id: features
+      title: "Key Features"
+      format: md
+    - id: screenshots
+      title: "Screenshots"
+      format: haml
+    - id: assets
+      title: "Brand Assets"
+      format: haml
+    - id: developer
+      title: "About the Developer"
+      format: md
+    - id: contact
+      title: "Contact"
+      format: haml

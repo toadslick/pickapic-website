@@ -51,7 +51,7 @@ styles: /styles/main.css
         {% set data = research %}
       {% endif %}
 
-      {% renderFile "_includes/content/" + section.id + "." + section.format,
+      {% renderFile "_includes/content/" + item.id + "/" + section.id + "." + section.format,
       data %}
 
     </hgroup>
