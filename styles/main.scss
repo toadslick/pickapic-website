@@ -36,10 +36,21 @@ main {
     color: vars.$blue;
     border-bottom: 0 solid #07a3;
     font-weight: 700;
+    -break: keep-all;
 
     &:hover,
     &:focus {
       border-bottom-width: 3px;
+    }
+
+    &.button {
+      position: relative;
+      display: inline-block;
+      padding: 0.4em 2em;
+      border: 2px solid vars.$blue;
+      border-bottom: 2px solid vars.$blue;
+      box-shadow: 0 0 7px vars.$blue;
+      border-radius: 1.5em;
     }
   }
 
@@ -115,7 +126,6 @@ main {
     > hgroup {
       + hgroup {
         margin-top: 2em;
-        border-top: 3px solid #0002;
         padding-top: 1em;
       }
     }
@@ -144,7 +154,7 @@ main {
   section {
     max-width: vars.$two-column-max-width;
     margin: auto;
-    padding: 0 10px;
+    padding: 0 20px;
 
     @media (min-width: vars.$extra-compact-nav-max-width) {
       padding: 0 30px;
@@ -161,11 +171,12 @@ main {
       flex-shrink: 0;
 
       @media (min-width: vars.$extra-compact-nav-max-width) {
-        max-width: 25%;
+        width: 25%;
       }
 
       h1 {
         padding-left: 6px;
+        font-weight: 300;
       }
 
       li[aria-current] {
@@ -188,26 +199,10 @@ main {
         &:hover,
         &:focus {
           color: #fff;
-          background-color: vars.$blue;
-          border-radius: 8px;
-          border-width: 1px;
-
-          + ul > li:first-child a {
-            border-top: 1px solid transparent;
-          }
         }
 
         strong {
           white-space: nowrap;
-        }
-      }
-
-      li:has(a:focus),
-      li:has(a:hover) {
-        + li > a,
-        + ul > li:first-child a,
-        > ul:first-child > li:first-child a {
-          border-top: 1px solid transparent;
         }
       }
 
@@ -235,11 +230,12 @@ main {
 
 a.app-store {
   display: block;
-  margin: auto;
+  margin: 2em auto 1em;
   position: relative;
   background-image: url("/assets/style/app-store.svg");
   aspect-ratio: 240 / 80;
   background-size: 100% 100%;
+  max-width: 208px;
   border: none;
 
   span {
@@ -531,6 +527,16 @@ $heading-height: 50px;
         content: "";
         clear: both;
       }
+    }
+  }
+}
+
+#pick-a-pic {
+  position: relative;
+
+  @media (max-width: vars.$extra-compact-nav-max-width) {
+    img {
+      width: 128px;
     }
   }
 }

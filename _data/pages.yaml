@@ -6,16 +6,16 @@
       title: "Why we made <strong>Pick-a-Pic</strong>"
       format: md
     - id: research
-      title: "Supporting Research"
+      title: "Supporting research"
       format: njk
     - id: roadmap
-      title: "Product Roadmap"
+      title: "Product roadmap"
       format: md
 - id: help
   title: "Help"
   sections:
     - id: practices
-      title: "Best Practices"
+      title: "Best practices"
       format: md
     - id: docs
       title: "Documentation"
@@ -26,26 +26,26 @@
 - id: press
   title: "Press"
   sections:
-    - id: press
-      title: "Press Kit"
+    - id: pick-a-pic
+      title: "Pick-a-Pic"
       format: haml
     - id: facts
-      title: "Fact Sheet"
+      title: "Fact sheet"
       format: haml
     - id: about
       title: "About Pick-a-Pic"
       format: md
     - id: features
-      title: "Key Features"
+      title: "Key features"
       format: md
     - id: screenshots
       title: "Screenshots"
       format: haml
     - id: assets
-      title: "Brand Assets"
+      title: "Brand assets"
       format: haml
     - id: developer
-      title: "About the Developer"
+      title: "About the developer"
       format: md
     - id: contact
       title: "Contact"

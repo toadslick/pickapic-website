@@ -58,6 +58,10 @@
     a {
       color: vars.$blue-dark-mode;
       border-bottom-color: vars.$dark-blue;
+
+      &.button {
+        border-color: vars.$blue;
+      }
     }
 
     nav menu,

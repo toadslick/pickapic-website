@@ -25,28 +25,24 @@ body header nav {
     padding-bottom: 0 !important;
 
     li {
-      &:first-child,
-      &:last-child {
-        a {
-          display: none;
-        }
+      &:first-child {
+        display: none;
+      }
+
+      &:nth-child(2) {
+        margin-left: auto;
       }
     }
   }
 
   @media (max-width: vars.$two-column-min-width) {
     menu li {
-      + li {
-        margin: 0 15px;
+      &:nth-child(2) {
+        margin-left: 0;
       }
 
-      &:first-child,
       &:last-child {
-        display: none;
-      }
-
-      &:nth-child(4) {
-        margin-right: auto;
+        margin-left: auto;
       }
     }
   }

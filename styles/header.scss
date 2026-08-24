@@ -69,177 +69,77 @@
 
 header,
 footer {
-  nav {
-    menu {
-      padding: 0 20px;
-      max-width: vars.$two-column-max-width;
-      margin: auto;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      font-size: 14pt;
-      position: relative;
+  nav menu {
+    padding: 10px 30px;
+    max-width: vars.$two-column-max-width;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14pt;
+    position: relative;
 
-      li {
-        + li {
-          margin-left: 30px;
+    li {
+      + li {
+        margin-left: 2em;
+      }
+
+      a {
+        font-weight: 700;
+        color: #adf;
+        text-decoration: none;
+
+        &[aria-current],
+        &:hover,
+        &:focus {
+          color: #fff;
         }
+      }
+    }
+  }
+}
+
+header:not(.home),
+footer {
+  nav menu {
+    padding: 20px 30px;
+
+    li {
+      &:first-child {
+        width: 25%;
+        position: relative;
 
         a {
-          font-weight: 700;
-          color: #adf;
-          text-decoration: none;
+          @include vars.app-logo;
 
-          &[aria-current],
-          &:hover,
-          &:focus {
-            color: #fff;
-            border-bottom: 3px solid vars.$blue;
-          }
-        }
-
-        &:first-child {
-          margin-right: auto;
-
-          a {
-            @include vars.app-logo;
-
-            border: none;
-            display: flex;
-            align-items: center;
-
-            &::before {
-              position: relative;
-              width: 80px;
-            }
-
-            &::after {
-              position: relative;
-              height: 50px;
-              margin-left: 20px;
-            }
-          }
-        }
-
-        &:last-child a {
-          height: 60px;
           border: none;
-        }
-      }
-    }
-  }
-}
+          display: flex;
+          align-items: center;
 
-header:not(.home),
-footer {
-  nav menu {
-    @media (max-width: vars.$compact-nav-max-width) {
-      padding: 10px;
-
-      li {
-        &:first-child a {
           &::before {
             content: none;
           }
 
           &::after {
-            height: 40px;
+            width: 220px;
+            max-width: 100%;
           }
         }
       }
-    }
 
-    @media (max-width: vars.$extra-compact-nav-max-width) {
-      li:first-child {
-        a {
-          &::before {
-            content: "";
-            width: 60px;
-          }
-        }
-      }
-    }
-  }
-}
-
-header:not(.home),
-footer {
-  nav menu {
-    @media (max-width: vars.$extra-compact-nav-max-width) {
-      padding-top: 80px;
-
-      li {
-        &:first-child {
-          position: absolute;
-          top: 10px;
-          left: 10px;
-
-          a {
-            &::after {
-              margin-left: 10px;
-            }
-          }
-        }
-
-        &:nth-child(2) {
-          margin-left: 10px;
-        }
-
-        &:last-child {
-          margin-left: auto;
-          a {
-            margin-left: 30px;
-          }
-        }
-      }
-    }
-
-    @media (max-width: vars.$ultra-compact-nav-max-width) {
-      padding-top: 60px;
-
-      li {
-        &:first-child a {
-          &::before {
-            content: none;
-          }
-
-          &::after {
-            margin-left: 0;
-          }
-        }
-
-        &:nth-child(2) {
-          margin-left: 5px;
-        }
-
-        &#dark-mode-toggle {
-          margin-left: auto;
-        }
-
-        &:last-child {
-          position: absolute;
-          top: 10px;
-          right: 10px;
-
-          a {
-            height: 40px;
-          }
-        }
+      &:last-child {
+        margin-left: auto;
       }
     }
   }
 }
 
 header {
-  background:
-    linear-gradient(vars.$dark-blue 50%, vars.$blue 98%, vars.$light-blue 100%),
-    vars.$dark-blue;
+  background: linear-gradient(vars.$dark-blue, vars.$blue), vars.$dark-blue;
 }
 
 footer {
-  background:
-    linear-gradient(vars.$light-blue 0%, vars.$blue 1%, vars.$dark-blue 100%),
-    vars.$dark-blue;
+  background: linear-gradient(vars.$blue, vars.$dark-blue), vars.$dark-blue;
   padding-bottom: 20px;
 
   p {
