@@ -1,3 +1,5 @@
+To get the most out of Pick-a-Pic, remember these key points as you and your learner begin your functional communication journey.
+
 ### Communication must be **meaningful** and **motivating**.
 
 Functional communication is more than just words — it is also **social behavior**. Motivation to communicate is a common barrier for individuals with autism that may need to be directly taught.

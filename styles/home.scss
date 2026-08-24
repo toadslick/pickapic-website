@@ -28,10 +28,6 @@ body header nav {
       &:first-child {
         display: none;
       }
-
-      &:nth-child(2) {
-        margin-left: auto;
-      }
     }
   }
 
@@ -42,6 +38,14 @@ body header nav {
       }
 
       &:last-child {
+        margin-left: auto;
+      }
+    }
+  }
+
+  @media (min-width: vars.$two-column-min-width) {
+    menu li {
+      &:nth-child(2) {
         margin-left: auto;
       }
     }

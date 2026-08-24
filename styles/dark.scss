@@ -66,15 +66,17 @@
 
     nav menu,
     nav ul {
+      a {
+        border-bottom: 3px solid transparent;
+
+        &:hover,
+        &:focus {
+          border-bottom: 3px solid vars.$dark-blue;
+        }
+      }
+
       li[aria-current] > a {
         color: #fff;
-      }
-    }
-
-    section nav a {
-      &:hover,
-      &:focus {
-        background-color: vars.$dark-blue;
       }
     }
   }

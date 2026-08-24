@@ -122,6 +122,12 @@ main {
     font-weight: 800;
   }
 
+  abbr[title] {
+    color: vars.$orange;
+    font-weight: 700;
+    display: inline-block;
+  }
+
   article {
     > hgroup {
       + hgroup {
@@ -169,14 +175,24 @@ main {
     nav {
       flex-grow: 1;
       flex-shrink: 0;
-
       @media (min-width: vars.$extra-compact-nav-max-width) {
         width: 25%;
       }
 
+      .app-store {
+        margin: 2em auto 1em 0;
+      }
+
       h1 {
-        padding-left: 6px;
-        font-weight: 300;
+        font-weight: 400;
+        opacity: 0.5;
+      }
+
+      li {
+        margin-bottom: 0.5em;
+        ul {
+          margin-top: 0.5em;
+        }
       }
 
       li[aria-current] {
@@ -192,13 +208,12 @@ main {
 
       a {
         font-weight: 600;
-        padding: 4px 6px 4px 8px;
-        display: block;
-        border-top: 1px solid vars.$blue-fade;
+
+        border-bottom: 3px solid transparent;
 
         &:hover,
         &:focus {
-          color: #fff;
+          border-bottom: 3px solid vars.$light-blue;
         }
 
         strong {
@@ -208,12 +223,13 @@ main {
 
       ul,
       menu {
-        list-style-type: none;
         font-size: 14pt;
         font-weight: 500;
+        margin-left: 18px;
+        list-style-type: disc;
+        color: vars.$orange;
 
         ul {
-          margin-left: 20px;
           font-size: 11pt;
         }
       }
@@ -230,7 +246,7 @@ main {
 
 a.app-store {
   display: block;
-  margin: 2em auto 1em;
+  margin: auto;
   position: relative;
   background-image: url("/assets/style/app-store.svg");
   aspect-ratio: 240 / 80;
@@ -534,9 +550,20 @@ $heading-height: 50px;
 #pick-a-pic {
   position: relative;
 
-  @media (max-width: vars.$extra-compact-nav-max-width) {
-    img {
-      width: 128px;
-    }
+  p:first-of-type {
+    font-size: 18pt;
+    font-weight: 600;
+  }
+
+  p:last-of-type {
+    font-size: 12pt;
+  }
+
+  img {
+    max-width: 80%;
+    border-radius: 27%;
+    border: 1px solid #0006;
+    box-shadow: 0 0 20px #0003;
+    margin-bottom: 1em;
   }
 }

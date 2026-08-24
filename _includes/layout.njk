@@ -74,15 +74,15 @@ custom: [
     </main>
 
     <footer>
+      <p>
+        <strong>Pick-a-Pic</strong>
+        is an
+        <abbr title="augmentative and alternative communication">AAC</abbr>
+        app for iPad focused on ease-of-use for early learners and their caregivers.
+      </p>
+
       <nav>
         <menu>
-          <li>
-            <a href="/">
-              <span>
-                Pick-a-Pic
-              </span>
-            </a>
-          </li>
 
           {%- for p in pages %}
             {% set pagePath = "/" + p.id + "/" %}
@@ -96,8 +96,7 @@ custom: [
         </menu>
       </nav>
       <p>
-        <strong>Pick-a-Pic</strong>
-        is made in Portland 🌲 by a BCBA and an app developer.
+        Made in Portland 🌲 by a BCBA and an app developer.
       </p>
       <p>&copy; 2026 Pocket Pigeon</p>
     </footer>

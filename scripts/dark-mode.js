@@ -41,10 +41,9 @@
     document.querySelectorAll("img").forEach((image) => {
       let oldAttr = image.getAttribute("srcset");
       if (oldAttr) {
-        let newAttr = oldAttr.replace(
-          `.${oldText[0]}.jpg`,
-          `.${newText[0]}.jpg`,
-        );
+        let newAttr = oldAttr
+          .replace(`.${oldText[0]}.jpg`, `.${newText[0]}.jpg`)
+          .replace(`-${oldText}`, `-${newText}`);
         image.setAttribute("srcset", newAttr);
       }
     });

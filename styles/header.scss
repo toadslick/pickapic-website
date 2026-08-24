@@ -103,34 +103,34 @@ header:not(.home),
 footer {
   nav menu {
     padding: 20px 30px;
+  }
+}
 
-    li {
-      &:first-child {
-        width: 25%;
-        position: relative;
+header:not(.home) li {
+  &:first-child {
+    width: 25%;
+    position: relative;
 
-        a {
-          @include vars.app-logo;
+    a {
+      @include vars.app-logo;
 
-          border: none;
-          display: flex;
-          align-items: center;
+      border: none;
+      display: flex;
+      align-items: center;
 
-          &::before {
-            content: none;
-          }
-
-          &::after {
-            width: 220px;
-            max-width: 100%;
-          }
-        }
+      &::before {
+        content: none;
       }
 
-      &:last-child {
-        margin-left: auto;
+      &::after {
+        width: 250px;
+        max-width: 100%;
       }
     }
+  }
+
+  &:last-child {
+    margin-left: auto;
   }
 }
 
@@ -140,7 +140,26 @@ header {
 
 footer {
   background: linear-gradient(vars.$blue, vars.$dark-blue), vars.$dark-blue;
-  padding-bottom: 20px;
+  padding: 1.5em 20px;
+
+  nav {
+    border-top: 1px solid vars.$dark-blue;
+    border-bottom: 1px solid vars.$dark-blue;
+    margin: 1em 0;
+    box-shadow:
+      0 1px 0 #fff3,
+      0 1px 0 #fff3 inset;
+
+    menu li {
+      &:first-child {
+        margin-left: auto;
+      }
+
+      &:last-child {
+        margin-right: auto;
+      }
+    }
+  }
 
   p {
     color: #fffd;
@@ -150,13 +169,7 @@ footer {
     padding: 0 10px;
 
     strong {
-      color: vars.$orange;
       font-weight: 800;
     }
-  }
-}
-
-footer nav menu {
-  @media (max-width: vars.$extra-compact-nav-max-width) {
   }
 }
