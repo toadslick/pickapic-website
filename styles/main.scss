@@ -12,10 +12,6 @@ body {
   font-weight: 500;
   line-height: 1.5;
   background: vars.$dark-blue;
-
-  @media (max-width: vars.$large-font-max-width) {
-    font-size: 12pt;
-  }
 }
 
 main {
@@ -36,7 +32,6 @@ main {
     color: vars.$blue;
     border-bottom: 0 solid #07a3;
     font-weight: 700;
-    -break: keep-all;
 
     &:hover,
     &:focus {
@@ -47,9 +42,8 @@ main {
       position: relative;
       display: inline-block;
       padding: 0.4em 2em;
-      border: 2px solid vars.$blue;
-      border-bottom: 2px solid vars.$blue;
-      box-shadow: 0 0 7px vars.$blue;
+      border: 3px solid vars.$blue;
+      border-bottom: 3px solid vars.$blue;
       border-radius: 1.5em;
     }
   }
@@ -225,7 +219,7 @@ main {
       menu {
         font-size: 14pt;
         font-weight: 500;
-        margin-left: 18px;
+        margin-left: 1.1em;
         list-style-type: disc;
         color: vars.$orange;
 
@@ -559,11 +553,86 @@ $heading-height: 50px;
     font-size: 12pt;
   }
 
-  img {
-    max-width: 80%;
-    border-radius: 27%;
-    border: 1px solid #0006;
-    box-shadow: 0 0 20px #0003;
+  a {
+    word-break: keep-all;
+  }
+}
+
+#facts {
+  dl {
+    border-bottom: 1px solid #7777;
+  }
+
+  dt {
+    font-weight: 700;
+  }
+
+  @media (min-width: vars.$extra-compact-nav-max-width) {
+    dl {
+      display: grid;
+      grid-template-columns: min-content minmax(0, 1fr);
+    }
+    dt,
+    dd {
+      border-top: 1px solid #7777;
+      padding: 1em 0;
+    }
+
+    dt {
+      font-weight: 700;
+      padding-right: 2em;
+      white-space: pre;
+    }
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      margin: 0;
+
+      li {
+        margin: 0;
+      }
+
+      li + li {
+        margin-left: 2em;
+      }
+    }
+  }
+
+  @media (max-width: vars.$extra-compact-nav-max-width) {
+    dt {
+      padding-top: 1em;
+      border-top: 1px solid #7777;
+    }
+
+    dd {
+      padding-bottom: 1em;
+      padding-left: 1em;
+    }
+
+    ul {
+      margin-bottom: 0;
+    }
+  }
+}
+
+#about {
+  blockquote {
+    font-size: 18pt;
+    font-weight: 600;
     margin-bottom: 1em;
+    padding: 1em 1em 0.1em 1em;
+    background: #7773;
+    border-radius: 10px;
+  }
+
+  p {
+    text-indent: 1em;
+  }
+}
+
+#features {
+  p {
+    text-indent: 1em;
   }
 }

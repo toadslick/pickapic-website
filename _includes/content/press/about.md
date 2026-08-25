@@ -1,10 +1,6 @@
 > Pick-a-Pic is an AAC (augmentative and alternative communication) app for iPad focused on ease-of-use for early learners and their caregivers. It allows caregivers to quickly turn their images into buttons that speak when tapped.
->
-> Pick-a-Pic was created as a springboard for teaching functional communication to children with autism. Pick-a-Pic seeks to address the common frustrations that early learners and their caregivers experience with more complex AAC apps.
 
-Pick-a-Pic is an AAC (augmentative and alternative communication) app for iPad focused on ease-of-use for early learners and their caregivers. It allows caregivers to quickly turn their images into buttons that speak when tapped.
-
-Pick-a-Pic was created as a springboard for teaching functional communication to children with autism. Functional communication is an evidence-based intervention for replacing challenging behaviors with basic social interaction. The basics of functional communication, such as making requests, are where Pick-a-Pic’s simplicity shines.
+Pick-a-Pic was created as a springboard for teaching **functional communication** to children with autism. Functional communication is an evidence-based intervention for replacing challenging behaviors with basic social interaction. The basics of functional communication, such as making requests, are where Pick-a-Pic’s simplicity _shines_.
 
 Pick-a-Pic seeks to address the common frustrations that learners and their caregivers experience with more complex AAC apps:
 
