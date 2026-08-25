@@ -1,23 +1,28 @@
 <p>All videos are available to download at 1280x890 pixels in both light and dark modes. </p>
 
-{% for item in items %}
+<div>
+  {% for item in items %}
+    <div>
 
-  <div>
-    <figure>
-      <video playsinline="playsinline" muted="muted" loop="loop">
-        <source src="/assets/video/{{item.file}}-light.mp4" type="video/mp4">
-      </video>
-      <figcaption>{{item.title}}</figcaption>
-    </figure>
-    {{item.text}}
-    <ul>
-      <li>
-        <a href="/assets/video/{{item.file}}-light.mp4" download>Light</a>
-      </li>
-      <li>
-        <a href="/assets/video/{{item.file}}-dark.mp4" download>Dark</a>
-      </li>
-    </ul>
-  </div>
+      <figure>
+        <video playsinline="playsinline" muted="muted" loop="loop">
+          <source src="/assets/video/{{item.file}}-light.mp4" type="video/mp4">
+        </video>
+        <figcaption>{{item.title}}</figcaption>
+      </figure>
 
-{% endfor %}
+      <p>{{item.text}}</p>
+
+      <ul>
+        {% for mode in (["light", "dark"]) %}
+          <li>
+            <a href="/assets/video/{{item.file}}-{{mode}}.mp4" download="pick-a-pic_{{item.file}}_{{mode}}.mp4">
+              {{mode}}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+
+    </div>
+  {% endfor %}
+</div>

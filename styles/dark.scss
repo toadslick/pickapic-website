@@ -20,6 +20,10 @@
     .video-frame.speech-bubble::before {
       color: #000;
     }
+
+    p {
+      color: vars.$bold-dark;
+    }
   }
 
   #hero h1,
@@ -37,8 +41,12 @@
     }
   }
 
-  #hero p {
-    opacity: 0.8;
+  .feature-list li {
+    color: vars.$bold-dark;
+  }
+
+  .two-column {
+    color: vars.$bold-dark;
   }
 
   .two-column.arrow {
@@ -53,7 +61,7 @@
 
   main {
     background: #000;
-    color: #fff;
+    color: vars.$body-dark;
 
     a {
       color: vars.$blue-dark-mode;
@@ -62,6 +70,17 @@
       &.button {
         border-color: vars.$blue;
       }
+    }
+
+    p strong,
+    ul strong,
+    p em,
+    h4 {
+      color: vars.$bold-dark;
+    }
+
+    h1 {
+      color: vars.$body-dark;
     }
 
     nav menu,
@@ -81,8 +100,14 @@
     }
   }
 
-  #research figure {
-    background-color: #fff2;
+  #research {
+    p em {
+      color: vars.$bold-dark;
+    }
+
+    figure {
+      background-color: #fff2;
+    }
   }
 
   #why cite::before {
@@ -112,6 +137,17 @@
 
     hgroup > hgroup {
       border-color: #fff3;
+    }
+  }
+
+  #about blockquote {
+    color: vars.$bold-dark;
+  }
+
+  #screenshots,
+  #videos {
+    figcaption {
+      color: vars.$bold-dark;
     }
   }
 

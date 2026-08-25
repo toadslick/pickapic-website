@@ -82,12 +82,11 @@ body header nav {
   }
 
   p {
-    color: #fff;
+    color: vars.$bold-dark;
     font-size: 20pt;
     margin: 0.5em 0 1em;
     text-align: center;
     font-weight: 500;
-    text-shadow: 0 0 30px vars.$dark-blue;
 
     @media (max-width: 700px) {
       font-size: 18pt;
@@ -100,6 +99,7 @@ body header nav {
       font-style: italic;
       font-weight: 900;
       letter-spacing: -0.3pt;
+      color: vars.$bold-dark;
     }
   }
 
@@ -182,6 +182,7 @@ body header nav {
   margin-bottom: 1.5em;
 
   li {
+    color: vars.$bold-light;
     display: inline-block;
     font-weight: 700;
     padding: 0.3em 0.7em;
@@ -250,6 +251,7 @@ body header nav {
   justify-content: center;
   align-items: center;
   flex: 1;
+  color: vars.$bold-light;
 
   > div {
     position: relative;

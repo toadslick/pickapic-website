@@ -7,7 +7,7 @@
 html,
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #000;
+  color: vars.$body-light;
   font-size: 14pt;
   font-weight: 500;
   line-height: 1.5;
@@ -24,7 +24,16 @@ main {
 
     strong {
       font-weight: 700;
+      color: vars.$bold-light;
     }
+
+    em {
+      color: vars.$bold-light;
+    }
+  }
+
+  ul strong {
+    color: vars.$bold-light;
   }
 
   a {
@@ -76,7 +85,7 @@ main {
   }
 
   h1 {
-    font-weight: 500;
+    color: vars.$body-light;
   }
 
   h2 {
@@ -108,6 +117,7 @@ main {
   h4 {
     font-size: 18pt;
     font-weight: 700;
+    color: vars.$bold-light;
 
     @media (max-width: vars.$large-font-max-width) {
       font-size: 14pt;
@@ -186,7 +196,6 @@ main {
 
       h1 {
         font-weight: 400;
-        opacity: 0.5;
       }
 
       li {
@@ -625,10 +634,7 @@ $heading-height: 50px;
   blockquote {
     font-size: 18pt;
     font-weight: 600;
-    margin-bottom: 1em;
-    padding: 1em 1em 0.1em 1em;
-    background: #7773;
-    border-radius: 10px;
+    color: vars.$bold-light;
   }
 
   p {
@@ -639,5 +645,49 @@ $heading-height: 50px;
 #features {
   p {
     text-indent: 1em;
+  }
+}
+
+#screenshots,
+#videos {
+  > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    row-gap: 2rem;
+    margin-top: 2rem;
+
+    @media (max-width: vars.$compact-nav-max-width) {
+      grid-template-columns: 1fr;
+    }
+
+    p {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  img,
+  video {
+    border: 2px solid #777;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+  }
+
+  figcaption {
+    font-weight: 700;
+    color: vars.$bold-light;
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+
+    li + li {
+      margin-left: 2rem;
+    }
+    a {
+      text-transform: capitalize;
+    }
   }
 }
