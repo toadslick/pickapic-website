@@ -55,6 +55,14 @@ styles: /styles/main.css
         {% set data = research %}
       {% endif %}
 
+      {% if section.id == "screenshots" %}
+        {% set data = screenshots %}
+      {% endif %}
+
+      {% if section.id == "videos" %}
+        {% set data = videos %}
+      {% endif %}
+
       {% renderFile "_includes/content/" + item.id + "/" + section.id + "." + section.format,
       data %}
 

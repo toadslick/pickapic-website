@@ -45,6 +45,13 @@ main {
       border: 3px solid vars.$blue;
       border-bottom: 3px solid vars.$blue;
       border-radius: 1.5em;
+
+      transition: box-shadow 0.2s ease-out;
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 10px vars.$blue;
+      }
     }
   }
 
@@ -219,12 +226,10 @@ main {
       menu {
         font-size: 14pt;
         font-weight: 500;
-        margin-left: 1.1em;
-        list-style-type: disc;
-        color: vars.$orange;
 
         ul {
           font-size: 11pt;
+          margin-left: 1rem;
         }
       }
     }

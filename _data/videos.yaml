@@ -1,0 +1,16 @@
+items:
+  - file: speak
+    title: "An open Button Book"
+    text: "Swipe to scroll between pages, then tap any button to speak its title."
+  - file: arrange
+    title: "Editing a Button Book"
+    text: "Add a button to a Button Book by tapping a picture in your Picture Library. Buttons layout is based on the number of buttons on a page."
+  - file: import
+    title: "Import and Crop"
+    text: "Import a picture from the camera, photo library, files, or copy-and-paste. Crop and rotate pictures after importing."
+  - file: pages
+    title: "All your pages at a glance"
+    text: "Switch to All Pages view to quickly navigate to any page of your Button Book. Drag a page to change its order in the book."
+  - file: lock
+    title: "A locked Button Book"
+    text: "Lock your Button Books with either Face ID or a 4-digit passcode to keep them open."

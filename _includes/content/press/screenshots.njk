@@ -1,0 +1,21 @@
+<p>All screenshots are available to download in </p>
+
+{% for item in items %}
+
+  <div>
+    <figure>
+      <img srcset="/assets/press/screenshots/{{item.file}}-light.png 1x" width="2360" height="1640" loading="lazy"/>
+      <figcaption>{{item.title}}</figcaption>
+    </figure>
+    {{item.text}}
+    <ul>
+      <li>
+        <a href="/assets/press/screenshots/{{item.file}}-light.png" download>Light</a>
+      </li>
+      <li>
+        <a href="/assets/press/screenshots/{{item.file}}-dark.png" download>Dark</a>
+      </li>
+    </ul>
+  </div>
+
+{% endfor %}

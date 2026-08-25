@@ -1,0 +1,19 @@
+items:
+  - file: use-book
+    title: "An open Button book"
+    text: "Swipe to scroll between pages, then tap any button to speak its title."
+  - file: all-books
+    title: "Button Book and Picture Library"
+    text: "Each Pick-a-Pic document contains a Picture Library and a collection of Button Books."
+  - file: edit-book-4-pages
+    title: "Editing a Button Book"
+    text: "Add a button to a Button Book by tapping a picture in your Picture Library."
+  - file: edit-book-7-pages
+    title: "Automatic button layout"
+    text: "Buttons layout is based on the number of buttons on a page. Drag a button to change its position."
+  - file: all-pages
+    title: "All your pages at a glance"
+    text: "Switch to All Pages view to quickly navigate to any page of your Button Book. Drag a page to change its order in the book."
+  - file: tags
+    title: "Organize your Picture Library with Tags"
+    text: "Search, sort, and tags let you quickly filter your Picture Library or Button Books."

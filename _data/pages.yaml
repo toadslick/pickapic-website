@@ -40,7 +40,10 @@
       format: md
     - id: screenshots
       title: "Screenshots"
-      format: haml
+      format: njk
+    - id: videos
+      title: "Videos"
+      format: njk
     - id: assets
       title: "Brand assets"
       format: haml
