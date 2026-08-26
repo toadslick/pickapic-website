@@ -76,7 +76,7 @@ main {
     font-size: 38pt;
     font-weight: 800;
     text-align: left;
-    line-height: 0.97;
+    line-height: 1.2;
     letter-spacing: -0.03rem;
 
     @media (max-width: vars.$large-font-max-width) {
@@ -170,11 +170,11 @@ main {
 
   section {
     max-width: vars.$two-column-max-width;
-    margin: 1rem auto;
-    padding: 0 1rem;
+    margin: 1.5rem auto;
+    padding: 0 1rem 1rem;
 
     @media (min-width: vars.$extra-compact-nav-max-width) {
-      padding: 0 2rem;
+      padding: 0 2rem 2rem;
       display: flex;
       flex-direction: row;
 
@@ -186,16 +186,25 @@ main {
     nav {
       flex-grow: 1;
       flex-shrink: 0;
-      @media (min-width: vars.$extra-compact-nav-max-width) {
-        width: 25%;
-      }
+      width: 25%;
 
       .app-store {
-        margin: 2rem auto 1rem 0;
+        margin: 1em auto 2rem 0;
+        border: none;
+
+        &:hover,
+        &:focus {
+          border: none;
+        }
+      }
+
+      @media (max-width: vars.$extra-compact-nav-max-width) {
+        display: none;
       }
 
       h1 {
-        font-weight: 400;
+        color: #777;
+        font-weight: 506;
       }
 
       li {
@@ -273,107 +282,6 @@ $heading-height: 50px;
 @media (max-width: vars.$extra-compact-nav-max-width) {
   main.navigation-heading-fixed {
     padding-top: $heading-height;
-  }
-}
-
-#navigation-container {
-  #navigation-heading {
-    display: block;
-
-    input {
-      display: none;
-    }
-  }
-
-  @media (max-width: vars.$extra-compact-nav-max-width) {
-    background: #fff;
-
-    &.navigation-hidden,
-    &.navigation-visible {
-      #navigation-heading {
-        padding: 0;
-        backdrop-filter: blur(5px);
-        background: #fffa;
-        font-size: 14pt;
-        font-weight: 800;
-        z-index: 100;
-      }
-
-      input {
-        display: block;
-        position: absolute;
-        left: -9999px;
-      }
-
-      label {
-        display: flex;
-        height: $heading-height;
-        align-items: center;
-        justify-content: flex-start;
-        padding-left: 10px;
-
-        &::after {
-          content: "❯";
-          font-size: 18pt;
-          display: flex;
-          aspect-ratio: 1;
-          position: absolute;
-          right: 0;
-          top: 0;
-          height: 100%;
-          align-items: center;
-          justify-content: center;
-          transform: rotate(90deg);
-        }
-      }
-
-      input:checked + label::after {
-        transform: rotate(-90deg);
-      }
-    }
-
-    &.navigation-visible {
-      position: fixed;
-      z-index: 100;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      overflow-y: scroll;
-      padding-top: 4em;
-
-      #navigation-heading {
-        margin: 0;
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
-      }
-
-      menu {
-        padding: 0 10px 10px 10px;
-      }
-    }
-
-    &.navigation-hidden {
-      #navigation-heading.navigation-heading-fixed {
-        margin: 0;
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
-      }
-
-      #navigation-heading:not(.navigation-heading-fixed) {
-        margin: 0 -10px;
-      }
-
-      menu {
-        overflow: hidden;
-        height: 0;
-        padding: 0;
-      }
-    }
   }
 }
 
@@ -673,6 +581,10 @@ $heading-height: 50px;
     margin-bottom: 0.5rem;
     aspect-ratio: 2360 / 1640;
     background-color: #7773;
+
+    @media (max-width: vars.$compact-nav-max-width) {
+      max-width: 400px;
+    }
   }
 
   figure > div {

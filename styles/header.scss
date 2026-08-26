@@ -83,8 +83,12 @@ footer {
       + li {
         margin-left: 2em;
 
-        @media (max-width: vars.$ultra-compact-nav-max-width) {
+        @media (max-width: vars.$extra-compact-nav-max-width) {
           margin-left: 1.5rem;
+        }
+
+        @media (max-width: vars.$ultra-compact-nav-max-width) {
+          margin-left: 1rem;
         }
       }
 
@@ -105,7 +109,7 @@ footer {
 
 footer {
   background: linear-gradient(vars.$blue, vars.$dark-blue), vars.$dark-blue;
-  padding: 1.5em 20px;
+  padding: 1rem 0;
 
   nav {
     border-top: 1px solid vars.$dark-blue;
@@ -135,10 +139,16 @@ footer {
     font-size: 12pt;
     text-align: center;
     display: block;
-    padding: 0 10px;
+    padding: 0 1rem;
 
     strong {
       font-weight: 800;
+    }
+  }
+
+  @media (max-width: vars.$extra-compact-nav-max-width) {
+    nav menu {
+      padding: 0.5rem 1rem;
     }
   }
 }
@@ -149,12 +159,20 @@ header.home {
   }
 
   @media (max-width: vars.$compact-nav-max-width) {
-    menu li:first-child {
-      margin-left: 0;
-    }
+    menu {
+      li:first-child {
+        margin-left: 0;
+      }
 
-    menu li:last-child {
-      margin-left: auto;
+      li:last-child {
+        margin-left: auto;
+      }
+    }
+  }
+
+  @media (max-width: vars.$ultra-compact-nav-max-width) {
+    menu {
+      padding: 0.5rem 1rem;
     }
   }
 }
@@ -182,15 +200,19 @@ header:not(.home) {
   }
 
   @media (max-width: vars.$extra-compact-nav-max-width) {
+    padding-top: 60px;
+
     menu {
-      padding-top: 75px;
+      border-top: 1px solid vars.$dark-blue;
+      box-shadow: 0 1px 0 #fff3 inset;
+      padding: 0.5em;
 
       li:first-child {
         width: auto;
         position: absolute;
         left: 0;
         right: 0;
-        top: 15px;
+        top: -52px;
 
         a {
           margin: auto;
