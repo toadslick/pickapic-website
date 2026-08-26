@@ -84,7 +84,7 @@ body header nav {
   p {
     color: vars.$bold-dark;
     font-size: 20pt;
-    margin: 0.5em 0 1em;
+    margin: 0.5rem 0 1rem;
     text-align: center;
     font-weight: 500;
 
@@ -179,14 +179,14 @@ body header nav {
 
 .feature-list {
   line-height: 1.2;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
 
   li {
     color: vars.$bold-light;
     display: inline-block;
     font-weight: 700;
-    padding: 0.3em 0.7em;
-    margin: 0.4em 0.2em;
+    padding: 0.3rem 0.7rem;
+    margin: 0.4rem 0.2rem;
     border-radius: 1em;
     border: 3px solid vars.$orange;
     box-shadow: 0 0 10px vars.$orange;
@@ -245,7 +245,7 @@ body header nav {
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: 1em auto;
+  margin: 1rem auto;
   padding: 0 10px;
   max-width: 1400px;
   justify-content: center;
@@ -358,7 +358,7 @@ body header nav {
         align-items: center;
         justify-content: flex-start;
         padding-left: 3em;
-        background: no-repeat left center/2.5em
+        background: no-repeat left center/2.5rem
           url("/assets/style/bracket-left.avif");
         min-height: 10em;
       }
@@ -370,7 +370,7 @@ body header nav {
         align-items: center;
         justify-content: flex-end;
         padding-right: 3em;
-        background: no-repeat right center/2.5em
+        background: no-repeat right center/2.5rem
           url("/assets/style/bracket-right.avif");
         min-height: 10em;
       }

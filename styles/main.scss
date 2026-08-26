@@ -16,11 +16,11 @@ body {
 
 main {
   background: #fff;
-  padding: 0.1px 0 3em;
+  padding: 0.1px 0 1rem;
 
   p {
     display: block;
-    margin: 0 auto 1em;
+    margin: 0 auto 1rem;
 
     strong {
       font-weight: 700;
@@ -50,10 +50,10 @@ main {
     &.button {
       position: relative;
       display: inline-block;
-      padding: 0.4em 2em;
+      padding: 0.4rem 2rem;
       border: 3px solid vars.$blue;
       border-bottom: 3px solid vars.$blue;
-      border-radius: 1.5em;
+      border-radius: 1.5rem;
 
       transition: box-shadow 0.2s ease-out;
 
@@ -67,7 +67,7 @@ main {
   h1,
   h2 {
     display: block;
-    margin: 0.5em auto 0.2em;
+    margin: 0.5rem auto 0.2rem;
     font-family:
       ui-rounded,
       -apple-system,
@@ -77,7 +77,7 @@ main {
     font-weight: 800;
     text-align: left;
     line-height: 0.97;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.03rem;
 
     @media (max-width: vars.$large-font-max-width) {
       font-size: 28pt;
@@ -109,7 +109,7 @@ main {
 
     strong {
       font-weight: 900;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.01rem;
       font-style: italic;
     }
   }
@@ -170,16 +170,16 @@ main {
 
   section {
     max-width: vars.$two-column-max-width;
-    margin: auto;
-    padding: 0 20px;
+    margin: 1rem auto;
+    padding: 0 1rem;
 
     @media (min-width: vars.$extra-compact-nav-max-width) {
-      padding: 0 30px;
+      padding: 0 2rem;
       display: flex;
       flex-direction: row;
 
       article {
-        margin-left: 2em;
+        margin-left: 2rem;
       }
     }
 
@@ -191,7 +191,7 @@ main {
       }
 
       .app-store {
-        margin: 2em auto 1em 0;
+        margin: 2rem auto 1rem 0;
       }
 
       h1 {
@@ -199,9 +199,9 @@ main {
       }
 
       li {
-        margin-bottom: 0.5em;
+        margin-bottom: 0.5rem;
         ul {
-          margin-top: 0.5em;
+          margin-top: 0.5rem;
         }
       }
 

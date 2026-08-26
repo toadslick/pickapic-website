@@ -102,7 +102,11 @@ footer {
 header:not(.home),
 footer {
   nav menu {
-    padding: 20px 30px;
+    padding: 1rem;
+
+    @media (min-width: vars.$extra-compact-nav-max-width) {
+      padding: 1rem 2rem;
+    }
   }
 }
 
