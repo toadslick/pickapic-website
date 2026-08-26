@@ -42,11 +42,11 @@
       title: "Screenshots"
       format: njk
     - id: videos
-      title: "Videos"
+      title: "Video clips"
       format: njk
     - id: assets
       title: "Brand assets"
-      format: haml
+      format: njk
     - id: developer
       title: "About the developer"
       format: md

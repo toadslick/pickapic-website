@@ -1,0 +1,31 @@
+<div>
+  {% for item in items %}
+    <div>
+
+      <figure>
+        <div>
+          {% set mode = item.modes[0] %}
+          <img srcset="/assets/press/brand/{{item.file}}-{{mode.key}}.{{mode.format}} 2x" width="{{item.width}}" height="{{item.height}}" loading="lazy"/>
+        </div>
+        <figcaption>{{item.title}}</figcaption>
+      </figure>
+
+      <p>
+        {{item.text}}
+        <br/>
+        {{item.width}} &times; {{item.height}} pixels
+      </p>
+
+      <ul>
+        {% for mode in item.modes %}
+          <li>
+            <a href="/assets/press/brand/{{item.file}}-{{mode.key}}.{{mode.format}}" download="pick-a-pic_{{item.file}}_{{mode}}.{{mode.format}}">
+              {{mode.key}}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+
+    </div>
+  {% endfor %}
+</div>

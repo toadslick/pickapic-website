@@ -1,0 +1,21 @@
+items:
+  - file: icon
+    title: "App Icon"
+    text: "Directly exported from Icon Composer for light and dark modes."
+    width: 1024
+    height: 1024
+    modes:
+      - key: light
+        format: png
+      - key: dark
+        format: png
+  - file: wordmark
+    title: "Wordmark"
+    text: "Raster PNG and vector SVG formats."
+    width: 2000
+    height: 308
+    modes:
+      - key: raster
+        format: png
+      - key: vector
+        format: svg

@@ -63,6 +63,10 @@ styles: /styles/main.css
         {% set data = videos %}
       {% endif %}
 
+      {% if section.id == "assets" %}
+        {% set data = assets %}
+      {% endif %}
+
       {% renderFile "_includes/content/" + item.id + "/" + section.id + "." + section.format,
       data %}
 
