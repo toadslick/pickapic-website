@@ -41,13 +41,16 @@ custom: [
     <header{% if page.url == "/" %} class="home"{% endif %}>
       <nav>
         <menu>
-          <li>
-            <a href="/">
-              <span>
+
+          {% if page.url != "/" %}
+            <li>
+              <a href="/">
+                <span>
                 Pick-a-Pic
               </span>
-            </a>
-          </li>
+              </a>
+            </li>
+          {% endif %}
 
           {% for p in pages %}
             {% set pagePath = "/" + p.id + "/" %}

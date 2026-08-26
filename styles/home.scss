@@ -17,41 +17,6 @@ main {
   }
 }
 
-body header nav {
-  background: vars.$dark-blue;
-  padding-top: 15px;
-
-  menu {
-    padding-bottom: 0 !important;
-
-    li {
-      &:first-child {
-        display: none;
-      }
-    }
-  }
-
-  @media (max-width: vars.$two-column-min-width) {
-    menu li {
-      &:nth-child(2) {
-        margin-left: 0;
-      }
-
-      &:last-child {
-        margin-left: auto;
-      }
-    }
-  }
-
-  @media (min-width: vars.$two-column-min-width) {
-    menu li {
-      &:nth-child(2) {
-        margin-left: auto;
-      }
-    }
-  }
-}
-
 #hero {
   background:
     repeat-x left bottom/200% 20% url("/assets/style/clouds.avif"),

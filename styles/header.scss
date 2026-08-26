@@ -70,7 +70,7 @@
 header,
 footer {
   nav menu {
-    padding: 10px 30px;
+    padding: 1rem 2rem;
     max-width: vars.$two-column-max-width;
     margin: auto;
     display: flex;
@@ -82,6 +82,10 @@ footer {
     li {
       + li {
         margin-left: 2em;
+
+        @media (max-width: vars.$ultra-compact-nav-max-width) {
+          margin-left: 1.5rem;
+        }
       }
 
       a {
@@ -99,49 +103,6 @@ footer {
   }
 }
 
-header:not(.home),
-footer {
-  nav menu {
-    padding: 1rem;
-
-    @media (min-width: vars.$extra-compact-nav-max-width) {
-      padding: 1rem 2rem;
-    }
-  }
-}
-
-header:not(.home) li {
-  &:first-child {
-    width: 25%;
-    position: relative;
-
-    a {
-      @include vars.app-logo;
-
-      border: none;
-      display: flex;
-      align-items: center;
-
-      &::before {
-        content: none;
-      }
-
-      &::after {
-        width: 250px;
-        max-width: 100%;
-      }
-    }
-  }
-
-  &:last-child {
-    margin-left: auto;
-  }
-}
-
-header {
-  background: linear-gradient(vars.$dark-blue, vars.$blue), vars.$dark-blue;
-}
-
 footer {
   background: linear-gradient(vars.$blue, vars.$dark-blue), vars.$dark-blue;
   padding: 1.5em 20px;
@@ -154,13 +115,17 @@ footer {
       0 1px 0 #fff3,
       0 1px 0 #fff3 inset;
 
-    menu li {
-      &:first-child {
-        margin-left: auto;
-      }
+    menu {
+      display: flex;
 
-      &:last-child {
-        margin-right: auto;
+      li {
+        &:first-child {
+          margin-left: auto;
+        }
+
+        &:last-child {
+          margin-right: auto;
+        }
       }
     }
   }
@@ -174,6 +139,72 @@ footer {
 
     strong {
       font-weight: 800;
+    }
+  }
+}
+
+header.home {
+  menu li:first-child {
+    margin-left: auto;
+  }
+
+  @media (max-width: vars.$compact-nav-max-width) {
+    menu li:first-child {
+      margin-left: 0;
+    }
+
+    menu li:last-child {
+      margin-left: auto;
+    }
+  }
+}
+
+header:not(.home) {
+  background: linear-gradient(vars.$dark-blue, vars.$blue), vars.$dark-blue;
+  position: relative;
+
+  menu li:first-child {
+    width: 25%;
+
+    a {
+      @include vars.app-logo;
+
+      max-width: 250px;
+
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  menu li:last-child {
+    margin-left: auto;
+  }
+
+  @media (max-width: vars.$extra-compact-nav-max-width) {
+    menu {
+      padding-top: 75px;
+
+      li:first-child {
+        width: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 15px;
+
+        a {
+          margin: auto;
+        }
+      }
+
+      li:nth-child(2) {
+        margin-left: auto;
+      }
+
+      li:last-child {
+        margin-left: 2em;
+        margin-right: auto;
+      }
     }
   }
 }
