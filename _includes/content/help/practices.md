@@ -1,4 +1,4 @@
-To get the most out of Pick-a-Pic, remember these key points as you and your learner begin your functional communication journey.
+To get the most out of Pick-a-Pic, remember these key points as you and your learner begin their functional communication journey.
 
 ### Communication must be **meaningful** and **motivating**.
 
