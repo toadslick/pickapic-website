@@ -143,7 +143,6 @@ main {
     > hgroup {
       + hgroup {
         margin-top: 2em;
-        padding-top: 1em;
       }
     }
 
@@ -564,7 +563,6 @@ $heading-height: 50px;
     grid-template-columns: 1fr 1fr;
     column-gap: 3rem;
     row-gap: 2rem;
-    margin-top: 2rem;
 
     @media (max-width: vars.$compact-nav-max-width) {
       grid-template-columns: 1fr;
