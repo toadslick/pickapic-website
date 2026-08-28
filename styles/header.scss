@@ -63,11 +63,11 @@
   }
 }
 
-// .mode-set #dark-mode-toggle {
-//   @media (min-width: vars.$extra-compact-nav-max-width) {
-//     display: block;
-//   }
-// }
+.mode-set #dark-mode-toggle {
+  @media (min-width: vars.$extra-compact-nav-max-width) {
+    display: block;
+  }
+}
 
 header,
 footer {
