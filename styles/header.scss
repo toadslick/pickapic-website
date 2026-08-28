@@ -64,7 +64,7 @@
 }
 
 .mode-set #dark-mode-toggle {
-  @media (min-width: vars.$extra-compact-nav-max-width) {
+  @media (min-width: vars.$ultra-compact-nav-max-width) {
     display: block;
   }
 }
