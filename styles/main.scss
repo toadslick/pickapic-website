@@ -579,10 +579,6 @@ $heading-height: 50px;
     margin-bottom: 0.5rem;
     aspect-ratio: 2360 / 1640;
     background-color: #7773;
-
-    @media (max-width: vars.$compact-nav-max-width) {
-      max-width: 400px;
-    }
   }
 
   figure > div {
