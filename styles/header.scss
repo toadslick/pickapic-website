@@ -146,6 +146,17 @@ footer {
     strong {
       font-weight: 800;
     }
+
+    a {
+      color: #adf;
+      text-decoration: none;
+
+      &[aria-current],
+      &:hover,
+      &:focus {
+        color: #fff;
+      }
+    }
   }
 
   @media (max-width: vars.$extra-compact-nav-max-width) {
