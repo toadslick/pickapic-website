@@ -12,4 +12,4 @@
 
 Pick-a-Pic was created as a springboard for teaching functional communication to children with autism. Functional communication is an evidence-based intervention for replacing challenging behaviors with basic social interaction. The basics of functional communication, such as making requests, are where Pick-a-Pic’s simplicity shines.
 
-### [App Store](https://apps.apple.com/app/id6794564956) • [Website](https://pick-a-pic.app)
+### [App Store](https://apps.apple.com/app/pick-a-pic-early-easy-aac/id6794564956) • [Website](https://pick-a-pic.app)

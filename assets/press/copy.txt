@@ -33,8 +33,9 @@ Developer:
   Pocket Pigeon
 
 Links:
-  - App Store: https://apps.apple.com/app/id6794564956
-  - Website: https://pick-a-pic.app
+  - App Store:    https://apps.apple.com/app/pick-a-pic-early-easy-aac/id6794564956
+  - Website:      https://pick-a-pic.app
+  - Intro video:  https://www.youtube.com/watch?v=Q7nI_NOYKjw
 
 ______________________________________________
 ABOUT PICK-A-PIC
