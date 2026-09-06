@@ -2,6 +2,9 @@
 - id: about
   title: "About"
   sections:
+    - id: intro
+      title: "Introduction"
+      format: njk
     - id: why
       title: "Why we made <strong>Pick-a-Pic</strong>"
       format: md

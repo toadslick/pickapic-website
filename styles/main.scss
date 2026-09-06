@@ -612,3 +612,8 @@ $heading-height: 50px;
     }
   }
 }
+
+iframe {
+  aspect-ratio: 16 / 9;
+  margin-top: 1rem;
+}
