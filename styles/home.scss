@@ -20,7 +20,7 @@ main {
 #hero {
   background:
     repeat-x left bottom/200% 20% url("/assets/style/clouds.avif"),
-    linear-gradient(vars.$dark-blue 0%, #69c 70%);
+    linear-gradient(vars.$dark-blue 0%, #69c 70%, #69c 99%, #fff 100%);
 
   h1 {
     @include vars.app-logo;

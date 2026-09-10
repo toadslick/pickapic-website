@@ -15,7 +15,7 @@
   #hero {
     background:
       repeat-x left bottom/200% 20% url("/assets/style/clouds-dark.avif"),
-      linear-gradient(vars.$dark-blue 0%, #69c 70%);
+      linear-gradient(vars.$dark-blue 0%, #69c 70%, #69c 99%, #000 100%);
 
     .video-frame.speech-bubble::before {
       color: #000;
