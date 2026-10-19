@@ -8,11 +8,20 @@
 
   const speechTimes = [
     { light: 3.2, dark: 2.95, className: "rice" },
-    { light: 6.3, dark: 6.1, className: "crayon" },
-    { light: 9.1, dark: 9.6, className: "apple" },
+    { light: 6.1, dark: 5.9, className: "crayon" },
+    { light: 8.9, dark: 9.0, className: "apple" },
   ];
 
-  var isDarkMode = false;
+  const isDarkMode = () => {
+    if (document.body.classList.contains("mode-set-dark")) {
+      return true;
+    }
+    if (document.body.classList.contains("mode-set-light")) {
+      return false;
+    }
+    return window.matchMedia("(prefers-color-scheme: dark)");
+  };
+
   var speechIndex = 0;
   var previousTime = 0;
 
@@ -24,8 +33,9 @@
 
     if (speechIndex < speechTimes.length) {
       let nextSpeechTime =
-        speechTimes[speechIndex][isDarkMode ? "dark" : "light"];
+        speechTimes[speechIndex][isDarkMode() ? "dark" : "light"];
 
+      console.log("next speech time", nextSpeechTime);
       if (video.currentTime >= nextSpeechTime) {
         speak(speechIndex);
         speechIndex += 1;
