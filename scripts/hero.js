@@ -35,7 +35,6 @@
       let nextSpeechTime =
         speechTimes[speechIndex][isDarkMode() ? "dark" : "light"];
 
-      console.log("next speech time", nextSpeechTime);
       if (video.currentTime >= nextSpeechTime) {
         speak(speechIndex);
         speechIndex += 1;
